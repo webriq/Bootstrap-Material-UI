@@ -8,8 +8,8 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>JavaScript - Collapsible | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.3.2" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.3.2" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.css?v=0.0.0" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.0.0" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"java-script",path:"collapsible",name_section:"JavaScript",name_chapter:"Collapsible"};</script>
@@ -754,7 +754,51 @@
                     </li>
                 </ul>
 
-                <pre><code class="language-markup">
+
+                <div class="col-md-12">
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
+
+        </ul>
+    </div>
+</div>
+
+<div id="eq-ui-tab-s1-t1" class="col-md-12">
+                <pre><code class="language-jade">
+ul.eq-ui-collapsible(data-collapsible='accordion')
+  li
+    .eq-ui-collapsible-header.active
+      a
+        i.mdi.mdi-image-filter-drama.icon.icon-left.icon-24
+        | Collapsible #1
+    .eq-ui-collapsible-body
+      .eq-ui-collapsible-body-inner
+        | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+  li
+    .eq-ui-collapsible-header
+      a
+        i.mdi.mdi-map-marker.icon.icon-left.icon-24
+        | Collapsible #2
+    .eq-ui-collapsible-body
+      .eq-ui-collapsible-body-inner
+        | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+  li
+    .eq-ui-collapsible-header
+      a
+        i.mdi.mdi-fire.icon.icon-left.icon-24
+        | Collapsible #3
+    .eq-ui-collapsible-body
+      .eq-ui-collapsible-body-inner
+        | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t2" class="col-md-12">
+
+ <pre><code class="language-markup">
 &lt;ul class=&quot;eq-ui-collapsible&quot; data-collapsible=&quot;accordion&quot;&gt;
     &lt;li&gt;
         &lt;div class=&quot;eq-ui-collapsible-header active&quot;&gt;
@@ -787,6 +831,9 @@
         &lt;/div&gt;
     &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+</div>
+
+                
 
             </div>
         </div>
@@ -830,9 +877,29 @@
                     </li>
                 </ul>
 
-                <pre><code class="language-markup">
+    <div class="col-md-12">
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t3">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t4">HTML</a></li>
+
+        </ul>
+    </div>
+</div>
+
+<div id="eq-ui-tab-s1-t3" class="col-md-12">
+<pre><code class="language-jade">
+ul.eq-ui-collapsible.popout(data-collapsible='accordion')
+  | ...
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t4" class="col-md-12">
+<pre><code class="language-markup">
 &lt;ul class=&quot;eq-ui-collapsible popout&quot; data-collapsible=&quot;accordion&quot;&gt;
 ...</code></pre>
+</div>
+ </div>
 
             </div>
         </div>
@@ -876,9 +943,29 @@
                     </li>
                 </ul>
 
-                <pre><code class="language-markup">
+<div class="col-md-12">
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t5">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t6">HTML</a></li>
+
+        </ul>
+    </div>
+</div>
+
+<div id="eq-ui-tab-s1-t5" class="col-md-12">
+<pre><code class="language-jade">
+ul.eq-ui-collapsible(data-collapsible='expandable')
+  | ...
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t6" class="col-md-12">
+<pre><code class="language-markup">
 &lt;ul class=&quot;eq-ui-collapsible&quot; data-collapsible=&quot;expandable&quot;&gt;
 ...</code></pre>
+</div>
+ </div>
 
             </div>
         </div>
@@ -900,12 +987,12 @@
 </div>
     </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
 <script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.3.2"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.js?v=0.0.0"></script>
 
 <script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
 <script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
 
-<script src="assets/js/doc.js?v=0.3.2"></script>
+<script src="assets/js/doc.js?v=0.0.0"></script>
 <script src="assets/js/ctrl/ctrl-color.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
