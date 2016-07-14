@@ -12,15 +12,15 @@ $eq-ui-num-cols: 12 !default;
 $eq-ui-gutter-width: 32px !default;
 
 /*** Custom Colors ***/
-//$eq-ui-primary-color: #3e50b4 !default;
+//$eq-ui-primary-color: #2196f3 !default;
 //$eq-ui-secondary-color: #FF4081 !default;
 
 /*** Colors ***/
-$eq-ui-primary-color: color("eq-deep-blue", "500") !default;
+$eq-ui-primary-color: color("blue", "500") !default;
 $eq-ui-primary-color-light: lighten($eq-ui-primary-color, 15%) !default;
 $eq-ui-primary-color-dark: darken($eq-ui-primary-color, 15%) !default;
 
-$eq-ui-secondary-color: color("eq-green-turquoise", "500") !default;
+$eq-ui-secondary-color: color("blue", "600") !default;
 
 $eq-ui-success-color: color("green", "500") !default;
 $eq-ui-info-color: color("light-blue", "200") !default;

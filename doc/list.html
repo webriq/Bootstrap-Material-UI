@@ -8,8 +8,9 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>Components - List | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.3.2" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.3.2" rel="stylesheet">
+    <link rel="icon" href="assets/img/doc/logo@xs.png" type="image/*">
+    <link href="assets/css/webriq-bootstrap-material-ui.css?v=0.0.0" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.0.0" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"components",path:"list",name_section:"Components",name_chapter:"List"};</script>
@@ -104,7 +105,7 @@
         <div class="container-fluid">
 
             <!-- Toggle -->
-            <div class="eq-ui-side-nav-toggle"><i class="mdi mdi-menu icon icon-left icon-24"></i></div>
+            <div class="eq-ui-side-nav-toggle"><i class="mdi mdi-menu icon icon-left icon-24 eq-ui-waves"></i></div>
 
             <!-- Title -->
             <!--div class="header-title">
@@ -201,7 +202,7 @@
 
         <div class="brand">
             <div class="eq-ui-side-nav-toggle"><i class="mdi mdi-menu icon icon-left icon-24"></i></div>
-            <img src="assets/img/doc/exentriq_logo.svg" alt="Exentriq logo">
+            <img src="assets/img/doc/logo.svg" alt="Webriq logo">
         </div>
 
         <div class="eq-ui-side-nav-content-wrapper">
@@ -228,13 +229,13 @@
 
                     <li>
                         <div class="eq-ui-collapsible-header eq-ui-waves">
-                            <a id="collapsible-nav-getting-started" target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/README.md">
+                            <a id="collapsible-nav-getting-started" href="./getting-started.html">
                                 <i class="mdi mdi-settings icon icon-left icon-24"></i>
-                                <i class="mdi mdi-open-in-new icon icon-right icon-18"></i>
                                 Getting Started
                             </a>
                         </div>
                     </li>
+
 
                     <li>
                         <div class="eq-ui-collapsible-header eq-ui-waves">
@@ -248,6 +249,7 @@
                             <a id="collapsible-nav-css-color" href="./color.html">Color</a>
                             <a id="collapsible-nav-css-helpers" href="./helpers.html">Helpers</a>
                             <a id="collapsible-nav-css-table" href="./table.html">Table</a>
+                            <a id="collapsible-nav-css-typography" href="./grid.html">Grid</a>
                             <a id="collapsible-nav-css-typography" href="./typography.html">Typography</a>
                         </div>
                     </li>
@@ -283,6 +285,15 @@
                         </div>
                     </li>
 
+                     <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a id="collapsible-nav-showcase" href="./admin-panel.html">
+                                <i class="mdi mdi-account icon icon-left icon-24"></i>
+                                Admin Panel
+                            </a>
+                        </div>
+                    </li>
+
                     <li>
                         <div class="eq-ui-collapsible-header eq-ui-waves">
                             <a id="collapsible-nav-download" class="download-in-git-hub-href" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI/archive/master.zip">
@@ -292,14 +303,16 @@
                         </div>
                     </li>
 
-                    <li>
+
+
+                   <!--  <li>
                         <div class="eq-ui-collapsible-header eq-ui-waves">
                             <a id="collapsible-nav-showcase" href="./showcase.html">
                                 <i class="mdi mdi-heart icon icon-left icon-24"></i>
                                 Showcase
                             </a>
                         </div>
-                    </li>
+                    </li> -->
 
                 </ul>
 
@@ -552,7 +565,7 @@
         </div>
 
         <div class="footer">
-            <a target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI"><i class="mdi mdi-github-circle icon icon-left icon-18"></i></a><p class="copyright">&copy; Exentriq</p>
+            <a target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI"><i class="mdi mdi-github-circle icon icon-left icon-18"></i></a><p class="copyright">&copy; WebriQ</p>
             <a target="_blank" href="http://opensource.org/licenses/MIT">Free & Open Source (MIT)</a>
         </div>
 
@@ -724,13 +737,45 @@
                 <li class="eq-ui-list-item">Porta ac consectetur ac</li>
             </ul>
 
-            <pre><code class="language-markup">
+            <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t1" class="col-md-12">
+               <pre><code class="language-jade">
+ul.eq-ui-list
+  li.eq-ui-list-item Cras justo odio
+  li.eq-ui-list-item Dapibus ac facilisis in
+  li.eq-ui-list-item Morbi leo risus
+  li.eq-ui-list-item Porta ac consectetur ac
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t2" class="col-md-12">
+
+<pre><code class="language-markup">
 &lt;ul class=&quot;eq-ui-list&quot;&gt;
     &lt;li class=&quot;eq-ui-list-item&quot;&gt;Cras justo odio&lt;/li&gt;
     &lt;li class=&quot;eq-ui-list-item&quot;&gt;Dapibus ac facilisis in&lt;/li&gt;
     &lt;li class=&quot;eq-ui-list-item&quot;&gt;Morbi leo risus&lt;/li&gt;
     &lt;li class=&quot;eq-ui-list-item&quot;&gt;Porta ac consectetur ac&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+
         </div>
     </div>
 
@@ -745,13 +790,45 @@
                 <a href="#" class="eq-ui-list-item">Porta ac consectetur ac</a>
             </div>
 
-            <pre><code class="language-markup">
+            <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t3">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t4">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t3" class="col-md-12">
+               <pre><code class="language-jade">
+.eq-ui-list.eq-ui-hoverable
+  a.eq-ui-list-item(href='#') Cras justo odio
+  a.eq-ui-list-item.active(href='#') Dapibus ac facilisis in
+  a.eq-ui-list-item(href='#') Morbi leo risus
+  a.eq-ui-list-item(href='#') Porta ac consectetur ac
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t4" class="col-md-12">
+
+ <pre><code class="language-markup">
 &lt;div class=&quot;eq-ui-list eq-ui-hoverable&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;eq-ui-list-item&quot;&gt;Cras justo odio&lt;/a&gt;
     &lt;a href=&quot;#&quot; class=&quot;eq-ui-list-item active&quot;&gt;Dapibus ac facilisis in&lt;/a&gt;
     &lt;a href=&quot;#&quot; class=&quot;eq-ui-list-item&quot;&gt;Morbi leo risus&lt;/a&gt;
     &lt;a href=&quot;#&quot; class=&quot;eq-ui-list-item&quot;&gt;Porta ac consectetur ac&lt;/a&gt;
 &lt;/div&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+
         </div>
     </div>
 
@@ -766,13 +843,47 @@
                 <li class="eq-ui-list-item">Porta ac consectetur ac</li>
             </ul>
 
-            <pre><code class="language-markup">
+            <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t5">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t6">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t5" class="col-md-12">
+               <pre><code class="language-jade">
+ul.eq-ui-list.eq-ui-hoverable
+  li.eq-ui-list-item.eq-ui-list-header
+    h4 Header
+  li.eq-ui-list-item Dapibus ac facilisis in
+  li.eq-ui-list-item Morbi leo risus
+  li.eq-ui-list-item Porta ac consectetur ac
+
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t6" class="col-md-12">
+
+<pre><code class="language-markup">
 &lt;ul class=&quot;eq-ui-list eq-ui-hoverable&quot;&gt;
     &lt;li class=&quot;eq-ui-list-item eq-ui-list-header&quot;&gt;&lt;h4&gt;Header&lt;/h4&gt;&lt;/li&gt;
     &lt;li class=&quot;eq-ui-list-item&quot;&gt;Dapibus ac facilisis in&lt;/li&gt;
     &lt;li class=&quot;eq-ui-list-item&quot;&gt;Morbi leo risus&lt;/li&gt;
     &lt;li class=&quot;eq-ui-list-item&quot;&gt;Porta ac consectetur ac&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+
         </div>
     </div>
 
@@ -814,7 +925,53 @@
 
             </ul>
 
-            <pre><code class="language-markup">
+
+             <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t7">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t8">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t7" class="col-md-12">
+               <pre><code class="language-jade">
+ul.eq-ui-list.eq-ui-hoverable
+  li.eq-ui-list-item.eq-ui-list-avatar.eq-ui-list-secondary-content
+    img.circle(src='assets/img/doc/avatar/avatar_1.jpg')
+    h6.eq-ui-list-title Title - Single line
+    a.eq-ui-list-secondary-content-body
+      i.mdi.mdi-star.icon.icon-24
+  li.eq-ui-list-item.eq-ui-list-avatar.eq-ui-list-truncate.active
+    img.circle(src='assets/img/doc/avatar/avatar_2.jpg')
+    .eq-ui-list-body
+      h6.eq-ui-list-title Title - Truncate text - Large title sample
+      | Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+  li.eq-ui-list-item.eq-ui-list-avatar.eq-ui-list-secondary-content
+    img.circle(src='assets/img/doc/avatar/avatar_3.jpg')
+    .eq-ui-list-body
+      h6.eq-ui-list-title Title
+      | Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+    a.eq-ui-list-secondary-content-body.active
+      i.mdi.mdi-star.icon.icon-24
+  li.eq-ui-list-item
+    .eq-ui-list-body
+      h6.eq-ui-list-title Title - Without Avatar
+      | Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+
+
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t8" class="col-md-12">
+
+<pre><code class="language-markup">
 &lt;ul class=&quot;eq-ui-list eq-ui-hoverable&quot;&gt;
 
     &lt;li class=&quot;eq-ui-list-item eq-ui-list-avatar eq-ui-list-secondary-content&quot;&gt;
@@ -848,6 +1005,12 @@
     &lt;/li&gt;
 
 &lt;/ul&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+
         </div>
     </div>
 
@@ -875,7 +1038,53 @@
                 </li>
             </ul>
 
-            <pre><code class="language-markup">
+
+            <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t9">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t10">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t9" class="col-md-12">
+               <pre><code class="language-jade">
+ul.eq-ui-list.eq-ui-hoverable
+  li.eq-ui-list-item.eq-ui-list-avatar.eq-ui-list-secondary-content
+    img.circle(src='assets/img/doc/avatar/avatar_1.jpg')
+    h6.eq-ui-list-title Title - Single line
+    a.eq-ui-list-secondary-content-body
+      i.mdi.mdi-star.icon.icon-24
+  li.eq-ui-list-item.eq-ui-list-avatar.eq-ui-list-truncate.active
+    img.circle(src='assets/img/doc/avatar/avatar_2.jpg')
+    .eq-ui-list-body
+      h6.eq-ui-list-title Title - Truncate text - Large title sample
+      | Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+  li.eq-ui-list-item.eq-ui-list-avatar.eq-ui-list-secondary-content
+    img.circle(src='assets/img/doc/avatar/avatar_3.jpg')
+    .eq-ui-list-body
+      h6.eq-ui-list-title Title
+      | Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+    a.eq-ui-list-secondary-content-body.active
+      i.mdi.mdi-star.icon.icon-24
+  li.eq-ui-list-item
+    .eq-ui-list-body
+      h6.eq-ui-list-title Title - Without Avatar
+      | Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+
+
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t10" class="col-md-12">
+
+<pre><code class="language-markup">
 &lt;ul class=&quot;eq-ui-list eq-ui-hoverable&quot;&gt;
     &lt;li class=&quot;eq-ui-list-item dismissable&quot;&gt;
         Cras justo odio
@@ -894,6 +1103,12 @@
         &lt;i class=&quot;mdi mdi-send icon icon-right icon-24 eq-ui-secondary-color-text&quot;&gt;&lt;/i&gt;
     &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+
         </div>
     </div>
 
@@ -913,22 +1128,23 @@
 </div>
     </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
 <script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.3.2"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.js?v=0.0.0"></script>
+
 
 <script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
 <script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
 
-<script src="assets/js/doc.js?v=0.3.2"></script>
+<script src="assets/js/doc.js?v=0.0.0"></script>
 <script src="assets/js/ctrl/ctrl-color.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-    e.src='//www.google-analytics.com/analytics.js';
-    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-</script>
+<!-- // <script>
+//     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+//     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+//     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+//     e.src='//www.google-analytics.com/analytics.js';
+//     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+//     ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+// </script> -->
   </body>
 </html>
