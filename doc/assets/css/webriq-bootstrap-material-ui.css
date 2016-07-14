@@ -22981,14 +22981,9 @@ html.is-touch .eq-ui-dropdown li > a:not(.active):hover {
 }
 
 .eq-ui-scrollbar-wrap.common ul.eq-ui-tabs{
-<<<<<<< HEAD:dist/css/exentriq-bootstrap-material-ui.css
- position: relative;
-}
 
-/*# sourceMappingURL=exentriq-bootstrap-material-ui.css.map */
-=======
   position: relative;
 }
 
 /*# sourceMappingURL=webriq-bootstrap-material-ui.css.map */
->>>>>>> develop:doc/assets/css/webriq-bootstrap-material-ui.css
+
