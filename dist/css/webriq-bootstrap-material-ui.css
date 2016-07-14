@@ -22979,9 +22979,31 @@ html.is-touch .eq-ui-dropdown li > a:not(.active):hover {
 .eq-ui-tabs.eq-ui-tabs-justified .eq-ui-tab {
   width: 100%;
 }
+<<<<<<< HEAD:doc/assets/css/exentriq-bootstrap-material-ui.css
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> e8cb356d6c68c084847f74f37e90c5ea15d884da
+
+.eq-ui-scrollbar-wrap.common ul.eq-ui-tabs{
+ position: relative;
+}
+
+<<<<<<< HEAD
+>>>>>>> parent of e8cb356... Merge pull request #4 from levigalicia/develop
+=======
+.eq-ui-scrollbar-wrap.common ul.eq-ui-tabs{
+position: relative;
+}
+
+>>>>>>> e8cb356d6c68c084847f74f37e90c5ea15d884da
+/*# sourceMappingURL=exentriq-bootstrap-material-ui.css.map */
+=======
 
 .eq-ui-scrollbar-wrap.common ul.eq-ui-tabs{
   position: relative;
 }
 
 /*# sourceMappingURL=webriq-bootstrap-material-ui.css.map */
+>>>>>>> develop:dist/css/webriq-bootstrap-material-ui.css
