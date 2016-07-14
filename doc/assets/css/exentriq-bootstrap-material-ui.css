@@ -22999,4 +22999,12 @@ html.is-touch .eq-ui-dropdown li > a:not(.active):hover {
 .eq-ui-tabs.eq-ui-tabs-justified .eq-ui-tab {
   width: 100%;
 }
+<<<<<<< HEAD
+=======
+
+.eq-ui-scrollbar-wrap.common ul.eq-ui-tabs{
+ position: relative;
+}
+
+>>>>>>> parent of e8cb356... Merge pull request #4 from levigalicia/develop
 /*# sourceMappingURL=exentriq-bootstrap-material-ui.css.map */
