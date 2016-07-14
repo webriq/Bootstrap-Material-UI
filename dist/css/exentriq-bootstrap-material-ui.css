@@ -22999,4 +22999,9 @@ html.is-touch .eq-ui-dropdown li > a:not(.active):hover {
 .eq-ui-tabs.eq-ui-tabs-justified .eq-ui-tab {
   width: 100%;
 }
+
+.eq-ui-scrollbar-wrap.common ul.eq-ui-tabs{
+ position: relative;
+}
+
 /*# sourceMappingURL=exentriq-bootstrap-material-ui.css.map */
