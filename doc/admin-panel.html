@@ -6,18 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
-    <title>Components - Cards | Exentriq - Bootstrap Material UI</title>
+    <title>Admin Panel | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-<<<<<<< HEAD
-    <link href="assets/css/exentriq-bootstrap-material-ui.css?v=0.0.0" rel="stylesheet">
-=======
     <link rel="icon" href="assets/img/doc/logo@xs.png" type="image/*">
     <link href="assets/css/webriq-bootstrap-material-ui.css?v=0.0.0" rel="stylesheet">
->>>>>>> develop
     <link href="assets/css/doc.css?v=0.0.0" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
-    <script>var _doc_route = {root_path:"components",path:"cards",name_section:"Components",name_chapter:"Cards"};</script>
+    <script>var _doc_route = {root_path:"",path:"admin-panel",name_section:"",name_chapter:"Admin Panel"};</script>
 <!--[if lt IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -724,7 +720,7 @@
 
     <main class="eq-ui-main"><div class="jumbotron">
     <div class="container">
-        <h1>Cards</h1>
+        <h1>Admin Panel</h1>
     </div>
 </div>
 
@@ -732,749 +728,154 @@
 
     <div class="row">
         <div class="col-md-12">
+            <h2 class="header">Configure Content Model</h2>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <h2 class="header">Basic</h2>
+             <p>Add a <code class="language-markup">config.yml</code> file to <code class="language-markup">/admin</code> folder.</p>
 
-                    <div class="eq-ui-card doc-margin-bottom">
-                        <div class="eq-ui-card-title">
-                            <h2 class="eq-ui-card-title-text">Welcome</h2>
-                        </div>
-                        <div class="eq-ui-card-supporting-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Mauris sagittis pellentesque lacus eleifend lacinia...
-                        </div>
-                        <div class="eq-ui-card-actions eq-ui-card-border">
-                            <a class="btn btn-default eq-ui-btn-flat eq-ui-waves eq-ui-secondary-color-text">Get Started</a>
-                        </div>
-                        <div class="eq-ui-card-menu">
-                            <ul class="right eq-ui-nav-menu">
-                                <li class="eq-ui-nav-menu-item-icon">
-                                    <a class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
-                                        <i class="mdi mdi-dots-vertical icon"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <h2 class="header">Panel</h2>
+            <pre><code class="language-markup">
+              MyWebsite/
+              |--admin/
+              |  |--config.yml
+              |  |--index.jade
+              |
+              |--data/
+              |  |--general.json
+              |
+              |--posts/
+              |  |--blog.md
+              |
+              |--views/
+              |  |--index.jade
+              |  |--layout.jade
+              |
 
-                    <div class="eq-ui-card doc-margin-bottom">
-                        <div class="eq-ui-card-supporting-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet eros quis sapien mollis congue eu a libero. Fusce blandit purus vel est sodales, consequat gravida felis condimentum. Suspendisse quis odio pulvinar neque condimentum congue ut et nisl. Cras nec neque eu urna euismod iaculis. Mauris facilisis arcu at eros porttitor, non consectetur ante rhoncus.
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </code></pre>
+            <br/>
+<div class="col-md-12">
+<p>WebriQ CMS works with the concept of collections of documents that a user can edit.</p>
+
+<p>Collections basically comes in two forms:</p>
+<ol>
+<li>A <code class="language-markup">folder</code>. Set the <code class="language-markup">folder</code> attribute on the collection. Each document will be a file in this folder. Each document will have the same format, fields and meta fields.</li>
+<li>A list of <code class="language-markup">files</code>. Set the <code class="language-markup">files</code> attribute on the collection. You can set fields that all files in the folder shares directly on the collection, and set specific fields for each file. This is great when you have files with a different structure.</li>
 
 
-            <!-- Tab start-->
-            <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
+</ol>
 
-       </ul>
-   </div>
+<p>Each collection has a list of fields (or files with their individual fields). Each field has a label, a name and a widget.</p>
+
+Setting up the right collections is the main part of integrating netlify CMS with your site. It's where you decide exactly what content editors can work with, and what widgets should be used to edit each field of your various files or content types.
+
+</div>
+<br/>
+<br/>
+
+<div class="col-md-12">
+<pre><code class="language-yaml">
+  backend:
+  name: github-api
+  repo: owner/repo # Path to your Github repository
+  branch: master # Branch to update (master by default)
+
+  media_folder: "img/uploads" # Folder where user uploaded files should go
+
+  collections: # A list of collections the CMS should be able to edit
+    - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
+      label: "Post" # Used in the UI, ie.: "New Post"
+      folder: "posts" # The path to the folder where the documents are stored
+      create: true # Allow users to create new documents in this collection
+      fields: # The fields each document in this collection have
+        - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+        - {label: "Body", name: "body", widget: "markdown"}
+        - {label: "Foo", name: "foo", widget: "foo"}
+      meta: # Meta data fields. Just like fields, but without any preview element
+        - {label: "Publish Date", name: "date", widget: "datetime"}
+
+    - name: "settings"
+      label: "Settings"
+      files:
+        - name: "general"
+          label: "General settings"
+          file: "_settings/general.json"
+          fields:
+            - {label: "Main site title", name: "site_title", widget: "string"}
+            - {label: "Number of fronpage posts", name: "post_count", widget: "number"}
+            - {label: "Site cover image", name: "cover", widget: "image"}
+            </code></pre>
 </div>
 
-<div id="eq-ui-tab-s1-t1" class="col-md-12">
-               <pre><code class="language-jade">
-// Basic
-.eq-ui-card
-  .eq-ui-card-title
-    h2.eq-ui-card-title-text Welcome
-  .eq-ui-card-supporting-text
-    | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    | Mauris sagittis pellentesque lacus eleifend lacinia...
-  .eq-ui-card-actions.eq-ui-card-border
-    a.btn.btn-default.eq-ui-btn-flat.eq-ui-waves.eq-ui-secondary-color-text Get Started
-  .eq-ui-card-menu
-    ul.right.eq-ui-nav-menu
-      li.eq-ui-nav-menu-item-icon
-        a.btn.btn-default.eq-ui-btn-flat.eq-ui-btn-fab.eq-ui-btn-menu-fab.eq-ui-waves
-          i.mdi.mdi-dots-vertical.icon
-
-// Panel
-.eq-ui-card
-  .eq-ui-card-supporting-text
-    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet eros quis sapien mollis congue eu a libero. Fusce blandit purus vel est sodales, consequat gravida felis condimentum. Suspendisse quis odio pulvinar neque condimentum congue ut et nisl. Cras nec neque eu urna euismod iaculis. Mauris facilisis arcu at eros porttitor, non consectetur ante rhoncus.
+        </div>
 
 
 
+</div>
+<div class="row">
+    <div class="col-md-12">
+            <h2 class="header">Roots Collection Content Model</h2>
+            <p></p>
+
+<pre><code>
+  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Post" # Used in the UI, ie.: "New Post"
+    folder: "_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Foo", name: "foo", widget: "foo"}
+    meta: # Meta data fields. Just like fields, but without any preview element
+      - {label: "Publish Date", name: "date", widget: "datetime"}
 
 </code></pre>
 
-</div>
-<div id="eq-ui-tab-s1-t2" class="col-md-12">
+<p>On <code class="language-markup">app.coffee</code> add this following lines on <code class="language-markup">extensions[]</code></p>
+<p>Example:</p>
+<pre>
+  <code>
+    extensions: [ collections(folder: '_posts', layout: 'post')]
+  </code>
 
- <pre><code class="language-markup">
-&lt;!-- Basic --&gt;
-&lt;div class=&quot;eq-ui-card&quot;&gt;
-    &lt;div class=&quot;eq-ui-card-title&quot;&gt;
-        &lt;h2 class=&quot;eq-ui-card-title-text&quot;&gt;Welcome&lt;/h2&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;eq-ui-card-supporting-text&quot;&gt;
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Mauris sagittis pellentesque lacus eleifend lacinia...
-    &lt;/div&gt;
-    &lt;div class=&quot;eq-ui-card-actions eq-ui-card-border&quot;&gt;
-        &lt;a class=&quot;btn btn-default eq-ui-btn-flat eq-ui-waves eq-ui-secondary-color-text&quot;&gt;Get Started&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;eq-ui-card-menu&quot;&gt;
-        &lt;ul class=&quot;right eq-ui-nav-menu&quot;&gt;
-            &lt;li class=&quot;eq-ui-nav-menu-item-icon&quot;&gt;
-                &lt;a class=&quot;btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves&quot;&gt;
-                    &lt;i class=&quot;mdi mdi-dots-vertical icon&quot;&gt;&lt;/i&gt;
-                &lt;/a&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+</pre>
 
-&lt;!-- Panel --&gt;
-&lt;div class=&quot;eq-ui-card&quot;&gt;
-    &lt;div class=&quot;eq-ui-card-supporting-text&quot;&gt;
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet eros quis sapien mollis congue eu a libero. Fusce blandit purus vel est sodales, consequat gravida felis condimentum. Suspendisse quis odio pulvinar neque condimentum congue ut et nisl. Cras nec neque eu urna euismod iaculis. Mauris facilisis arcu at eros porttitor, non consectetur ante rhoncus.
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-</div>
-
-<!-- Tab end-->
-
-
-        </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="header">With Image</h2>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="eq-ui-card doc-card-head-image doc-margin-bottom">
-                        <div class="eq-ui-card-title">
-                            <h2 class="eq-ui-card-title-text">Welcome</h2>
-                        </div>
-                        <div class="eq-ui-card-supporting-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Mauris sagittis pellentesque lacus eleifend lacinia...
-                        </div>
-                        <div class="eq-ui-card-actions eq-ui-card-border">
-                            <a class="btn btn-default eq-ui-btn-flat eq-ui-waves eq-ui-secondary-color-text">Get Started</a>
-                        </div>
-                        <div class="eq-ui-card-menu">
-                            <ul class="right eq-ui-nav-menu">
-                                <li class="eq-ui-nav-menu-item-icon">
-                                    <a class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
-                                        <i class="mdi mdi-dots-vertical icon"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6"></div>
-            </div>
-
-            <!-- Tab start-->
-            <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t3">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t4">HTML</a></li>
-
-       </ul>
-   </div>
 </div>
 
-<div id="eq-ui-tab-s1-t3" class="col-md-12">
-               <pre><code class="language-jade">
-.eq-ui-card
-  .eq-ui-card-title
-    h2.eq-ui-card-title-text Welcome
-  .eq-ui-card-supporting-text
-    | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    | Mauris sagittis pellentesque lacus eleifend lacinia...
-  .eq-ui-card-actions.eq-ui-card-border
-    a.btn.btn-default.eq-ui-btn-flat.eq-ui-waves.eq-ui-secondary-color-text Get Started
-  .eq-ui-card-menu
-    ul.right.eq-ui-nav-menu
-      li.eq-ui-nav-menu-item-icon
-        a.btn.btn-default.eq-ui-btn-flat.eq-ui-btn-fab.eq-ui-btn-menu-fab.eq-ui-waves
-          i.mdi.mdi-dots-vertical.icon
+<div class="row">
+    <div class="col-md-12">
+            <h2 class="header">Roots Records Content Model</h2>
+            <p></p>
 
-
-
-
+<pre><code>
+  - name: "settings"
+      label: "Settings"
+      files:
+        - name: "general"
+          label: "General settings"
+          file: "data/general.json"
+          fields:
+            - {label: "Main site title", name: "site_title", widget: "string"}
+            - {label: "Number of fronpage posts", name: "post_count", widget: "number"}
+            - {label: "Site cover image", name: "cover", widget: "image"}
 
 </code></pre>
 
-</div>
-<div id="eq-ui-tab-s1-t4" class="col-md-12">
+<p>On <code class="language-markup">app.coffee</code> add this following lines on <code class="language-markup">extensions[]</code></p>
+<p>Example:</p>
+<pre>
+  <code>
+    extensions: [ records(
 
- <pre><code class="language-markup">
-&lt;div class=&quot;eq-ui-card&quot;&gt;
-    &lt;div class=&quot;eq-ui-card-title&quot;&gt;
-        &lt;h2 class=&quot;eq-ui-card-title-text&quot;&gt;Welcome&lt;/h2&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;eq-ui-card-supporting-text&quot;&gt;
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Mauris sagittis pellentesque lacus eleifend lacinia...
-    &lt;/div&gt;
-    &lt;div class=&quot;eq-ui-card-actions eq-ui-card-border&quot;&gt;
-        &lt;a class=&quot;btn btn-default eq-ui-btn-flat eq-ui-waves eq-ui-secondary-color-text&quot;&gt;Get Started&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;eq-ui-card-menu&quot;&gt;
-        &lt;ul class=&quot;right eq-ui-nav-menu&quot;&gt;
-            &lt;li class=&quot;eq-ui-nav-menu-item-icon&quot;&gt;
-                &lt;a class=&quot;btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves&quot;&gt;
-                    &lt;i class=&quot;mdi mdi-dots-vertical icon&quot;&gt;&lt;/i&gt;
-                &lt;/a&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+      general: { file: "data/general.json"}
 
-</div>
+    )]
+  </code>
 
-<!-- Tab end-->
+</pre>
 
-
-        </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-
-            <div class="row">
-                <div class="col-md-6">
-                    <h2 class="header">With Table</h2>
-
-                    <div class="eq-ui-card eq-ui-card-with-table doc-margin-bottom">
-                        <div class="eq-ui-card-title">
-                            <h2 class="eq-ui-card-title-text">List Materials</h2>
-                        </div>
-                        <table class="table eq-ui-data-table eq-ui-data-table-js eq-ui-with-checkbox">
-                            <thead>
-                            <tr>
-                                <th>
-                                    <input type="checkbox" class="eq-ui-input filled-in" id="checkbox-all" />
-                                    <label for="checkbox-all"></label>
-                                </th>
-                                <th class="eq-ui-data-table-cell-non-numeric">Material</th>
-                                <th>Quantity</th>
-                                <th>Unit price</th>
-                            </tr>
-                            </thead>
-
-                            <tbody>
-                            <tr>
-                                <td>
-                                    <input type="checkbox" class="eq-ui-input filled-in" id="checkbox-1" />
-                                    <label for="checkbox-1"></label>
-                                </td>
-                                <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
-                                <td>25</td>
-                                <td>$2.90</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="checkbox" class="eq-ui-input filled-in" id="checkbox-2" />
-                                    <label for="checkbox-2"></label>
-                                </td>
-                                <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
-                                <td>50</td>
-                                <td>$1.25</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="checkbox" class="eq-ui-input filled-in" id="checkbox-3" />
-                                    <label for="checkbox-3"></label>
-                                </td>
-                                <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
-                                <td>10</td>
-                                <td>$2.35</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <div class="eq-ui-card-actions eq-ui-card-border">
-                            <ul class="right eq-ui-nav-menu">
-                                <li>Rows per page:</li>
-                                <li><a href="#">10<i class="mdi mdi-menu-down icon icon-right" style="margin-left: 5px;"></i></a></li>
-                                <li><a>1 - 3 of 100</a></li>
-                                <li class="eq-ui-nav-menu-item-icon">
-                                    <a class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
-                                        <i class="mdi mdi-chevron-left icon"></i>
-                                    </a>
-                                </li>
-                                <li class="eq-ui-nav-menu-item-icon">
-                                    <a class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
-                                        <i class="mdi mdi-chevron-right icon"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="eq-ui-card-menu">
-                            <ul class="right eq-ui-nav-menu">
-                                <li class="eq-ui-nav-menu-item-icon">
-                                    <div class="eq-ui-search eq-ui-search-expandable">
-                                        <input type="text" placeholder="Search">
-                                        <a class="eq-ui-search-icon-left eq-ui-serach-expandable-show btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
-                                            <i class="mdi mdi mdi-magnify icon"></i>
-                                        </a>
-                                        <i class="eq-ui-search-clear mdi mdi-close icon icon-right icon-18"></i>
-                                    </div>
-                                </li>
-                                <li class="eq-ui-nav-menu-item-icon">
-                                    <a class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
-                                        <i class="mdi mdi-filter-variant icon"></i>
-                                    </a>
-                                </li>
-                                <li class="eq-ui-nav-menu-item-icon">
-                                    <a class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
-                                        <i class="mdi mdi-dots-vertical icon"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <h2 class="header">With List</h2>
-
-                    <div class="eq-ui-card eq-ui-card-with-list doc-margin-bottom">
-                        <div class="eq-ui-card-title eq-ui-card-border">
-                            <h2 class="eq-ui-card-title-text">Messages</h2>
-                        </div>
-                        <ul class="eq-ui-list eq-ui-hoverable">
-
-                            <li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-truncate eq-ui-list-secondary-content">
-                                <img class="circle" src="assets/img/doc/avatar/avatar_1.jpg">
-                                <div class="eq-ui-list-body">
-                                    <h6 class="eq-ui-list-title">Title</h6>
-                                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
-                                </div>
-                                <a class="eq-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle icon icon-18"></i></a>
-                            </li>
-
-                            <li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-truncate eq-ui-list-secondary-content">
-                                <img class="circle" src="assets/img/doc/avatar/avatar_2.jpg">
-                                <div class="eq-ui-list-body">
-                                    <h6 class="eq-ui-list-title">Title</h6>
-                                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
-                                </div>
-                                <a class="eq-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle icon icon-18"></i></a>
-                            </li>
-
-                            <li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-truncate eq-ui-list-secondary-content">
-                                <img class="circle" src="assets/img/doc/avatar/avatar_3.jpg">
-                                <div class="eq-ui-list-body">
-                                    <h6 class="eq-ui-list-title">Title</h6>
-                                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
-                                </div>
-                                <a class="eq-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle icon icon-18"></i></a>
-                            </li>
-
-                        </ul>
-                        <div class="eq-ui-card-actions eq-ui-card-border center">
-                            <a class="btn btn-default eq-ui-btn-flat eq-ui-waves shades-text-black">View all</a>
-                        </div>
-                        <div class="eq-ui-card-menu">
-                            <ul class="right eq-ui-nav-menu">
-                                <li class="eq-ui-nav-menu-item-icon">
-                                    <a class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
-                                        <i class="mdi mdi-check-all icon"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Tab start-->
-            <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t5">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t6">HTML</a></li>
-
-       </ul>
-   </div>
-</div>
-
-<div id="eq-ui-tab-s1-t5" class="col-md-12">
-               <pre><code class="language-jade">
-// With Table
-.eq-ui-card.eq-ui-card-with-table
-  .eq-ui-card-title
-    h2.eq-ui-card-title-text List Materials
-  table.table.eq-ui-data-table.eq-ui-with-checkbox
-    thead
-      tr
-        th
-          input#checkbox-all.eq-ui-input.filled-in(type='checkbox')
-          label(for='checkbox-all')
-        th.eq-ui-data-table-cell-non-numeric Material
-        th Quantity
-        th Unit price
-    tbody
-      tr
-        td
-          input#checkbox-1.eq-ui-input.filled-in(type='checkbox')
-          label(for='checkbox-1')
-        td.eq-ui-data-table-cell-non-numeric Acrylic (Transparent)
-        td 25
-        td $2.90
-      tr
-        td
-          input#checkbox-2.eq-ui-input.filled-in(type='checkbox')
-          label(for='checkbox-2')
-        td.eq-ui-data-table-cell-non-numeric Plywood (Birch)
-        td 50
-        td $1.25
-      tr
-        td
-          input#checkbox-3.eq-ui-input.filled-in(type='checkbox')
-          label(for='checkbox-3')
-        td.eq-ui-data-table-cell-non-numeric Laminate (Gold on Blue)
-        td 10
-        td $2.35
-  .eq-ui-card-actions.eq-ui-card-border
-    ul.right.eq-ui-nav-menu
-      li Rows per page:
-      li
-        a(href='#')
-          | 10
-          i.mdi.mdi-menu-down.icon.icon-right(style='margin-left: 5px;')
-      li
-        a 1 - 3 of 100
-      li.eq-ui-nav-menu-item-icon
-        a.btn.btn-default.eq-ui-btn-flat.eq-ui-btn-fab.eq-ui-btn-menu-fab.eq-ui-waves
-          i.mdi.mdi-chevron-left.icon
-      li.eq-ui-nav-menu-item-icon
-        a.btn.btn-default.eq-ui-btn-flat.eq-ui-btn-fab.eq-ui-btn-menu-fab.eq-ui-waves
-          i.mdi.mdi-chevron-right.icon
-  .eq-ui-card-menu
-    ul.right.eq-ui-nav-menu
-      li.eq-ui-nav-menu-item-icon
-        .eq-ui-search.eq-ui-search-expandable
-          input(type='text', placeholder='Search')
-          a.eq-ui-search-icon-left.eq-ui-serach-expandable-show.btn.btn-default.eq-ui-btn-flat.eq-ui-btn-fab.eq-ui-btn-menu-fab.eq-ui-waves
-            i.mdi.mdi.mdi-magnify.icon
-          i.eq-ui-search-clear.mdi.mdi-close.icon.icon-right.icon-18
-      li.eq-ui-nav-menu-item-icon
-        a.btn.btn-default.eq-ui-btn-flat.eq-ui-btn-fab.eq-ui-btn-menu-fab.eq-ui-waves
-          i.mdi.mdi-filter-variant.icon
-      li.eq-ui-nav-menu-item-icon
-        a.btn.btn-default.eq-ui-btn-flat.eq-ui-btn-fab.eq-ui-btn-menu-fab.eq-ui-waves
-          i.mdi.mdi-dots-vertical.icon
-
-// With List
-.eq-ui-card.eq-ui-card-with-list
-  .eq-ui-card-title.eq-ui-card-border
-    h2.eq-ui-card-title-text Messages
-  ul.eq-ui-list.eq-ui-hoverable
-    li.eq-ui-list-item.eq-ui-list-avatar.eq-ui-list-truncate.eq-ui-list-secondary-content
-      img.circle(src='assets/img/doc/avatar/avatar_1.jpg')
-      .eq-ui-list-body
-        h6.eq-ui-list-title Title
-        | Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
-      a.eq-ui-list-secondary-content-body.shades-text-black-hover
-        i.mdi.mdi-close-circle.icon.icon-18
-    li.eq-ui-list-item.eq-ui-list-avatar.eq-ui-list-truncate.eq-ui-list-secondary-content
-      img.circle(src='assets/img/doc/avatar/avatar_2.jpg')
-      .eq-ui-list-body
-        h6.eq-ui-list-title Title
-        | Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
-      a.eq-ui-list-secondary-content-body.shades-text-black-hover
-        i.mdi.mdi-close-circle.icon.icon-18
-    li.eq-ui-list-item.eq-ui-list-avatar.eq-ui-list-truncate.eq-ui-list-secondary-content
-      img.circle(src='assets/img/doc/avatar/avatar_3.jpg')
-      .eq-ui-list-body
-        h6.eq-ui-list-title Title
-        | Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
-      a.eq-ui-list-secondary-content-body.shades-text-black-hover
-        i.mdi.mdi-close-circle.icon.icon-18
-  .eq-ui-card-actions.eq-ui-card-border.center
-    a.btn.btn-default.eq-ui-btn-flat.eq-ui-waves.shades-text-black View all
-  .eq-ui-card-menu
-    ul.right.eq-ui-nav-menu
-      li.eq-ui-nav-menu-item-icon
-        a.btn.btn-default.eq-ui-btn-flat.eq-ui-btn-fab.eq-ui-btn-menu-fab.eq-ui-waves
-          i.mdi.mdi-check-all.icon
-
-
-
-
-
-
-</code></pre>
-
-</div>
-<div id="eq-ui-tab-s1-t6" class="col-md-12">
-
-<pre><code class="language-markup">
-&lt;!--  With Table --&gt;
-&lt;div class=&quot;eq-ui-card eq-ui-card-with-table&quot;&gt;
-    &lt;div class=&quot;eq-ui-card-title&quot;&gt;
-        &lt;h2 class=&quot;eq-ui-card-title-text&quot;&gt;List Materials&lt;/h2&gt;
-    &lt;/div&gt;
-    &lt;table class=&quot;table eq-ui-data-table eq-ui-with-checkbox&quot;&gt;
-        &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;
-                &lt;input type=&quot;checkbox&quot; class=&quot;eq-ui-input filled-in&quot; id=&quot;checkbox-all&quot; /&gt;
-                &lt;label for=&quot;checkbox-all&quot;&gt;&lt;/label&gt;
-            &lt;/th&gt;
-            &lt;th class=&quot;eq-ui-data-table-cell-non-numeric&quot;&gt;Material&lt;/th&gt;
-            &lt;th&gt;Quantity&lt;/th&gt;
-            &lt;th&gt;Unit price&lt;/th&gt;
-        &lt;/tr&gt;
-        &lt;/thead&gt;
-
-        &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;
-                &lt;input type=&quot;checkbox&quot; class=&quot;eq-ui-input filled-in&quot; id=&quot;checkbox-1&quot; /&gt;
-                &lt;label for=&quot;checkbox-1&quot;&gt;&lt;/label&gt;
-            &lt;/td&gt;
-            &lt;td class=&quot;eq-ui-data-table-cell-non-numeric&quot;&gt;Acrylic (Transparent)&lt;/td&gt;
-            &lt;td&gt;25&lt;/td&gt;
-            &lt;td&gt;$2.90&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;
-                &lt;input type=&quot;checkbox&quot; class=&quot;eq-ui-input filled-in&quot; id=&quot;checkbox-2&quot; /&gt;
-                &lt;label for=&quot;checkbox-2&quot;&gt;&lt;/label&gt;
-            &lt;/td&gt;
-            &lt;td class=&quot;eq-ui-data-table-cell-non-numeric&quot;&gt;Plywood (Birch)&lt;/td&gt;
-            &lt;td&gt;50&lt;/td&gt;
-            &lt;td&gt;$1.25&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;
-                &lt;input type=&quot;checkbox&quot; class=&quot;eq-ui-input filled-in&quot; id=&quot;checkbox-3&quot; /&gt;
-                &lt;label for=&quot;checkbox-3&quot;&gt;&lt;/label&gt;
-            &lt;/td&gt;
-            &lt;td class=&quot;eq-ui-data-table-cell-non-numeric&quot;&gt;Laminate (Gold on Blue)&lt;/td&gt;
-            &lt;td&gt;10&lt;/td&gt;
-            &lt;td&gt;$2.35&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;/tbody&gt;
-    &lt;/table&gt;
-    &lt;div class=&quot;eq-ui-card-actions eq-ui-card-border&quot;&gt;
-        &lt;ul class=&quot;right eq-ui-nav-menu&quot;&gt;
-            &lt;li&gt;Rows per page:&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;10&lt;i class=&quot;mdi mdi-menu-down icon icon-right&quot; style=&quot;margin-left: 5px;&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a&gt;1 - 3 of 100&lt;/a&gt;&lt;/li&gt;
-            &lt;li class=&quot;eq-ui-nav-menu-item-icon&quot;&gt;
-                &lt;a class=&quot;btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves&quot;&gt;
-                    &lt;i class=&quot;mdi mdi-chevron-left icon&quot;&gt;&lt;/i&gt;
-                &lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class=&quot;eq-ui-nav-menu-item-icon&quot;&gt;
-                &lt;a class=&quot;btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves&quot;&gt;
-                    &lt;i class=&quot;mdi mdi-chevron-right icon&quot;&gt;&lt;/i&gt;
-                &lt;/a&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;eq-ui-card-menu&quot;&gt;
-        &lt;ul class=&quot;right eq-ui-nav-menu&quot;&gt;
-            &lt;li class=&quot;eq-ui-nav-menu-item-icon&quot;&gt;
-                &lt;div class=&quot;eq-ui-search eq-ui-search-expandable&quot;&gt;
-                    &lt;input type=&quot;text&quot; placeholder=&quot;Search&quot;&gt;
-                    &lt;a class=&quot;eq-ui-search-icon-left eq-ui-serach-expandable-show btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves&quot;&gt;
-                        &lt;i class=&quot;mdi mdi mdi-magnify icon&quot;&gt;&lt;/i&gt;
-                    &lt;/a&gt;
-                    &lt;i class=&quot;eq-ui-search-clear mdi mdi-close icon icon-right icon-18&quot;&gt;&lt;/i&gt;
-                &lt;/div&gt;
-            &lt;/li&gt;
-            &lt;li class=&quot;eq-ui-nav-menu-item-icon&quot;&gt;
-                &lt;a class=&quot;btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves&quot;&gt;
-                    &lt;i class=&quot;mdi mdi-filter-variant icon&quot;&gt;&lt;/i&gt;
-                &lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class=&quot;eq-ui-nav-menu-item-icon&quot;&gt;
-                &lt;a class=&quot;btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves&quot;&gt;
-                    &lt;i class=&quot;mdi mdi-dots-vertical icon&quot;&gt;&lt;/i&gt;
-                &lt;/a&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;!--  With List --&gt;
-&lt;div class=&quot;eq-ui-card eq-ui-card-with-list&quot;&gt;
-    &lt;div class=&quot;eq-ui-card-title eq-ui-card-border&quot;&gt;
-        &lt;h2 class=&quot;eq-ui-card-title-text&quot;&gt;Messages&lt;/h2&gt;
-    &lt;/div&gt;
-    &lt;ul class=&quot;eq-ui-list eq-ui-hoverable&quot;&gt;
-
-        &lt;li class=&quot;eq-ui-list-item eq-ui-list-avatar eq-ui-list-truncate eq-ui-list-secondary-content&quot;&gt;
-            &lt;img class=&quot;circle&quot; src=&quot;assets/img/doc/avatar/avatar_1.jpg&quot;&gt;
-            &lt;div class=&quot;eq-ui-list-body&quot;&gt;
-                &lt;h6 class=&quot;eq-ui-list-title&quot;&gt;Title&lt;/h6&gt;
-                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
-            &lt;/div&gt;
-            &lt;a class=&quot;eq-ui-list-secondary-content-body shades-text-black-hover&quot;&gt;&lt;i class=&quot;mdi mdi-close-circle icon icon-18&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-        &lt;/li&gt;
-
-        &lt;li class=&quot;eq-ui-list-item eq-ui-list-avatar eq-ui-list-truncate eq-ui-list-secondary-content&quot;&gt;
-            &lt;img class=&quot;circle&quot; src=&quot;assets/img/doc/avatar/avatar_2.jpg&quot;&gt;
-            &lt;div class=&quot;eq-ui-list-body&quot;&gt;
-                &lt;h6 class=&quot;eq-ui-list-title&quot;&gt;Title&lt;/h6&gt;
-                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
-            &lt;/div&gt;
-            &lt;a class=&quot;eq-ui-list-secondary-content-body shades-text-black-hover&quot;&gt;&lt;i class=&quot;mdi mdi-close-circle icon icon-18&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-        &lt;/li&gt;
-
-        &lt;li class=&quot;eq-ui-list-item eq-ui-list-avatar eq-ui-list-truncate eq-ui-list-secondary-content&quot;&gt;
-            &lt;img class=&quot;circle&quot; src=&quot;assets/img/doc/avatar/avatar_3.jpg&quot;&gt;
-            &lt;div class=&quot;eq-ui-list-body&quot;&gt;
-                &lt;h6 class=&quot;eq-ui-list-title&quot;&gt;Title&lt;/h6&gt;
-                Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
-            &lt;/div&gt;
-            &lt;a class=&quot;eq-ui-list-secondary-content-body shades-text-black-hover&quot;&gt;&lt;i class=&quot;mdi mdi-close-circle icon icon-18&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-        &lt;/li&gt;
-
-    &lt;/ul&gt;
-    &lt;div class=&quot;eq-ui-card-actions eq-ui-card-border center&quot;&gt;
-        &lt;a class=&quot;btn btn-default eq-ui-btn-flat eq-ui-waves shades-text-black&quot;&gt;View all&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;eq-ui-card-menu&quot;&gt;
-        &lt;ul class=&quot;right eq-ui-nav-menu&quot;&gt;
-            &lt;li class=&quot;eq-ui-nav-menu-item-icon&quot;&gt;
-                &lt;a class=&quot;btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves&quot;&gt;
-                    &lt;i class=&quot;mdi mdi-check-all icon&quot;&gt;&lt;/i&gt;
-                &lt;/a&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-</div>
-
-<!-- Tab end-->
-
-
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12">
-
-            <div class="row">
-                <div class="col-md-6">
-                    <h2 class="header">Image</h2>
-
-                    <div class="eq-ui-card eq-ui-card-image doc-card-image doc-margin-bottom">
-                        <div class="eq-ui-card-title eq-ui-card-title-expand"></div>
-                        <div class="eq-ui-card-actions">
-                            <span class="shades-text-white">Image.jpg</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <h2 class="header">Event</h2>
-
-                    <div class="eq-ui-card eq-ui-card-event eq-ui-primary-color doc-card-event doc-margin-bottom">
-                        <div class="eq-ui-card-title eq-ui-card-title-expand">
-                            <h4 class="shades-text-white">
-                                Featured event:<br>
-                                May 24, 2016<br>
-                                7-11pm
-                            </h4>
-                        </div>
-                        <div class="eq-ui-card-actions eq-ui-card-border">
-                            <a class="btn btn-default eq-ui-btn-flat eq-ui-waves shades-text-white">Add to Calendar</a>
-                            <i class="mdi mdi-calendar icon icon-right icon-24 shades-text-white"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
- <!-- Tab start-->
-            <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t7">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t8">HTML</a></li>
-
-       </ul>
-   </div>
-</div>
-
-<div id="eq-ui-tab-s1-t7" class="col-md-12">
-               <pre><code class="language-jade">
-// Image
-.eq-ui-card.eq-ui-card-image
-  .eq-ui-card-title.eq-ui-card-title-expand
-  .eq-ui-card-actions
-    span.shades-text-white Image.jpg
-
-// Event
-.eq-ui-card.eq-ui-card-event.eq-ui-primary-color
-  .eq-ui-card-title.eq-ui-card-title-expand
-    h4.shades-text-white
-      | Featured event:
-      br
-      | May 24, 2016
-      br
-      | 7-11pm
-  .eq-ui-card-actions.eq-ui-card-border
-    a.btn.btn-default.eq-ui-btn-flat.eq-ui-waves.shades-text-white Add to Calendar
-    i.mdi.mdi-calendar.icon.icon-right.icon-24.shades-text-white
-
-
-
-
-
-
-</code></pre>
-
-</div>
-<div id="eq-ui-tab-s1-t8" class="col-md-12">
-
-<pre><code class="language-markup">
-&lt;!-- Image --&gt;
-&lt;div class=&quot;eq-ui-card eq-ui-card-image&quot;&gt;
-    &lt;div class=&quot;eq-ui-card-title eq-ui-card-title-expand&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;eq-ui-card-actions&quot;&gt;
-        &lt;span class=&quot;shades-text-white&quot;&gt;Image.jpg&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;!-- Event --&gt;
- &lt;div class=&quot;eq-ui-card eq-ui-card-event eq-ui-primary-color&quot;&gt;
-    &lt;div class=&quot;eq-ui-card-title eq-ui-card-title-expand&quot;&gt;
-        &lt;h4 class=&quot;shades-text-white&quot;&gt;
-            Featured event:&lt;br&gt;
-            May 24, 2016&lt;br&gt;
-            7-11pm
-        &lt;/h4&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;eq-ui-card-actions eq-ui-card-border&quot;&gt;
-        &lt;a class=&quot;btn btn-default eq-ui-btn-flat eq-ui-waves shades-text-white&quot;&gt;Add to Calendar&lt;/a&gt;
-        &lt;i class=&quot;mdi mdi-calendar icon icon-right icon-24 shades-text-white&quot;&gt;&lt;/i&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-</div>
-
-<!-- Tab end-->
-
-
-        </div>
-    </div>
 
 </div>
 <!--footer>
@@ -1493,10 +894,7 @@
     </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
 <script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
 <script src="assets/js/exentriq-bootstrap-material-ui.js?v=0.0.0"></script>
-<<<<<<< HEAD
-=======
 
->>>>>>> develop
 
 <script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
 <script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>

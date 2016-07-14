@@ -37,7 +37,7 @@
 
 		// Init Waves
         Waves.init();
-        Waves.attach('.eq-ui-waves', ['waves-effect']);
+        Waves.attach('.eq-ui-waves', '' ['waves-effect']);
         Waves.attach('.eq-ui-waves-light', ['waves-effect', 'waves-light']);
 
 		// Resize
@@ -51,6 +51,6 @@
             // Update
             _this.load();
 	    });
-	    
+
 	});
 }( jQuery ));
