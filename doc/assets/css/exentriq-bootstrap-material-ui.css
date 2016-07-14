@@ -23004,4 +23004,8 @@ html.is-touch .eq-ui-dropdown li > a:not(.active):hover {
  position: relative;
 }
 
+.eq-ui-scrollbar-wrap.common ul.eq-ui-tabs{
+position: relative;
+}
+
 /*# sourceMappingURL=exentriq-bootstrap-material-ui.css.map */
