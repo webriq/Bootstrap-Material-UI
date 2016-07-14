@@ -797,67 +797,69 @@
                     </div>
                 </div>
             </form>
-
+            
 <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
 
-       </ul>
-   </div>
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t1" class="col-md-12">
 <pre><code class="language-jade">
-form
-  .row
-    .col-md-6
+html
+  body
+    form
+      .row
+        .col-md-6
+          .row
+            .col-md-12
+              .eq-ui-form-group.eq-ui-input-field
+                input#first_name.eq-ui-input(type='text')
+                label(for='first_name') First Name
+        .col-md-6
+          .row
+            .col-md-12
+              .eq-ui-form-group.eq-ui-input-field
+                input#last_name.eq-ui-input(type='text')
+                label(for='last_name') Last Name
       .row
         .col-md-12
           .eq-ui-form-group.eq-ui-input-field
-            input#first_name.eq-ui-input(type='text')
-            label(for='first_name') First Name
-    .col-md-6
+            input#password.eq-ui-input(type='password')
+            label(for='password') Password
       .row
-        .col-md-12
-          .eq-ui-form-group.eq-ui-input-field
-            input#last_name.eq-ui-input(type='text')
-            label(for='last_name') Last Name
-  .row
-    .col-md-12
-      .eq-ui-form-group.eq-ui-input-field
-        input#password.eq-ui-input(type='password')
-        label(for='password') Password
-  .row
-    .col-md-6
+        .col-md-6
+          .row
+            .col-md-12
+              .eq-ui-form-group.eq-ui-input-field
+                input#email.eq-ui-input(type='email')
+                label(for='email', data-error='wrong', data-success='right') Email
+        .col-md-6
+          .row
+            .col-md-12
+              .eq-ui-form-group.eq-ui-input-field
+                select#gender.eq-ui-select
+                  option(value='', disabled='', selected='') Choose your gender
+                  option(value='1') Male
+                  option(value='2') Female
+                label Gender
       .row
-        .col-md-12
-          .eq-ui-form-group.eq-ui-input-field
-            input#email.eq-ui-input(type='email')
-            label(for='email', data-error='wrong', data-success='right') Email
-    .col-md-6
-      .row
-        .col-md-12
-          .eq-ui-form-group.eq-ui-input-field
-            select#gender.eq-ui-select
-              option(value='', disabled='', selected='') Choose your gender
-              option(value='1') Male
-              option(value='2') Female
-            label Gender
-  .row
-    .col-md-6
-      .row
-        .col-md-12
-          .eq-ui-form-group.eq-ui-input-field
-            input#country.eq-ui-input(placeholder='Placeholder', type='text')
-            label(for='country') Country
-    .col-md-6
-      .row
-        .col-md-12
-          .eq-ui-form-group.eq-ui-input-field
-            input#disabled.eq-ui-input(type='text', value='I am not editable', disabled='')
-            label(for='disabled') Disabled
+        .col-md-6
+          .row
+            .col-md-12
+              .eq-ui-form-group.eq-ui-input-field
+                input#country.eq-ui-input(placeholder='Placeholder', type='text')
+                label(for='country') Country
+        .col-md-6
+          .row
+            .col-md-12
+              .eq-ui-form-group.eq-ui-input-field
+                input#disabled.eq-ui-input(type='text', value='I am not editable', disabled='')
+                label(for='disabled') Disabled
 </code></pre>
 
 </div>
@@ -944,9 +946,8 @@ form
     &lt;/div&gt;
 &lt;/form&gt;</code></pre>
 </div>
-</div>
 
-        
+        </div>
     </div>
 
     <div class="row">
@@ -965,13 +966,13 @@ form
             </form>
             
 <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t3">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t4">HTML</a></li>
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t3">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t4">HTML</a></li>
 
-       </ul>
-   </div>
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t3" class="col-md-12">
@@ -998,9 +999,8 @@ form
     &lt;/div&gt;
 &lt;/form&gt;</code></pre>
 </div>
-</div>
 
-        
+        </div>
     </div>
 
     <div class="row">
@@ -1042,15 +1042,15 @@ form
                     </div>
                 </div>
             </form>
-            
+        
 <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t5">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t6">HTML</a></li>
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t5">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t6">HTML</a></li>
 
-       </ul>
-   </div>
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t5" class="col-md-12">
@@ -1118,9 +1118,8 @@ form
     &lt;/div&gt;
 &lt;/form&gt;</code></pre>
 </div>
-</div>
 
-        
+        </div>
     </div>
 
     <div class="row">
@@ -1137,15 +1136,15 @@ form
                     </div>
                 </div>
             </form>
-            
-<div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t7">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t8">HTML</a></li>
 
-       </ul>
-   </div>
+<div class="col-md-12">
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t7">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t8">HTML</a></li>
+
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t7" class="col-md-12">
@@ -1172,9 +1171,8 @@ form
     &lt;/div&gt;
 &lt;/form&gt;</code></pre>
 </div>
-</div>
 
-        
+        </div>
     </div>
 
     <div id="forms-select" class="row">
@@ -1198,13 +1196,13 @@ form
             </form>
 
 <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t9">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t10">HTML</a></li>
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t9">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t10">HTML</a></li>
 
-       </ul>
-   </div>
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t9" class="col-md-12">
@@ -1231,7 +1229,6 @@ form
     &lt;label&gt;Normal Select&lt;/label&gt;
 &lt;/div&gt;</code></pre>
 </div>
-</div>
 
             <br><br>
 
@@ -1252,13 +1249,13 @@ form
             </form>
 
 <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t11">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t12">HTML</a></li>
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t11">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t12">HTML</a></li>
 
-       </ul>
-   </div>
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t11" class="col-md-12">
@@ -1285,7 +1282,6 @@ form
     &lt;label&gt;Multiple Select&lt;/label&gt;
 &lt;/div&gt;</code></pre>
 </div>
-</div>
 
             <br><br>
 
@@ -1307,13 +1303,13 @@ form
             </form>
 
 <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t13">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t14">HTML</a></li>
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t13">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t14">HTML</a></li>
 
-       </ul>
-   </div>
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t13" class="col-md-12">
@@ -1342,7 +1338,6 @@ form
     &lt;label&gt;Browser Select&lt;/label&gt;
 &lt;/div&gt;</code></pre>
 </div>
-
 
             <br><br>
 
@@ -1379,14 +1374,15 @@ form
                 </div>
             </form>
 
-<div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t15">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t16">HTML</a></li>
 
-       </ul>
-   </div>
+<div class="col-md-12">
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t15">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t16">HTML</a></li>
+
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t15" class="col-md-12">
@@ -1415,9 +1411,8 @@ select.eq-ui-select(disabled='')
 ...</code></pre>
 </div>
 
-
-       
-    
+        </div>
+    </div>
 
     <div id="forms-search" class="row">
 
@@ -1462,13 +1457,13 @@ select.eq-ui-select(disabled='')
         </div>
 
 <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t17">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t18">HTML</a></li>
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t17">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t18">HTML</a></li>
 
-       </ul>
-   </div>
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t17" class="col-md-12">
@@ -1524,6 +1519,7 @@ form
 &lt;/form&gt;</code></pre>
 </div>
 
+    </div>
 
     <div class="row">
         <div class="col-md-12">
@@ -1551,15 +1547,15 @@ form
                     </div>
                 </div>
             </form>
-          
+            
 <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t19">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t20">HTML</a></li>
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t19">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t20">HTML</a></li>
 
-       </ul>
-   </div>
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t19" class="col-md-12">
@@ -1608,10 +1604,8 @@ form
 &lt;/form&gt;</code></pre>
 </div>
 
-
-       
-    
-    
+        </div>
+    </div>
 
     <div class="row">
         <div class="col-md-12">
@@ -1647,15 +1641,15 @@ form
                     </div>
                 </div>
             </form>
-
+          
 <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t21">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t22">HTML</a></li>
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t21">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t22">HTML</a></li>
 
-       </ul>
-   </div>
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t21" class="col-md-12">
@@ -1717,7 +1711,6 @@ form
     &lt;/div&gt;
 &lt;/form&gt;</code></pre>
 </div>
-</div>
 
         </div>
     </div>
@@ -1754,15 +1747,15 @@ form
                     </div>
                 </div>
             </form>
-        
-<div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t23">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t24">HTML</a></li>
 
-       </ul>
-   </div>
+<div class="col-md-12">
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t23">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t24">HTML</a></li>
+
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t23" class="col-md-12">
@@ -1819,7 +1812,6 @@ form
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/form&gt;</code></pre>
-</div>
 </div>
 
         </div>
@@ -1895,18 +1887,18 @@ form
             <p>Sample autocomplete</p>
 
 <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t25">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t26">HTML</a></li>
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t25">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t26">HTML</a></li>
 
-       </ul>
-   </div>
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t25" class="col-md-12">
 <pre><code class="language-jade">
-| !-- Search -->
+// Search
 form.doc-form
   .row
     .col-md-12
@@ -1975,19 +1967,19 @@ form.doc-form
     &lt;/div&gt;
 &lt;/form&gt;</code></pre>
 </div>
-</div>
 
     <br>
     <p>Sample usage</p>
 
-<div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t27">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t28">HTML</a></li>
 
-       </ul>
-   </div>
+<div class="col-md-12">
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t27">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t28">HTML</a></li>
+
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t27" class="col-md-12">
@@ -2068,6 +2060,9 @@ form.doc-form
     });</code></pre>
 </div>
 
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-md-12">
             <h2 class="header">File Input</h2>
@@ -2089,14 +2084,15 @@ form.doc-form
                 </div>
             </form>
 
-<div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t29">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t30">HTML</a></li>
 
-       </ul>
-   </div>
+<div class="col-md-12">
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t29">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t30">HTML</a></li>
+
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t29" class="col-md-12">
@@ -2132,7 +2128,6 @@ form(action='#')
 &lt;/form&gt;</code></pre>
 </div>
 
-
             <br>
 
             <p>Multiple upload</p>
@@ -2154,13 +2149,13 @@ form(action='#')
             </form>
 
 <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t31">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t32">HTML</a></li>
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t31">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t32">HTML</a></li>
 
-       </ul>
-   </div>
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t31" class="col-md-12">
@@ -2196,7 +2191,6 @@ form(action='#')
 &lt;/form&gt;</code></pre>
 </div>
 
-
             <h2 class="header">File Input - Image Preview</h2>
             <p>Image preview for upload</p>
 
@@ -2231,13 +2225,13 @@ form(action='#')
             </form>
 
 <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t33">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t34">HTML</a></li>
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t33">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t34">HTML</a></li>
 
-       </ul>
-   </div>
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t33" class="col-md-12">
@@ -2294,7 +2288,6 @@ form(action='#')
 &lt;/form&gt;</code></pre>
 </div>
 
-
         </div>
     </div>
 
@@ -2311,15 +2304,15 @@ form(action='#')
             </ul>
 
             <p>Sample drop zone</p>
-          
+           
 <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t35">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t36">HTML</a></li>
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t35">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t36">HTML</a></li>
 
-       </ul>
-   </div>
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t35" class="col-md-12">
@@ -2344,18 +2337,17 @@ ul.eq-ui-list.eq-ui-file-upload-drop-zone
 &lt;/ul&gt;</code></pre>
 </div>
 
-
             <br>
             <p>Sample usage</p>
 
 <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t37">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t38">HTML</a></li>
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t37">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t38">HTML</a></li>
 
-       </ul>
-   </div>
+        </ul>
+    </div>
 </div>
 
 <div id="eq-ui-tab-s1-t37" class="col-md-12">
@@ -2391,7 +2383,6 @@ $(document).ready(function(){
 
 });</code></pre>
 </div>
-
 
         </div>
     </div>
