@@ -833,7 +833,40 @@
             <h2 class="header">Structure</h2>
             <p>Add class <code class="language-markup">dropdown-trigger</code> for trigger element. And add target id for dropdown in <code class="language-markup">data-target</code> attr.</p>
 
-            <pre><code class="language-markup">
+            <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t1" class="col-md-12">
+               <pre><code class="language-jade">
+// Dropdown Trigger
+a.btn.btn-default.eq-ui-waves.dropdown-trigger(data-target='dropdown-test1')
+
+// Dropdown Structure
+ul#dropdown-test1.eq-ui-dropdown
+  li
+    a(href='#!') Some Action
+  li.disabled
+    a(href='#!') Disabled Action
+  li
+    a.active(href='#!') Item Active
+  li
+    a(href='#!') Another Action
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t2" class="col-md-12">
+
+
+<pre><code class="language-markup">
 &lt;!-- Dropdown Trigger --&gt;
 &lt;a data-target=&quot;dropdown-test1&quot; class=&quot;btn btn-default eq-ui-waves dropdown-trigger&quot;&gt;&lt;/a&gt;
 
@@ -844,6 +877,12 @@
     &lt;li&gt;&lt;a href=&quot;#!&quot; class=&quot;active&quot;&gt;Item Active&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+        </div>
+
+<!-- Tab end-->
+
+
+
         </div>
     </div>
 
@@ -901,7 +940,81 @@
         <div class="col-md-12">
             <p>Structure for sub menu.</p>
 
-            <pre><code class="language-markup">
+            <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t3">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t4">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t3" class="col-md-12">
+               <pre><code class="language-jade">
+// Dropdown Trigger
+a.btn.btn-default.eq-ui-waves.dropdown-trigger(data-target='dropdown-test5')
+// Dropdown Structure
+ul#dropdown-test5.eq-ui-dropdown
+  li
+    a(href='#!')
+      i.mdi.mdi-home.icon
+      |  Some Action
+  li
+    a(href='#!')
+      i.mdi.mdi-puzzle.icon
+      |  Another Action
+  li.divider
+  li
+    i.mdi.mdi-menu-right.icon
+    // Dropdown Trigger
+    a.dropdown-trigger(data-target='dropdown-test5-sub')
+      i.mdi.mdi-layers.icon
+      |  Another Action
+    // Dropdown Sub
+    ul#dropdown-test5-sub.eq-ui-dropdown
+      li
+        a(href='#!')
+          i.mdi.mdi-home.icon
+          |  Some Action
+      li
+        a(href='#!')
+          i.mdi.mdi-puzzle.icon
+          |  Another Action
+      li
+        i.mdi.mdi-menu-right.icon
+        // Dropdown Trigger
+        a.dropdown-trigger(data-target='dropdown-test5-sub2')
+          i.mdi.mdi-layers.icon
+          |  Another Action
+        // Dropdown Sub
+        ul#dropdown-test5-sub2.eq-ui-dropdown
+          li
+            a(href='#!')
+              i.mdi.mdi-home.icon
+              |  Some Action
+          li
+            a(href='#!')
+              i.mdi.mdi-layers.icon
+              |  Another Action
+          li
+            a(href='#!')
+              i.mdi.mdi-settings.icon
+              |  Yet Another Action
+  li
+    a(href='#!')
+      i.mdi.mdi-settings.icon
+      |  Yet Another Action
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t4" class="col-md-12">
+
+
+<pre><code class="language-markup">
 &lt;!-- Dropdown Trigger --&gt;
 &lt;a data-target=&quot;dropdown-test5&quot; class=&quot;btn btn-default eq-ui-waves dropdown-trigger&quot;&gt;&lt;/a&gt;
 
@@ -937,6 +1050,11 @@
     &lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;&lt;i class=&quot;mdi mdi-settings icon&quot;&gt;&lt;/i&gt; Yet Another Action&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+        </div>
+
+<!-- Tab end-->
+
+
         </div>
     </div>
 
@@ -978,9 +1096,38 @@
 
             <p>To use these inline you have to add them as data attributes.</p>
 
-            <pre><code class="language-markup">
+
+             <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t5">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t6">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t5" class="col-md-12">
+               <pre><code class="language-jade">
+// Dropdown Trigger
+a.btn.btn-default.dropdown-trigger(data-target='dropdown-test3', data-hover='false', data-below-origin='true')
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t6" class="col-md-12">
+
+
+<pre><code class="language-markup">
 &lt;!-- Dropdown Trigger --&gt;
 &lt;a data-target=&quot;dropdown-test3&quot; data-hover=&quot;false&quot; data-below-origin=&quot;true&quot; class=&quot;btn btn-default dropdown-trigger&quot;&gt;&lt;/a&gt;</code></pre>
+        </div>
+
+<!-- Tab end-->
+
+
         </div>
     </div>
 
