@@ -846,7 +846,101 @@
                     </div>
                 </div>
             </form>
-            <pre><code class="language-markup">
+
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t1" class="col-md-12">
+               <pre><code class="language-jade">
+form#form-validation-test1
+  .row
+    .col-md-12
+      .eq-ui-form-group.eq-ui-input-field
+        input#username-test1.form-control.eq-ui-input(type='text', data-parsley-minlength='6', required='')
+        label(for='username-test1', data-error='Min length 6') Username
+  .row
+    .col-md-6
+      .row
+        .col-md-12
+          .eq-ui-form-group.eq-ui-input-field
+            input#first_name-test1.form-control.eq-ui-input(type='text', data-parsley-minlength='3')
+            label(for='first_name-test1', data-error='Min length 3') First Name
+    .col-md-6
+      .row
+        .col-md-12
+          .eq-ui-form-group.eq-ui-input-field
+            input#last_name-test1.form-control.eq-ui-input(type='text', data-parsley-minlength='3')
+            label(for='last_name-test1', data-error='Min length 3') Last Name
+  .row
+    .col-md-6
+      .row
+        .col-md-12
+          .eq-ui-form-group.eq-ui-input-field
+            input#password-test1.form-control.eq-ui-input(type='password', data-parsley-minlength='6', required='')
+            label(for='password-test1', data-error='Min length 6') Password
+    .col-md-6
+      .row
+        .col-md-12
+          .eq-ui-form-group.eq-ui-input-field
+            input#password-confirm-test1.form-control.eq-ui-input(type='password', data-parsley-minlength='6', data-parsley-equalto='#password-test1', required='')
+            label(for='password-confirm-test1', data-error='Min length 6 or Password not equal') Confirm Password
+  .row
+    .col-md-6
+      .row
+        .col-md-12
+          .eq-ui-form-group.eq-ui-input-field
+            input#email-test1.form-control.eq-ui-input(type='email', required='')
+            label(for='email-test1', data-error='Email not valid') Email
+    .col-md-6
+      .row
+        .col-md-12
+          .eq-ui-form-group.eq-ui-input-field
+            select#gender-test1.eq-ui-select(required='')
+              option(value='', disabled='', selected='') Choose your gender
+              option(value='1') Male
+              option(value='2') Female
+            label(data-error='Required') Gender
+  .row
+    .col-md-6
+      .row
+        .col-md-12
+          .eq-ui-form-group.eq-ui-input-field
+            input#city-test1.form-control.eq-ui-input(type='text', required='')
+            label(for='city-test1', data-error='Required') City
+    .col-md-6
+      .row
+        .col-md-12
+          .eq-ui-form-group.eq-ui-input-field
+            input#country-test1.form-control.eq-ui-input(type='text', required='')
+            label(for='country-test1', data-error='Required') Country
+  .row
+    .col-md-12
+      .eq-ui-form-group.eq-ui-input-field
+        input#agree-test1.eq-ui-input.filled-in(type='checkbox', data-parsley-class-handler='#agree-test1', required='')
+        label(for='agree-test1') I agree to the terms and conditions
+  .row
+    .col-md-12
+      .eq-ui-form-group.eq-ui-input-field
+        a#form-validation-test1-submit.btn.btn-primary.eq-ui-waves-light Submit
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t2" class="col-md-12">
+
+
+ <pre><code class="language-markup">
 &lt;form id=&quot;form-validation-test1&quot;&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-md-12&quot;&gt;
@@ -964,6 +1058,11 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/form&gt;</code></pre>
+        </div>
+
+<!-- Tab end-->
+
+
         </div>
     </div>
 
