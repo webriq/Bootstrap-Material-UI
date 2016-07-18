@@ -309,12 +309,12 @@ module.exports = function ( grunt ) {
         },
 
         // Jade
-        jade: {
+        pug: {
             compile: {
                 options: {
                     pretty: true,
                     data: {
-                        debug: true
+                        debug: false
                     }
                 },
                 files: {
@@ -476,7 +476,7 @@ module.exports = function ( grunt ) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-sass');
 
-    grunt.loadNpmTasks('grunt-contrib-jade');
+    grunt.loadNpmTasks('grunt-contrib-pug');
 
     /**
     * Register Grunt tasks.
@@ -488,7 +488,7 @@ module.exports = function ( grunt ) {
 
     grunt.registerTask('sass_compile', ['sass:dist', 'postcss:dist', 'cssmin:dist', 'copy:css', 'notify:sass_compile']);
     grunt.registerTask('js_compile', ['jshint:beforeconcat', 'concat:dist', 'concat:dist_without_libs', 'uglify:dist', 'uglify:dist_without_libs', 'copy:js', 'notify:js_compile']);
-    grunt.registerTask('jade_compile', ['jade:compile', 'notify:jade_compile']);
+    grunt.registerTask('jade_compile', ['pug:compile', 'notify:jade_compile']);
 
     grunt.registerTask('server', ['browserSync', 'notify:server']);
 
