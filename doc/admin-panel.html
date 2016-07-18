@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
-    <title>Admin Panel | Exentriq - Bootstrap Material UI</title>
+    <title>Admin Panel | WebriQ - Bootstrap Material UI</title>
     <!-- CSS-->
     <link rel="icon" href="assets/img/doc/logo@xs.png" type="image/*">
     <link href="assets/css/webriq-bootstrap-material-ui.css?v=0.0.0" rel="stylesheet">
@@ -732,21 +732,21 @@
 
              <p>Add a <code class="language-markup">config.yml</code> file to <code class="language-markup">/admin</code> folder.</p>
 
-            <pre><code class="language-markup">
-              MyWebsite/
-              |--admin/
-              |  |--config.yml
-              |  |--index.jade
+            <pre><code>
+              <span class="token tag">MyWebsite</span>/
+              |--<span class="token attr-value">admin</span>/
+              |  |--<span class="token attr-name">config.yml</span>
+              |  |--<span class="token attr-name">index.jade</span>
               |
-              |--data/
-              |  |--general.json
+              |--<span class="token attr-value">data</span>/
+              |  |--<span class="token attr-name">general.json</span>
               |
-              |--posts/
-              |  |--blog.md
+              |--<span class="token attr-value">posts</span>/
+              |  |--<span class="token attr-name">blog.md</span>
               |
-              |--views/
-              |  |--index.jade
-              |  |--layout.jade
+              |--<span class="token attr-value">views</span>/
+              |  |--<span class="token attr-name">index.jade</span>
+              |  |--<span class="token attr-name">layout.jade</span>
               |
 
             </code></pre>
@@ -772,35 +772,35 @@ Setting up the right collections is the main part of integrating netlify CMS wit
 
 <div class="col-md-12">
 <pre><code class="language-yaml">
-  backend:
-  name: github-api
-  repo: owner/repo # Path to your Github repository
-  branch: master # Branch to update (master by default)
+  <span class="token tag">backend:</span>
+  <span class="token tag">name:</span> <span class="token attr-value">github-api</span>
+  <span class="token tag">repo:</span> <span class="token attr-value">owner/repo # Path to your Github repository</span>
+  <span class="token tag">branch:</span> <span class="token attr-value">master</span> # Branch to update (master by default)
 
-  media_folder: "img/uploads" # Folder where user uploaded files should go
+  <span class="token tag">media_folder:</span> <span class="token attr-value">"img/uploads"</span> # Folder where user uploaded files should go
 
-  collections: # A list of collections the CMS should be able to edit
-    - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-      label: "Post" # Used in the UI, ie.: "New Post"
-      folder: "posts" # The path to the folder where the documents are stored
-      create: true # Allow users to create new documents in this collection
-      fields: # The fields each document in this collection have
-        - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-        - {label: "Body", name: "body", widget: "markdown"}
-        - {label: "Foo", name: "foo", widget: "foo"}
-      meta: # Meta data fields. Just like fields, but without any preview element
-        - {label: "Publish Date", name: "date", widget: "datetime"}
+  <span class="token tag">collections:</span> # A list of collections the CMS should be able to edit
+    <span class="token tag">- name:</span> <span class="token attr-value">"post"</span> # Used in routes, ie.: /admin/collections/:slug/edit
+      <span class="token tag">label:</span> <span class="token attr-value">"Post"</span> # Used in the UI, ie.: "New Post"
+      <span class="token tag">folder:</span> <span class="token attr-value">"posts"</span> # The path to the folder where the documents are stored
+      <span class="token tag">create:</span> <span class="token attr-value">true</span> # Allow users to create new documents in this collection
+      <span class="token tag">fields:</span> # The fields each document in this collection have
+        <span class="token tag">- {label:</span> <span class="token attr-value">"Title", <span class="token attr-name">name:</span> "title", <span class="token attr-name">widget:</span> "string", <span class="token attr-name">tagname:</span> "h1"}</span>
+        <span class="token tag">- {label:</span> <span class="token attr-value">"Body", <span class="token attr-name">name:</span> "body", <span class="token attr-name">widget:</span> "markdown"}</span>
+        <span class="token tag">- {label:</span> <span class="token attr-value">"Foo", <span class="token attr-name">name:</span> "foo", <span class="token attr-name">widget:</span> "foo"}</span>
+      <span class="token tag">meta:</span> # Meta data fields. Just like fields, but without any preview element
+        <span class="token tag">- {label:</span> <span class="token attr-value">"Publish Date", <span class="token attr-name">name:</span> "date", <span class="token attr-name">widget:</span> "datetime"}</span>
 
-    - name: "settings"
-      label: "Settings"
-      files:
-        - name: "general"
-          label: "General settings"
-          file: "_settings/general.json"
-          fields:
-            - {label: "Main site title", name: "site_title", widget: "string"}
-            - {label: "Number of fronpage posts", name: "post_count", widget: "number"}
-            - {label: "Site cover image", name: "cover", widget: "image"}
+    <span class="token tag">- name:</span> <span class="token attr-value">"settings"</span>
+      <span class="token tag">label:</span> <span class="token attr-value">"Settings"</span>
+      <span class="token tag">files:</span>
+        <span class="token tag">- name:</span> <span class="token attr-value">"general"</span>
+          <span class="token tag">label:</span> <span class="token attr-value">"General settings"</span>
+          <span class="token tag">file:</span> <span class="token attr-value">"_settings/general.json"</span>
+          <span class="token tag">fields:</span>
+            <span class="token tag">- {label:</span> <span class="token attr-value">"Main site title", <span class="token attr-name">name: "site_title", <span class="token attr-name">widget: "string"}</span>
+            <span class="token tag">- {label:</span> <span class="token attr-value">"Number of fronpage posts", <span class="token attr-name">name:</span> "post_count", <span class="token attr-name">widget:</span> "number"}</span>
+            <span class="token tag">- {label:</span> <span class="token attr-value">"Site cover image", <span class="token attr-name">name:</span> "cover", <span class="token attr-name">widget:</span> "image"}</span>
             </code></pre>
 </div>
 
@@ -814,17 +814,17 @@ Setting up the right collections is the main part of integrating netlify CMS wit
             <h2 class="header">Roots Collection Content Model</h2>
             <p></p>
 
-<pre><code>
-  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
-    folder: "_posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Foo", name: "foo", widget: "foo"}
-    meta: # Meta data fields. Just like fields, but without any preview element
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+<pre><code class="language-yaml">
+  <span class="token tag">- name:</span> <span class="token attr-value">"post"</span> # Used in routes, ie.: /admin/collections/:slug/edit
+      <span class="token tag">label:</span> <span class="token attr-value">"Post"</span> # Used in the UI, ie.: "New Post"
+      <span class="token tag">folder:</span> <span class="token attr-value">"posts"</span> # The path to the folder where the documents are stored
+      <span class="token tag">create:</span> <span class="token attr-value">true</span> # Allow users to create new documents in this collection
+      <span class="token tag">fields:</span> # The fields each document in this collection have
+        <span class="token tag">- {label:</span> <span class="token attr-value">"Title", <span class="token attr-name">name:</span> "title", <span class="token attr-name">widget:</span> "string", <span class="token attr-name">tagname:</span> "h1"}</span>
+        <span class="token tag">- {label:</span> <span class="token attr-value">"Body", <span class="token attr-name">name:</span> "body", <span class="token attr-name">widget:</span> "markdown"}</span>
+        <span class="token tag">- {label:</span> <span class="token attr-value">"Foo", <span class="token attr-name">name:</span> "foo", <span class="token attr-name">widget:</span> "foo"}</span>
+      <span class="token tag">meta:</span> # Meta data fields. Just like fields, but without any preview element
+        <span class="token tag">- {label:</span> <span class="token attr-value">"Publish Date", <span class="token attr-name">name:</span> "date", <span class="token attr-name">widget:</span> "datetime"}</span>
 
 </code></pre>
 
@@ -832,7 +832,7 @@ Setting up the right collections is the main part of integrating netlify CMS wit
 <p>Example:</p>
 <pre>
   <code>
-    extensions: [ collections(folder: '_posts', layout: 'post')]
+    <span class="token tag">extensions:</span> [ <span class="token attr-value">collections</span>(<span class="token attr-name">folder:</span> '_posts', <span class="token attr-name">layout:</span> 'post')]
   </code>
 
 </pre>
@@ -847,17 +847,17 @@ Setting up the right collections is the main part of integrating netlify CMS wit
             <h2 class="header">Roots Records Content Model</h2>
             <p></p>
 
-<pre><code>
-  - name: "settings"
-      label: "Settings"
-      files:
-        - name: "general"
-          label: "General settings"
-          file: "data/general.json"
-          fields:
-            - {label: "Main site title", name: "site_title", widget: "string"}
-            - {label: "Number of fronpage posts", name: "post_count", widget: "number"}
-            - {label: "Site cover image", name: "cover", widget: "image"}
+<pre><code class="language-yaml">
+  <span class="token tag">- name:</span> <span class="token attr-value">"settings"</span>
+    <span class="token tag">label:</span> <span class="token attr-value">"Settings"</span>
+    <span class="token tag">files:</span>
+      <span class="token tag">- name:</span> <span class="token attr-value">"general"</span>
+        <span class="token tag">label:</span> <span class="token attr-value">"General settings"</span>
+        <span class="token tag">file:</span> <span class="token attr-value">"_settings/general.json"</span>
+        <span class="token tag">fields:</span>
+          <span class="token tag">- {label:</span> <span class="token attr-value">"Main site title", <span class="token attr-name">name: "site_title", <span class="token attr-name">widget: "string"}</span>
+          <span class="token tag">- {label:</span> <span class="token attr-value">"Number of fronpage posts", <span class="token attr-name">name:</span> "post_count", <span class="token attr-name">widget:</span> "number"}</span>
+          <span class="token tag">- {label:</span> <span class="token attr-value">"Site cover image", <span class="token attr-name">name:</span> "cover", <span class="token attr-name">widget:</span> "image"}</span>
 
 </code></pre>
 
@@ -865,10 +865,8 @@ Setting up the right collections is the main part of integrating netlify CMS wit
 <p>Example:</p>
 <pre>
   <code>
-    extensions: [ records(
-
-      general: { file: "data/general.json"}
-
+    <span class="token tag">extensions:</span> [ <span class="token attr-value">records</span>(
+      <span class="token attr-name">general:</span> { <span class="token attr-name">file:</span> <span class="token attr-value">"data/general.json"</span>}
     )]
   </code>
 
