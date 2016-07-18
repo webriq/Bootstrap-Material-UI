@@ -8,6 +8,7 @@ Implements Google's Material Design in Bootstrap
 
 View the [DEMO & DOC](http://developers.webriq.com/)
 
+Based on [ExentriqLtd/Bootstrap-Material-UI](https://github.com/ExentriqLtd/Bootstrap-Material-UI)
 
 ## HTML Setup
 
@@ -84,3 +85,4 @@ Grunt will then watch concurrently for changes to src and jade folders, js, scss
 
 ## License
 
+View the [LICENSE](https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/LICENSE.md)
