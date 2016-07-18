@@ -1,5 +1,9 @@
 // Tabs
 
+.eq-ui-scrollbar-wrap.common ul.eq-ui-tabs{
+  position: relative;
+}
+
 .eq-ui-tabs {
     position: absolute;
     display: inline-block;
