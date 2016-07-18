@@ -13,13 +13,14 @@ body.doc-show-in-layout-struture-1 .doc-show-in-layout-struture-1 {
 
 /* Home */
 .jumbotron.home {
-	text-align: center;
+    text-align: center;
 }
 .jumbotron.home .getting-started {
-	text-align: right;
+    text-align: right;
 }
 .jumbotron.home .source-in-git-hub {
-	text-align: center;
+    text-align: center;
+    margin-top:1em;
 }
 p.last-commit-in-git-hub-p {
     font-weight: 300;
@@ -28,10 +29,10 @@ p.last-commit-in-git-hub-p {
     text-decoration: none;
 }
 @media (max-width: 768px){
-	.jumbotron.home .getting-started,
-	.jumbotron.home .source-in-git-hub {
-		text-align: center;
-	}
+    .jumbotron.home .getting-started,
+    .jumbotron.home .source-in-git-hub {
+        text-align: center;
+    }
 }
 
 /* Show Grid*/
@@ -106,11 +107,11 @@ p.last-commit-in-git-hub-p {
 
 /* Helpers */
 .valign-demo {
-	padding: 24px;
-	height: 500px;
+    padding: 24px;
+    height: 500px;
 }
 .valign-demo h3 {
-	width: 100%;
+    width: 100%;
 }
 
 /* Cards -> Head Image */
@@ -127,7 +128,7 @@ p.last-commit-in-git-hub-p {
 .doc-card-image {
     width: 256px;
     height: 256px;
-	background: url('../img/doc/image_card.jpg') center / cover;
+    background: url('../img/doc/image_card.jpg') center / cover;
 }
 
 /* Cards -> Event */
@@ -138,7 +139,7 @@ p.last-commit-in-git-hub-p {
 
 /* Forms */
 .doc-form {
-	margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 .doc-form .eq-ui-search-expandable {
@@ -175,7 +176,7 @@ p.last-commit-in-git-hub-p {
 
 /* Helps */
 .doc-margin-bottom {
-	margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 /* Drop zone */
