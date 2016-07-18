@@ -1,4 +1,4 @@
-# Exentriq - Bootstrap Material UI
+# WebriQ - Bootstrap Material UI
 
 **Note:** Not use this current version for production, only test purpose.
 
@@ -6,9 +6,8 @@
 
 Implements Google's Material Design in Bootstrap
 
-View the [DEMO & DOC](http://bootstrap-material-ui.exentriq.com)
+View the [DEMO & DOC](http://developers.webriq.com/)
 
-View the [CHANGELOG](https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/CHANGELOG.md)
 
 ## HTML Setup
 
@@ -18,16 +17,16 @@ Use the files in the "dist" folder
 <!DOCTYPE html>
 <html>
 <head>
-  <!--Import exentriq-bootstrap-material-ui.min.css-->
-  <link type="text/css" rel="stylesheet" href="css/exentriq-bootstrap-material-ui.min.css"  media="screen,projection"/>
+  <!--Import webriq-bootstrap-material-ui.min.css-->
+  <link type="text/css" rel="stylesheet" href="css/webriq-bootstrap-material-ui.min.css"  media="screen,projection"/>
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-  <!--Import jQuery before exentriq-bootstrap-material-ui.min.js-->
+  <!--Import jQuery before webriq-bootstrap-material-ui.min.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script type="text/javascript" src="js/exentriq-bootstrap-material-ui.min.js"></script>
+  <script type="text/javascript" src="js/webriq-bootstrap-material-ui.min.js"></script>
 </body>
 </html>
 ```
@@ -85,4 +84,3 @@ Grunt will then watch concurrently for changes to src and jade folders, js, scss
 
 ## License
 
-View the [LICENSE](https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/LICENSE.md)
