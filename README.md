@@ -1,4 +1,4 @@
-# Exentriq - Bootstrap Material UI
+# WebriQ - Bootstrap Material UI
 
 **Note:** Not use this current version for production, only test purpose.
 
@@ -6,9 +6,8 @@
 
 Implements Google's Material Design in Bootstrap
 
-View the [DEMO & DOC](http://bootstrap-material-ui.exentriq.com)
+View the [DEMO & DOC](http://developers.webriq.com/)
 
-View the [CHANGELOG](https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/CHANGELOG.md)
 
 ## HTML Setup
 
@@ -85,4 +84,3 @@ Grunt will then watch concurrently for changes to src and jade folders, js, scss
 
 ## License
 
-View the [LICENSE](https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/LICENSE.md)
