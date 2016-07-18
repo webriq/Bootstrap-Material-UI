@@ -22885,6 +22885,10 @@ html.is-touch .eq-ui-dropdown li > a:not(.active):hover {
   will-change: opacity;
 }
 
+.eq-ui-scrollbar-wrap.common ul.eq-ui-tabs {
+  position: relative;
+}
+
 .eq-ui-tabs {
   position: absolute;
   display: inline-block;
@@ -22979,11 +22983,4 @@ html.is-touch .eq-ui-dropdown li > a:not(.active):hover {
 .eq-ui-tabs.eq-ui-tabs-justified .eq-ui-tab {
   width: 100%;
 }
-
-.eq-ui-scrollbar-wrap.common ul.eq-ui-tabs{
-
-  position: relative;
-}
-
 /*# sourceMappingURL=webriq-bootstrap-material-ui.css.map */
-
