@@ -171,7 +171,7 @@ var EqUIDoc = {};
         var _download_in_git_hub_href = $('.download-in-git-hub-href');
         if (_download_in_git_hub.length) {
             $.ajax({
-                url: "https://api.github.com/repos/ayenzky/Bootstrap-Material-UI/tags",
+                url: "../assets/archive/master.zip",
                 dataType: "json",
                 success: function (data) {
                     _download_in_git_hub.html('<i class="mdi mdi-download icon icon-right icon-18"></i> Download v.'+data[0].name).attr('href', data[0].zipball_url);
@@ -182,7 +182,7 @@ var EqUIDoc = {};
         var _last_commit_in_git_hub = $('.last-commit-in-git-hub');
         if (_last_commit_in_git_hub.length) {
             $.ajax({
-                url: "https://api.github.com/repos/ayenzky/Bootstrap-Material-UI/commits/master",
+                url: "../assets/archive/master.zip",
                 dataType: "json",
                 success: function (data) {
                     var date = $.timeago(data.commit.author.date);
