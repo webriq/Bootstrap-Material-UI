@@ -1,5 +1,5 @@
 body {
-    
+
 }
 
 /* Layout */
@@ -19,7 +19,9 @@ body.doc-show-in-layout-struture-1 .doc-show-in-layout-struture-1 {
 	text-align: right;
 }
 .jumbotron.home .source-in-git-hub {
-	text-align: left;
+	text-align: center;
+    margin-top:1em;
+
 }
 p.last-commit-in-git-hub-p {
     font-weight: 300;

@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
-    <title>JavaScript - Dropdown | Exentriq - Bootstrap Material UI</title>
+    <title>JavaScript - Dropdown | WebriQ - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.3.2" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.3.2" rel="stylesheet">
+    <link rel="icon" href="assets/img/doc/logo@xs.png" type="image/*">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.3.3" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.3.3" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"java-script",path:"dropdown",name_section:"JavaScript",name_chapter:"Dropdown"};</script>
@@ -104,7 +105,7 @@
         <div class="container-fluid">
 
             <!-- Toggle -->
-            <div class="eq-ui-side-nav-toggle"><i class="mdi mdi-menu icon icon-left icon-24"></i></div>
+            <div class="eq-ui-side-nav-toggle"><i class="mdi mdi-menu icon icon-left icon-24 eq-ui-waves"></i></div>
 
             <!-- Title -->
             <!--div class="header-title">
@@ -201,7 +202,7 @@
 
         <div class="brand">
             <div class="eq-ui-side-nav-toggle"><i class="mdi mdi-menu icon icon-left icon-24"></i></div>
-            <img src="assets/img/doc/exentriq_logo.svg" alt="Exentriq logo">
+            <img src="assets/img/doc/logo.svg" alt="Webriq logo">
         </div>
 
         <div class="eq-ui-side-nav-content-wrapper">
@@ -228,13 +229,13 @@
 
                     <li>
                         <div class="eq-ui-collapsible-header eq-ui-waves">
-                            <a id="collapsible-nav-getting-started" target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/README.md">
+                            <a id="collapsible-nav-getting-started" href="./getting-started.html">
                                 <i class="mdi mdi-settings icon icon-left icon-24"></i>
-                                <i class="mdi mdi-open-in-new icon icon-right icon-18"></i>
                                 Getting Started
                             </a>
                         </div>
                     </li>
+
 
                     <li>
                         <div class="eq-ui-collapsible-header eq-ui-waves">
@@ -248,6 +249,7 @@
                             <a id="collapsible-nav-css-color" href="./color.html">Color</a>
                             <a id="collapsible-nav-css-helpers" href="./helpers.html">Helpers</a>
                             <a id="collapsible-nav-css-table" href="./table.html">Table</a>
+                            <a id="collapsible-nav-css-grid" href="./grid.html">Grid</a>
                             <a id="collapsible-nav-css-typography" href="./typography.html">Typography</a>
                         </div>
                     </li>
@@ -283,23 +285,34 @@
                         </div>
                     </li>
 
-                    <li>
+                     <li>
                         <div class="eq-ui-collapsible-header eq-ui-waves">
-                            <a id="collapsible-nav-download" class="download-in-git-hub-href" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI/archive/master.zip">
-                                <i class="mdi mdi-download icon icon-left icon-24"></i>
-                                Download
+                            <a id="collapsible-nav-admin-panel" href="./admin-panel.html">
+                                <i class="mdi mdi-account icon icon-left icon-24"></i>
+                                Admin Panel
                             </a>
                         </div>
                     </li>
 
                     <li>
                         <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a id="collapsible-nav-download" class="download-in-git-hub-href" href="../assets/archive/master.zip" download>
+                                <i class="mdi mdi-download icon icon-left icon-24"></i>
+                                Download
+                            </a>
+                        </div>
+                    </li>
+
+
+
+                   <!--  <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
                             <a id="collapsible-nav-showcase" href="./showcase.html">
                                 <i class="mdi mdi-heart icon icon-left icon-24"></i>
                                 Showcase
                             </a>
                         </div>
-                    </li>
+                    </li> -->
 
                 </ul>
 
@@ -552,7 +565,7 @@
         </div>
 
         <div class="footer">
-            <a target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI"><i class="mdi mdi-github-circle icon icon-left icon-18"></i></a><p class="copyright">&copy; Exentriq</p>
+            <a target="_blank" href="https://github.com/webriq/Bootstrap-Material-UI"><i class="mdi mdi-github-circle icon icon-left icon-18"></i></a><p class="copyright">&copy; WebriQ</p>
             <a target="_blank" href="http://opensource.org/licenses/MIT">Free & Open Source (MIT)</a>
         </div>
 
@@ -820,7 +833,40 @@
             <h2 class="header">Structure</h2>
             <p>Add class <code class="language-markup">dropdown-trigger</code> for trigger element. And add target id for dropdown in <code class="language-markup">data-target</code> attr.</p>
 
-            <pre><code class="language-markup">
+            <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t1" class="col-md-12">
+               <pre><code class="language-jade">
+// Dropdown Trigger
+<span class="token tag">a<span class="token attr-value">.btn.btn-default.eq-ui-waves.dropdown-trigger<span class="token attr-name">(data-target='dropdown-test1')</span></span>
+
+// Dropdown Structure
+ul<span class="token attr-value">#dropdown-test1.eq-ui-dropdown</span>
+  li
+    a<span class="token attr-name">(href='#!')</span></span> Some Action
+  <span class="token tag">li<span class="token attr-value">.disabled</span>
+    a<span class="token attr-name">(href='#!')</span></span> Disabled Action
+  <span class="token tag">li
+    a<span class="token attr-value">.active<span class="token attr-name">(href='#!')</span></span></span> Item Active
+  <span class="token tag">li
+    a<span class="token attr-name">(href='#!')</span></span> Another Action
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t2" class="col-md-12">
+
+
+<pre><code class="language-markup">
 &lt;!-- Dropdown Trigger --&gt;
 &lt;a data-target=&quot;dropdown-test1&quot; class=&quot;btn btn-default eq-ui-waves dropdown-trigger&quot;&gt;&lt;/a&gt;
 
@@ -831,6 +877,12 @@
     &lt;li&gt;&lt;a href=&quot;#!&quot; class=&quot;active&quot;&gt;Item Active&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+        </div>
+
+<!-- Tab end-->
+
+
+
         </div>
     </div>
 
@@ -888,7 +940,86 @@
         <div class="col-md-12">
             <p>Structure for sub menu.</p>
 
-            <pre><code class="language-markup">
+            <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t3">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t4">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t3" class="col-md-12">
+               <pre><code class="language-jade">
+// Dropdown Trigger
+<span class="token tag">a<span class="token attr-value">.btn.btn-default.eq-ui-waves.dropdown-trigger<span class="token attr-name">(data-target='dropdown-test5')</span></span></span>
+
+// Dropdown Structure
+<span class="token tag">ul<span class="token attr-value">#dropdown-test5.eq-ui-dropdown</span>
+  li
+    a<span class="token attr-name">(href='#!')</span>
+      i<span class="token attr-value">.mdi.mdi-home.icon</span></span>
+      |  Some Action
+  <span class="token tag">li
+    a<span class="token attr-name">(href='#!')</span>
+      i<span class="token attr-value">.mdi.mdi-puzzle.icon</span></span>
+      |  Another Action
+  <span class="token tag">li<span class="token attr-value">.divider</span>
+  li
+    i<span class="token attr-value">.mdi.mdi-menu-right.icon</span></span>
+
+    // Dropdown Trigger
+    <span class="token tag">a<span class="token attr-value">.dropdown-trigger<span class="token attr-name">(data-target='dropdown-test5-sub')</span></span>
+      i.<span class="token attr-value">mdi.mdi-layers.icon</span></span>
+      |  Another Action
+
+    // Dropdown Sub
+    <span class="token tag">ul<span class="token attr-value">#dropdown-test5-sub.eq-ui-dropdown</span>
+      li
+        a<span class="token attr-name">(href='#!')</span>
+          i<span class="token attr-value">.mdi.mdi-home.icon</span></span>
+          |  Some Action
+      <span class="token tag">li
+        a<span class="token attr-name">(href='#!')</span>
+          i<span class="token attr-value">.mdi.mdi-puzzle.icon</span></span>
+          |  Another Action
+      <span class="token tag">li
+        i<span class="token attr-value">.mdi.mdi-menu-right.icon</span></span>
+
+        // Dropdown Trigger
+        <span class="token tag">a<span class="token attr-value">.dropdown-trigger<span class="token attr-value">(data-target='dropdown-test5-sub2')</span></span>
+          i<span class="token attr-value">.mdi.mdi-layers.icon</span></span>
+          |  Another Action
+
+        // Dropdown Sub
+        <span class="token tag">ul<span class="token attr-value">#dropdown-test5-sub2.eq-ui-dropdown</span>
+          li
+            a<span class="token attr-name">(href='#!')</span>
+              i<span class="token attr-value">.mdi.mdi-home.icon</span></span>
+              |  Some Action
+          <span class="token tag">li
+            a<span class="token attr-name">(href='#!')</span>
+              i<span class="token attr-value">.mdi.mdi-layers.icon</span></span>
+              |  Another Action
+          <span class="token tag">li
+            a<span class="token attr-name">(href='#!')</span>
+              i<span class="token attr-value">.mdi.mdi-settings.icon</span></span>
+              |  Yet Another Action
+  <span class="token tag">li
+    a<span class="token attr-name">(href='#!')</span>
+      i<span class="token attr-value">.mdi.mdi-settings.icon</span></span>
+      |  Yet Another Action
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t4" class="col-md-12">
+
+
+<pre><code class="language-markup">
 &lt;!-- Dropdown Trigger --&gt;
 &lt;a data-target=&quot;dropdown-test5&quot; class=&quot;btn btn-default eq-ui-waves dropdown-trigger&quot;&gt;&lt;/a&gt;
 
@@ -924,6 +1055,11 @@
     &lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;&lt;i class=&quot;mdi mdi-settings icon&quot;&gt;&lt;/i&gt; Yet Another Action&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+        </div>
+
+<!-- Tab end-->
+
+
         </div>
     </div>
 
@@ -965,9 +1101,38 @@
 
             <p>To use these inline you have to add them as data attributes.</p>
 
-            <pre><code class="language-markup">
+
+             <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t5">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t6">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t5" class="col-md-12">
+               <pre><code class="language-jade">
+// Dropdown Trigger
+<span class="token tag">a<span class="token attr-value">.btn.btn-default.dropdown-trigger<span class="token attr-name">(data-target='dropdown-test3', data-hover='false', data-below-origin='true')</span></span></span>
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t6" class="col-md-12">
+
+
+<pre><code class="language-markup">
 &lt;!-- Dropdown Trigger --&gt;
 &lt;a data-target=&quot;dropdown-test3&quot; data-hover=&quot;false&quot; data-below-origin=&quot;true&quot; class=&quot;btn btn-default dropdown-trigger&quot;&gt;&lt;/a&gt;</code></pre>
+        </div>
+
+<!-- Tab end-->
+
+
         </div>
     </div>
 
@@ -1018,12 +1183,12 @@ $(document).ready(function(){
 </div>
     </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
 <script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.3.2"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.3.3"></script>
 
 <script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
 <script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
 
-<script src="assets/js/doc.js?v=0.3.2"></script>
+<script src="assets/js/doc.js?v=0.3.3"></script>
 <script src="assets/js/ctrl/ctrl-color.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

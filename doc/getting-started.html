@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
-    <title>CSS - Badges | WebriQ - Bootstrap Material UI</title>
+    <title>Getting Started | WebriQ - Bootstrap Material UI</title>
     <!-- CSS-->
     <link rel="icon" href="assets/img/doc/logo@xs.png" type="image/*">
     <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.3.3" rel="stylesheet">
     <link href="assets/css/doc.css?v=0.3.3" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
-    <script>var _doc_route = {root_path:"css",path:"badges",name_section:"CSS",name_chapter:"Badges"};</script>
+    <script>var _doc_route = {root_path:"",path:"getting-started",name_section:"",name_chapter:"Getting Started"};</script>
 <!--[if lt IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -720,72 +720,21 @@
 
     <main class="eq-ui-main"><div class="jumbotron">
     <div class="container">
-        <h1>Badges</h1>
+        <h1>Getting Started</h1>
+        <p>Learn how to easily start using Bootstrap Materialize in your website.</p>
     </div>
 </div>
+
 
 <div class="container">
-
     <div class="row">
-        <div class="col-md-6">
-            <h2 class="header">Overlap</h2>
-            <p>Add <code class="language-markup">eq-ui-badge eq-ui-badge-overlap</code>.</p>
-
-            <div class="eq-ui-card doc-margin-bottom">
-                <div class="eq-ui-card-supporting-text">
-                    <a class="doc-badge-icon">
-                        <i class="mdi mdi-comment icon eq-ui-badge eq-ui-badge-overlap" data-badge="12"></i>
-                    </a>
-                </div>
-            </div>
-
             <div class="col-md-12">
-    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-        <ul class="eq-ui-tabs">
-            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
-            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
-
-        </ul>
-    </div>
-</div>
-
-<div id="eq-ui-tab-s1-t1" class="col-md-12">
-                <pre><code class="language-jade">
-<span class="token tag">a
-  i<span class="token attr-value">.mdi.mdi-comment.icon.eq-ui-badge.eq-ui-badge-overlap</span><span class="token attr-name">(data-badge='12')</span></span>
-</code></pre>
-
-</div>
-<div id="eq-ui-tab-s1-t2" class="col-md-12">
-
-            <pre><code class="language-markup">
-&lt;a&gt;
-    &lt;i class=&quot;mdi mdi-comment icon eq-ui-badge eq-ui-badge-overlap&quot; data-badge=&quot;12&quot;&gt;&lt;/i&gt;
-&lt;/a&gt;</code></pre>
-</div>
+                <h2 class="header">JADE & HTML Setup</h2>
+                <p>Use the files in the "dist" folder</p>
 
 
-
-
-        </div>
-
-        <div class="col-md-6">
-            <h2 class="header">Normal</h2>
-            <p>Add <code class="language-markup">eq-ui-badge</code>.</p>
-
-            <div class="eq-ui-card doc-margin-bottom">
-                <div class="eq-ui-card-supporting-text">
-                    <a class="eq-ui-badge doc-badge-text" data-badge="12">Inbox</a>
-                </div>
-            </div>
-
-
-
-
-
-
-
-<div class="col-md-12">
+<!-- Tab start-->
+            <div class="col-md-12">
    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
        <ul class="eq-ui-tabs">
            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s2-t1">JADE</a></li>
@@ -797,18 +746,58 @@
 
 <div id="eq-ui-tab-s2-t1" class="col-md-12">
                <pre><code class="language-jade">
-<span class="token tag">a<span class="token attr-value">.eq-ui-badge(data-badge='12')</span></span> Inbox
+<span class="token tag">doctype</span> <span class="token attr-value">html
+head</span>
+  // Import exentriq-bootstrap-material-ui.min.css
+  <span class="token attr-value">link<span class="token attr-name">(type='text/css', rel='stylesheet', href='css/webriq-bootstrap-material-ui.min.css', media='screen,projection')</span></span>
+
+  // Let browser know website is optimized for mobile
+  <span class="token attr-value">meta<span class="token attr-name">(name='viewport', content='width=device-width, initial-scale=1.0')</span></span>
+
+// Import jQuery before exentriq-bootstrap-material-ui.min.js
+<span class="token attr-value">script<span class="token attr-name">(type='text/javascript', src='https://code.jquery.com/jquery-2.1.4.min.js')</span></span>
+<span class="token attr-value">script<span class="token attr-name">(type='text/javascript', src='js/webriq-bootstrap-material-ui.min.js')</span></span>
 
 </code></pre>
 
 </div>
 <div id="eq-ui-tab-s2-t2" class="col-md-12">
 
-         <pre><code class="language-markup">
-&lt;a class=&quot;eq-ui-badge&quot; data-badge=&quot;12&quot;&gt;Inbox&lt;/a&gt;</code></pre>
+
+<pre>
+    <code class="language-markup">
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;!--Import exentriq-bootstrap-material-ui.min.css--&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/exentriq-bootstrap-material-ui.min.css&quot;  media=&quot;screen,projection&quot;/&gt;
+
+&lt;!--Let browser know website is optimized for mobile--&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;/&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!--Import jQuery before exentriq-bootstrap-material-ui.min.js--&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://code.jquery.com/jquery-2.1.4.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/exentriq-bootstrap-material-ui.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+    </code>
+</pre>
+
 
         </div>
+
+<!-- Tab end-->
+
+
+            </div>
+
+
+
     </div>
+
 
 </div>
 

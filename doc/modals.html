@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
-    <title>JavaScript - Modals | Exentriq - Bootstrap Material UI</title>
+    <title>JavaScript - Modals | WebriQ - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.3.2" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.3.2" rel="stylesheet">
+    <link rel="icon" href="assets/img/doc/logo@xs.png" type="image/*">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.3.3" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.3.3" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"java-script",path:"modals",name_section:"JavaScript",name_chapter:"Modals"};</script>
@@ -104,7 +105,7 @@
         <div class="container-fluid">
 
             <!-- Toggle -->
-            <div class="eq-ui-side-nav-toggle"><i class="mdi mdi-menu icon icon-left icon-24"></i></div>
+            <div class="eq-ui-side-nav-toggle"><i class="mdi mdi-menu icon icon-left icon-24 eq-ui-waves"></i></div>
 
             <!-- Title -->
             <!--div class="header-title">
@@ -201,7 +202,7 @@
 
         <div class="brand">
             <div class="eq-ui-side-nav-toggle"><i class="mdi mdi-menu icon icon-left icon-24"></i></div>
-            <img src="assets/img/doc/exentriq_logo.svg" alt="Exentriq logo">
+            <img src="assets/img/doc/logo.svg" alt="Webriq logo">
         </div>
 
         <div class="eq-ui-side-nav-content-wrapper">
@@ -228,13 +229,13 @@
 
                     <li>
                         <div class="eq-ui-collapsible-header eq-ui-waves">
-                            <a id="collapsible-nav-getting-started" target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/README.md">
+                            <a id="collapsible-nav-getting-started" href="./getting-started.html">
                                 <i class="mdi mdi-settings icon icon-left icon-24"></i>
-                                <i class="mdi mdi-open-in-new icon icon-right icon-18"></i>
                                 Getting Started
                             </a>
                         </div>
                     </li>
+
 
                     <li>
                         <div class="eq-ui-collapsible-header eq-ui-waves">
@@ -248,6 +249,7 @@
                             <a id="collapsible-nav-css-color" href="./color.html">Color</a>
                             <a id="collapsible-nav-css-helpers" href="./helpers.html">Helpers</a>
                             <a id="collapsible-nav-css-table" href="./table.html">Table</a>
+                            <a id="collapsible-nav-css-grid" href="./grid.html">Grid</a>
                             <a id="collapsible-nav-css-typography" href="./typography.html">Typography</a>
                         </div>
                     </li>
@@ -283,23 +285,34 @@
                         </div>
                     </li>
 
-                    <li>
+                     <li>
                         <div class="eq-ui-collapsible-header eq-ui-waves">
-                            <a id="collapsible-nav-download" class="download-in-git-hub-href" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI/archive/master.zip">
-                                <i class="mdi mdi-download icon icon-left icon-24"></i>
-                                Download
+                            <a id="collapsible-nav-admin-panel" href="./admin-panel.html">
+                                <i class="mdi mdi-account icon icon-left icon-24"></i>
+                                Admin Panel
                             </a>
                         </div>
                     </li>
 
                     <li>
                         <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a id="collapsible-nav-download" class="download-in-git-hub-href" href="../assets/archive/master.zip" download>
+                                <i class="mdi mdi-download icon icon-left icon-24"></i>
+                                Download
+                            </a>
+                        </div>
+                    </li>
+
+
+
+                   <!--  <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
                             <a id="collapsible-nav-showcase" href="./showcase.html">
                                 <i class="mdi mdi-heart icon icon-left icon-24"></i>
                                 Showcase
                             </a>
                         </div>
-                    </li>
+                    </li> -->
 
                 </ul>
 
@@ -552,7 +565,7 @@
         </div>
 
         <div class="footer">
-            <a target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI"><i class="mdi mdi-github-circle icon icon-left icon-18"></i></a><p class="copyright">&copy; Exentriq</p>
+            <a target="_blank" href="https://github.com/webriq/Bootstrap-Material-UI"><i class="mdi mdi-github-circle icon icon-left icon-18"></i></a><p class="copyright">&copy; WebriQ</p>
             <a target="_blank" href="http://opensource.org/licenses/MIT">Free & Open Source (MIT)</a>
         </div>
 
@@ -1218,7 +1231,59 @@
             <h2 class="header">Modal Structure</h2>
             <p>For set Trigger, specify the Modal ID in data-target or href and add <code class="language-markup">eq-ui-modal-trigger</code> in the class item.</p>
 
-            <pre><code class="language-markup">
+
+            <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t1" class="col-md-12">
+               <pre><code class="language-jade">
+// Modal Trigger With href
+<span class="token tag">a<span class="token attr-value">.btn.btn-primary.eq-ui-waves-light.eq-ui-modal-trigger<span class="token attr-name">(href='#eq-ui-modal-sample1')</span></span></span> Show Modal
+
+// Modal Trigger With data-target
+<span class="token tag">button<span class="token attr-value">.btn.btn-primary.eq-ui-waves-light.eq-ui-modal-trigger<span class="token attr-name">(data-target='eq-ui-modal-sample1')</span></span></span> Show Modal
+
+// Modal
+<span class="token attr-value">#eq-ui-modal-sample1.eq-ui-modal</span>
+
+  // Header
+  <span class="token tag"><span class="token attr-value">.eq-ui-modal-header
+    .header-title</span>
+      i<span class="token attr-value">.mdi.mdi-settings.icon.icon-left.icon-24</span>
+      span<span class="token attr-value">.section-title</span></span> Modal Header
+    <span class="token tag">ul<span class="token attr-value">.right.eq-ui-nav-menu</span>
+      li<span class="token attr-value">.eq-ui-nav-menu-item-icon</span>
+        a<span class="token attr-value">.btn.btn-default.eq-ui-btn-flat.eq-ui-btn-fab.eq-ui-btn-menu-fab.eq-ui-waves</span>
+          i<span class="token attr-value">.mdi.mdi-dots-vertical.icon</span></span>
+
+  // Content
+  <span class="token tag"><span class="token attr-value">.eq-ui-modal-content
+    h5</span></span> Title
+    <span class="token tag">p</span>
+      | Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue.
+
+  // Footer
+  <span class="token tag">.eq-ui-modal-footer</span>
+    a<span class="token attr-value">.btn.btn-default.eq-ui-btn-flat.eq-ui-waves.eq-ui-secondary-color-text.eq-ui-modal-close<span class="token attr-name">(href='#')</span></span> Agree
+    a<span class="token attr-value">.btn.btn-default.eq-ui-btn-flat.eq-ui-waves.eq-ui-secondary-color-text.eq-ui-modal-close<span class="token attr-name">(href='#')</span></span> Disagree
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t2" class="col-md-12">
+
+
+<pre><code class="language-markup">
 &lt;!-- Modal Trigger With href --&gt;
 &lt;a href=&quot;#eq-ui-modal-sample1&quot; class=&quot;btn btn-primary eq-ui-waves-light eq-ui-modal-trigger&quot;&gt;Show Modal&lt;/a&gt;
 
@@ -1257,6 +1322,11 @@
 
 &lt;/div&gt;
 </code></pre>
+        </div>
+
+<!-- Tab end-->
+
+
         </div>
     </div>
 
@@ -1311,12 +1381,12 @@ $(document).ready(function(){
 </div>
     </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
 <script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.3.2"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.3.3"></script>
 
 <script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
 <script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
 
-<script src="assets/js/doc.js?v=0.3.2"></script>
+<script src="assets/js/doc.js?v=0.3.3"></script>
 <script src="assets/js/ctrl/ctrl-color.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
