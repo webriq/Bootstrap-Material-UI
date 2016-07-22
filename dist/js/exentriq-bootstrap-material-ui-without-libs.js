@@ -2224,4 +2224,4 @@ else {
 
 	});
 }( jQuery ));
-//# sourceMappingURL=webriq-bootstrap-material-ui-without-libs.js.map
+//# sourceMappingURL=exentriq-bootstrap-material-ui-without-libs.js.map

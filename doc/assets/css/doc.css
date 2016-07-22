@@ -19,8 +19,14 @@ body.doc-show-in-layout-struture-1 .doc-show-in-layout-struture-1 {
     text-align: right;
 }
 .jumbotron.home .source-in-git-hub {
+<<<<<<< HEAD
     text-align: center;
     margin-top:1em;
+=======
+	text-align: center;
+    margin-top:1em;
+
+>>>>>>> develop
 }
 p.last-commit-in-git-hub-p {
     font-weight: 300;
@@ -33,20 +39,6 @@ p.last-commit-in-git-hub-p {
     .jumbotron.home .source-in-git-hub {
         text-align: center;
     }
-}
-
-/* Show Grid*/
-
-.show-grid [class^=col-] {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #607D8B;
-    border: 1px solid #9b9b9b;
-    color:#fff;
-}
-
-.show-grid {
-    margin-bottom: 15px;
 }
 
 /* Notifications modal */

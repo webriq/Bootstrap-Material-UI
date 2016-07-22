@@ -61,9 +61,9 @@ module.exports = function ( grunt ) {
         pkg: grunt.file.readJSON('package.json'),
 
         meta: {
-            name_root_file: 'webriq-bootstrap-material-ui',
-            name_root_file_without_libs: 'webriq-bootstrap-material-ui-without-libs',
-            notify_title: 'WebriQ - Bootstrap Material UI'
+            name_root_file: 'exentriq-bootstrap-material-ui',
+            name_root_file_without_libs: 'exentriq-bootstrap-material-ui-without-libs',
+            notify_title: 'Exentriq - Bootstrap Material UI'
         },
 
         // Clean

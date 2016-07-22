@@ -22478,7 +22478,7 @@ input.eq-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
 }
 
 .eq-ui-side-nav nav .eq-ui-collapsible li .eq-ui-collapsible-header a {
-  font-weight: 400;
+  font-weight: 700;
   color: #9b9b9b;
   padding: 0 16px 0 24px;
   line-height: 3rem;
@@ -22983,4 +22983,8 @@ html.is-touch .eq-ui-dropdown li > a:not(.active):hover {
 .eq-ui-tabs.eq-ui-tabs-justified .eq-ui-tab {
   width: 100%;
 }
+<<<<<<< HEAD:dist/css/webriq-bootstrap-material-ui.css
 /*# sourceMappingURL=webriq-bootstrap-material-ui.css.map */
+=======
+/*# sourceMappingURL=exentriq-bootstrap-material-ui.css.map */
+>>>>>>> develop:doc/assets/css/exentriq-bootstrap-material-ui.css
