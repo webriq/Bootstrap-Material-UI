@@ -2207,7 +2207,7 @@ else {
 
 		// Init Waves
         Waves.init();
-        Waves.attach('.eq-ui-waves', '' ['waves-effect']);
+        Waves.attach('.eq-ui-waves', ['waves-effect']);
         Waves.attach('.eq-ui-waves-light', ['waves-effect', 'waves-light']);
 
 		// Resize
@@ -2221,7 +2221,7 @@ else {
             // Update
             _this.load();
 	    });
-
+	    
 	});
 }( jQuery ));
 //# sourceMappingURL=exentriq-bootstrap-material-ui-without-libs.js.map
