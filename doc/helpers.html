@@ -8,8 +8,8 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>CSS - Helpers | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.css?v=0.0.0" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.0.0" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.3.3" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.3.3" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"css",path:"helpers",name_section:"CSS",name_chapter:"Helpers"};</script>
@@ -719,73 +719,717 @@
 
     <main class="eq-ui-main"><div class="jumbotron">
     <div class="container">
-        <h1>Helpers</h1>
+        <h1>Grid System</h1>
     </div>
 </div>
 
 <div class="container">
+  <div class="row">
+  <div class="col-md-12">
 
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="header">Vertical Align</h2>
-            <p>Align vertically center things by adding the class <code class="language-markup">valign-wrapper</code> to the container holding the items.</p>
-            <div class="eq-ui-card doc-margin-bottom valign-demo valign-wrapper">
-                <h3 class="valign center">Align vertically center</h3>
-            </div>
-            <pre><code class="language-markup">
-&lt;div class=&quot;valign-wrapper&quot;&gt;
-  &lt;h3 class=&quot;valign center&quot;&gt;Align vertically center&lt;/h3&gt;
+    <h2 class="header">Introduction</h2>
+  <p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+
+<ol>
+
+<li>Rows must be placed within a <code class="language-markup">.container</code> (fixed-width) or <code class="language-markup">.container-fluid</code> (full-width) for proper alignment and padding.</li>
+<li>Use rows to create horizontal groups of columns.</li>
+<li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+<li>Predefined grid classes like <code class="language-markup">.row</code> and <code class="language-markup">.col-xs-4</code> are available for quickly making grid layouts. Less mixins can also be used for more semantic layouts.</li>
+<li>Columns create gutters (gaps between column content) via <code class="language-markup">padding</code>. That padding is offset in rows for the first and last column via negative margin on <code class="language-markup">.rows</code>.</li>
+<li>The negative margin is why the examples below are outdented. It's so that content within grid columns is lined up with non-grid content.</li>
+<li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three <code class="language-markup">.col-xs-4</code>.</li>
+<li>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</li>
+<li>Grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices. Therefore, e.g. applying any <code class="language-markup">.col-md-*</code> class to an element will not only affect its styling on medium devices but also on large devices if a <code class="language-markup">.col-lg-*</code> class is not present.</li>
+</ol>
+
+<p>Look to the examples for applying these principles to your code.</p>
+
+  </div>
+  </div>
+   <div class="row">
+  <div class="col-md-12">
+  <h2 class="header">Grid Options</h2>
+  <p>See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
+  <div class="table-responsive"> <table class="table table-bordered table-striped"> <thead> <tr> <th></th> <th> Extra small devices <small>Phones (&lt;768px)</small> </th> <th> Small devices <small>Tablets (≥768px)</small> </th> <th> Medium devices <small>Desktops (≥992px)</small> </th> <th> Large devices <small>Desktops (≥1200px)</small> </th> </tr> </thead> <tbody> <tr> <th class="text-nowrap" scope="row">Grid behavior</th> <td>Horizontal at all times</td> <td colspan="3">Collapsed to start, horizontal above breakpoints</td> </tr> <tr> <th class="text-nowrap" scope="row">Container width</th> <td>None (auto)</td> <td>750px</td> <td>970px</td> <td>1170px</td> </tr> <tr> <th class="text-nowrap" scope="row">Class prefix</th> <td><code class="language-markup">.col-xs-</code></td> <td><code class="language-markup">.col-sm-</code></td> <td><code class="language-markup">.col-md-</code></td> <td><code class="language-markup">.col-lg-</code></td> </tr> <tr> <th class="text-nowrap" scope="row"># of columns</th> <td colspan="4">12</td> </tr> <tr> <th class="text-nowrap" scope="row">Column width</th> <td class="text-muted">Auto</td> <td>~62px</td> <td>~81px</td> <td>~97px</td> </tr> <tr> <th class="text-nowrap" scope="row">Gutter width</th> <td colspan="4">30px (15px on each side of a column)</td> </tr> <tr> <th class="text-nowrap" scope="row">Nestable</th> <td colspan="4">Yes</td> </tr> <tr> <th class="text-nowrap" scope="row">Offsets</th> <td colspan="4">Yes</td> </tr> <tr> <th class="text-nowrap" scope="row">Column ordering</th> <td colspan="4">Yes</td> </tr> </tbody> </table> </div>
+</div>
+</div>
+
+<div class="row">
+
+<div class="col-md-12">
+
+ <h2>Example: Stacked-to-horizontal</h2>
+ <p>Using a single set of .col-md-* grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices. Place grid columns in any .row.</p>
+
+</div>
+
+
+</div>
+<div class="row show-grid"> <div class="col-md-1">.col-md-1</div> <div class="col-md-1">.col-md-1</div> <div class="col-md-1">.col-md-1</div> <div class="col-md-1">.col-md-1</div> <div class="col-md-1">.col-md-1</div> <div class="col-md-1">.col-md-1</div> <div class="col-md-1">.col-md-1</div> <div class="col-md-1">.col-md-1</div> <div class="col-md-1">.col-md-1</div> <div class="col-md-1">.col-md-1</div> <div class="col-md-1">.col-md-1</div> <div class="col-md-1">.col-md-1</div> </div>
+
+
+ <div class="row show-grid"> <div class="col-md-8">.col-md-8</div> <div class="col-md-4">.col-md-4</div> </div>
+
+ <div class="row show-grid"> <div class="col-md-4">.col-md-4</div> <div class="col-md-4">.col-md-4</div> <div class="col-md-4">.col-md-4</div> </div>
+
+ <div class="row show-grid"> <div class="col-md-6">.col-md-6</div> <div class="col-md-6">.col-md-6</div> </div>
+
+ <div class="row">
+   <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t3">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t4">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t3" class="col-md-12">
+               <pre><code class="language-jade">
+  <span class="token tag"><span class="token attr-value">.row
+    .col-md-1</span></span> .col-md-1
+    <span class="token tag"><span class="token attr-value">.col-md-1</span></span> .col-md-1
+    <span class="token tag"><span class="token attr-value">.col-md-1</span></span> .col-md-1
+    <span class="token tag"><span class="token attr-value">.col-md-1</span></span> .col-md-1
+    <span class="token tag"><span class="token attr-value">.col-md-1</span></span> .col-md-1
+    <span class="token tag"><span class="token attr-value">.col-md-1</span></span> .col-md-1
+    <span class="token tag"><span class="token attr-value">.col-md-1</span></span> .col-md-1
+    <span class="token tag"><span class="token attr-value">.col-md-1</span></span> .col-md-1
+    <span class="token tag"><span class="token attr-value">.col-md-1</span></span> .col-md-1
+    <span class="token tag"><span class="token attr-value">.col-md-1</span></span> .col-md-1
+    <span class="token tag"><span class="token attr-value">.col-md-1</span></span> .col-md-1
+    <span class="token tag"><span class="token attr-value">.col-md-1</span></span> .col-md-1
+  <span class="token tag"><span class="token attr-value">.row
+    .col-md-8</span></span> .col-md-8
+    <span class="token tag"><span class="token attr-value">.col-md-4</span></span> .col-md-4
+  <span class="token tag"><span class="token attr-value">.row
+    .col-md-4</span></span> .col-md-4
+    <span class="token tag"><span class="token attr-value">.col-md-4</span></span> .col-md-4
+    <span class="token tag"><span class="token attr-value">.col-md-4</span></span>.col-md-4
+  <span class="token tag"><span class="token attr-value">.row
+    .col-md-6</span></span> .col-md-6
+    <span class="token tag"><span class="token attr-value">.col-md-6</span></span> .col-md-6
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t4" class="col-md-12">
+
+
+<pre><code class="language-markup">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;
+  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;
+  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;
+  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;
+  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;
+  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;
+  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;
+  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;
+  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;
+  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;
+  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;
+  &lt;div class=&quot;col-md-1&quot;&gt;.col-md-1&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-8&quot;&gt;.col-md-8&lt;/div&gt;
+  &lt;div class=&quot;col-md-4&quot;&gt;.col-md-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-4&quot;&gt;.col-md-4&lt;/div&gt;
+  &lt;div class=&quot;col-md-4&quot;&gt;.col-md-4&lt;/div&gt;
+  &lt;div class=&quot;col-md-4&quot;&gt;.col-md-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-6&quot;&gt;.col-md-6&lt;/div&gt;
+  &lt;div class=&quot;col-md-6&quot;&gt;.col-md-6&lt;/div&gt;
 &lt;/div&gt;</code></pre>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="header">Text Align</h2>
-            <p>For horizontally aligning content. We have <code class=" language-markup">.left-align</code>, <code class=" language-markup">.right-align</code> and <code class=" language-markup">.center-align</code></p>
-            <div class="eq-ui-card doc-margin-bottom">
-            	<div class="eq-ui-card-supporting-text">
-                	<h5 class="left-align">Left aligned</h5>
-                </div>
-            </div>
-            <div class="eq-ui-card doc-margin-bottom">
-            	<div class="eq-ui-card-supporting-text">
-                	<h5 class="right-align">Right aligned</h5>
-                </div>
-            </div>
-            <div class="eq-ui-card doc-margin-bottom">
-            	<div class="eq-ui-card-supporting-text">
-                	<h5 class="center-align">Center aligned</h5>
-                </div>
-            </div>
-            <pre><code class="language-markup">
-&lt;div&gt;
-    &lt;h5 class=&quot;left-align&quot;&gt;Left aligned&lt;/h5&gt;
-&lt;/div&gt;
-&lt;div&gt;
-    &lt;h5 class=&quot;right-align&quot;&gt;Right aligned&lt;/h5&gt;
-&lt;/div&gt;
-&lt;div&gt;
-    &lt;h5 class=&quot;center-align&quot;&gt;Center aligned&lt;/h5&gt;
+<!-- Tab end-->
+
+ </div>
+
+ <div class="row">
+
+  <div class="col-md-12">
+    <h2>Example: Fluid container</h2>
+    <p>Turn any fixed-width grid layout into a full-width layout by changing your outermost <code class="language-markup">.container</code> to <code class="language-markup">.container-fluid</code>.</p>
+
+     <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t5">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t6">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t5" class="col-md-12">
+               <pre><code class="language-jade">
+
+<span class="token tag"><span class="token attr-value">.container-fluid
+  .row</span></span>
+    ...
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t6" class="col-md-12">
+
+
+<pre><code class="language-markup">
+&lt;div class=&quot;container-fluid&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    ...
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="header">Truncate Text</h2>
-            <p>For truncate text, add <code class=" language-markup">truncate</code> class</p>
+<!-- Tab end-->
 
-            <div class="eq-ui-card doc-margin-bottom">
-            	<div class="eq-ui-card-supporting-text">
-                	<h5 class="truncate">Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum mauris sit amet nisl augue nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.</h5>
-                </div>
-            </div>
+  </div>
 
-            <pre><code class="language-markup">
-&lt;h5 class=&quot;truncate&quot;&gt;Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum mauris sit amet nisl augue nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.&lt;/h5&gt;</code></pre>
+ </div>
+
+ <div class="row">
+   <div class="col-md-12">
+
+     <h2>Example: Mobile and desktop</h2>
+     <p>Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding <code class="language-markup">.col-xs-*</code> <code class="language-markup">.col-md-*</code> to your columns. See the example below for a better idea of how it all works.</p>
+   </div>
+
+ </div>
+ <div class="row show-grid"> <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div> <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div> </div>
+
+ <div class="row show-grid"> <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div> <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div> <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div> </div>
+
+ <div class="row show-grid"> <div class="col-xs-6">.col-xs-6</div> <div class="col-xs-6">.col-xs-6</div> </div>
+
+<div class="row">
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t7">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t8">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t7" class="col-md-12">
+               <pre><code class="language-jade">
+
+// Stack the columns on mobile by making one full-width and the other half-width
+<span class="token tag"><span class="token attr-value">.row
+  .col-xs-12.col-md-8</span></span> .col-xs-12 .col-md-8
+  <span class="token tag"><span class="token attr-value">.col-xs-6.col-md-4</span></span> .col-xs-6 .col-md-4
+
+// Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop
+<span class="token tag"><span class="token attr-value">.row
+  .col-xs-6.col-md-4</span></span> .col-xs-6 .col-md-4
+  <span class="token tag"><span class="token attr-value">.col-xs-6.col-md-4</span></span> .col-xs-6 .col-md-4
+  <span class="token tag"><span class="token attr-value">.col-xs-6.col-md-4</span></span> .col-xs-6 .col-md-4
+
+// Columns are always 50% wide, on mobile and desktop
+<span class="token tag"><span class="token attr-value">.row
+  .col-xs-6</span></span> .col-xs-6
+  <span class="token tag"><span class="token attr-value">.col-xs-6</span></span> .col-xs-6
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t8" class="col-md-12">
+
+
+<pre><code class="language-markup">
+&lt;!-- Stack the columns on mobile by making one full-width and the other half-width --&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-xs-12 col-md-8&quot;&gt;.col-xs-12 .col-md-8&lt;/div&gt;
+  &lt;div class=&quot;col-xs-6 col-md-4&quot;&gt;.col-xs-6 .col-md-4&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-xs-6 col-md-4&quot;&gt;.col-xs-6 .col-md-4&lt;/div&gt;
+  &lt;div class=&quot;col-xs-6 col-md-4&quot;&gt;.col-xs-6 .col-md-4&lt;/div&gt;
+  &lt;div class=&quot;col-xs-6 col-md-4&quot;&gt;.col-xs-6 .col-md-4&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Columns are always 50% wide, on mobile and desktop --&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-xs-6&quot;&gt;.col-xs-6&lt;/div&gt;
+  &lt;div class=&quot;col-xs-6&quot;&gt;.col-xs-6&lt;/div&gt;
+&lt;/div&gt;</code></pre>
         </div>
-    </div>
+
+<!-- Tab end-->
+
+</div>
+
+<div class="row">
+  <h2>Example: Mobile, tablet, desktop</h2>
+  <p>Build on the previous example by creating even more dynamic and powerful layouts with tablet <code class="language-markup">.col-sm-*</code> classes.</p>
+
+</div>
+<div class="row show-grid"> <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div> <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div> </div>
+
+<div class="row show-grid"> <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div> <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>  <div class="clearfix visible-xs-block"></div> <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div> </div>
+
+
+<div class="row">
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t9">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t10">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t9" class="col-md-12">
+               <pre><code class="language-jade">
+
+<span class="token tag"><span class="token attr-value">.row
+  .col-xs-12.col-sm-6.col-md-8</span></span> .col-xs-12 .col-sm-6 .col-md-8
+  <span class="token tag"><span class="token attr-value">.col-xs-6.col-md-4</span></span> .col-xs-6 .col-md-4
+<span class="token tag"><span class="token attr-value">.row
+  .col-xs-6.col-sm-4</span></span> .col-xs-6 .col-sm-4
+  <span class="token tag"><span class="token attr-value">.col-xs-6.col-sm-4</span></span> .col-xs-6 .col-sm-4
+
+  // Optional: clear the XS cols if their content doesn't match in height
+  <span class="token tag"><span class="token attr-value">.clearfix.visible-xs-block
+  .col-xs-6.col-sm-4</span></span> .col-xs-6 .col-sm-4
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t10" class="col-md-12">
+
+
+<pre><code class="language-markup">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-xs-12 col-sm-6 col-md-8&quot;&gt;.col-xs-12 .col-sm-6 .col-md-8&lt;/div&gt;
+  &lt;div class=&quot;col-xs-6 col-md-4&quot;&gt;.col-xs-6 .col-md-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-xs-6 col-sm-4&quot;&gt;.col-xs-6 .col-sm-4&lt;/div&gt;
+  &lt;div class=&quot;col-xs-6 col-sm-4&quot;&gt;.col-xs-6 .col-sm-4&lt;/div&gt;
+  &lt;!-- Optional: clear the XS cols if their content doesn't match in height --&gt;
+  &lt;div class=&quot;clearfix visible-xs-block&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;col-xs-6 col-sm-4&quot;&gt;.col-xs-6 .col-sm-4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+<!-- Tab end-->
+
+</div>
+
+<div class="row">
+
+  <div class="col-md-12">
+    <h2>Example: Column wrapping</h2>
+    <p>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</p>
+
+  </div>
+</div>
+
+<div class="row show-grid"> <div class="col-xs-9">.col-xs-9</div> <div class="col-xs-4">.col-xs-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div> <div class="col-xs-6">.col-xs-6<br>Subsequent columns continue along the new line.</div> </div>
+
+<div class="row">
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t11">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t12">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t11" class="col-md-12">
+               <pre><code class="language-jade">
+
+<span class="token tag"><span class="token attr-value">.row
+  .col-xs-9</span></span> .col-xs-9
+  <span class="token tag"><span class="token attr-value">.col-xs-4</span></span>
+    | .col-xs-4
+    <span class="token tag">br</span>
+    | Since 9 + 4 = 13 > 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.
+  <span class="token tag"><span class="token attr-value">.col-xs-6</span></span>
+    | .col-xs-6
+    <span class="token tag">br</span>
+    | Subsequent columns continue along the new line.
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t12" class="col-md-12">
+
+
+<pre><code class="language-markup">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-xs-9&quot;&gt;.col-xs-9&lt;/div&gt;
+  &lt;div class=&quot;col-xs-4&quot;&gt;.col-xs-4&lt;br&gt;Since 9 + 4 = 13 &amp;gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.&lt;/div&gt;
+  &lt;div class=&quot;col-xs-6&quot;&gt;.col-xs-6&lt;br&gt;Subsequent columns continue along the new line.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+<!-- Tab end-->
+
+</div>
+<div class="row">
+
+  <div class="col-md-12">
+    <h2>Responsive column resets</h2>
+    <p>With the four tiers of grids available you're bound to run into issues where, at certain breakpoints, your columns don't clear quite right as one is taller than the other. To fix that, use a combination of a <code class="language-markup">.clearfix</code> and our <a href="#responsive-utilities">responsive utility classes</a>.</p>
+  </div>
+</div>
+
+<div class="row show-grid"> <div class="col-xs-6 col-sm-3"> .col-xs-6 .col-sm-3 <br> Resize your viewport or check it out on your phone for an example. </div> <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>  <div class="clearfix visible-xs-block"></div> <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div> <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div> </div>
+
+<div class="row">
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t13">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t14">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t13" class="col-md-12">
+               <pre><code class="language-jade">
+
+<span class="token tag"><span class="token attr-value">.row
+  .col-xs-6.col-sm-3</span></span> .col-xs-6 .col-sm-3
+  <span class="token tag"><span class="token attr-value">.col-xs-6.col-sm-3</span></span> .col-xs-6 .col-sm-3
+
+  // Add the extra clearfix for only the required viewport
+  <span class="token tag"><span class="token attr-value">.clearfix.visible-xs-block
+  .col-xs-6.col-sm-3</span></span> .col-xs-6 .col-sm-3
+  <span class="token tag"><span class="token attr-value">.col-xs-6.col-sm-3</span></span> .col-xs-6 .col-sm-3
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t14" class="col-md-12">
+
+
+<pre><code class="language-markup">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-xs-6 col-sm-3&quot;&gt;.col-xs-6 .col-sm-3&lt;/div&gt;
+  &lt;div class=&quot;col-xs-6 col-sm-3&quot;&gt;.col-xs-6 .col-sm-3&lt;/div&gt;
+
+  &lt;!-- Add the extra clearfix for only the required viewport --&gt;
+  &lt;div class=&quot;clearfix visible-xs-block&quot;&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;col-xs-6 col-sm-3&quot;&gt;.col-xs-6 .col-sm-3&lt;/div&gt;
+  &lt;div class=&quot;col-xs-6 col-sm-3&quot;&gt;.col-xs-6 .col-sm-3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+<!-- Tab end-->
+
+</div>
+
+<div class="row">
+<div class="col-md-12">
+  <p>In addition to column clearing at responsive breakpoints, you may need to <strong>reset offsets, pushes, or pulls</strong>. See this in action in <a href="//getbootstrap.com/examples/grid/" target="_blank">the grid example</a>.</p>
+
+</div>
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t15">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t16">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t15" class="col-md-12">
+               <pre><code class="language-jade">
+
+<span class="token tag"><span class="token attr-value">.row
+  .col-sm-5.col-md-6</span></span> .col-sm-5 .col-md-6
+  <span class="token tag"><span class="token attr-value">.col-sm-5.col-sm-offset-2.col-md-6.col-md-offset-0</span></span> .col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0
+<span class="token tag"><span class="token attr-value">.row
+  .col-sm-6.col-md-5.col-lg-6</span></span> .col-sm-6 .col-md-5 .col-lg-6
+  <span class="token tag"><span class="token attr-value">.col-sm-6.col-md-5.col-md-offset-2.col-lg-6.col-lg-offset-0</span></span> .col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0
+
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t16" class="col-md-12">
+
+
+<pre><code class="language-markup">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-5 col-md-6&quot;&gt;.col-sm-5 .col-md-6&lt;/div&gt;
+  &lt;div class=&quot;col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0&quot;&gt;.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-6 col-md-5 col-lg-6&quot;&gt;.col-sm-6 .col-md-5 .col-lg-6&lt;/div&gt;
+  &lt;div class=&quot;col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0&quot;&gt;.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+<!-- Tab end-->
+
+
+</div>
+
+<div class="row">
+
+  <div class="col-md-12">
+  <h2>Offsetting columns</h2>
+    <p>Move columns to the right using <code class="language-markup">.col-md-offset-*</code> classes. These classes increase the left margin of a column by <code class="language-markup">*</code> columns. For example, <code class="language-markup">.col-md-offset-4</code> moves <code class="language-markup">.col-md-4</code> over four columns.</p>
+  </div>
+</div>
+
+<div class="row show-grid"> <div class="col-md-4">.col-md-4</div> <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div> </div>
+<div class="row show-grid"> <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div> <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div> </div>
+<div class="row show-grid"> <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div> </div>
+
+<div class="row">
+
+  <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t17">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t18">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t17" class="col-md-12">
+               <pre><code class="language-jade">
+
+<span class="token tag"><span class="token attr-value">.row
+  .col-md-4</span></span> .col-md-4
+  <span class="token tag"><span class="token attr-value">.col-md-4.col-md-offset-4</span></span> .col-md-4 .col-md-offset-4
+<span class="token tag"><span class="token attr-value">.row
+  .col-md-3.col-md-offset-3</span></span> .col-md-3 .col-md-offset-3
+  <span class="token tag"><span class="token attr-value">.col-md-3.col-md-offset-3</span></span> .col-md-3 .col-md-offset-3
+<span class="token tag"><span class="token attr-value">.row
+  <span class="token tag"><span class="token attr-value">.col-md-6.col-md-offset-3</span></span> .col-md-6 .col-md-offset-3
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t18" class="col-md-12">
+
+
+<pre><code class="language-markup">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-4&quot;&gt;.col-md-4&lt;/div&gt;
+  &lt;div class=&quot;col-md-4 col-md-offset-4&quot;&gt;.col-md-4 .col-md-offset-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-3 col-md-offset-3&quot;&gt;.col-md-3 .col-md-offset-3&lt;/div&gt;
+  &lt;div class=&quot;col-md-3 col-md-offset-3&quot;&gt;.col-md-3 .col-md-offset-3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-6 col-md-offset-3&quot;&gt;.col-md-6 .col-md-offset-3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+<!-- Tab end-->
+
+</div>
+
+
+
+
+<div class="row">
+
+<div class="col-md-12">
+  <p>You can also override offsets from lower grid tiers with <code class="language-markup">.col-*-offset-0</code> classes.</p>
+</div>
+  <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t19">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t20">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t19" class="col-md-12">
+               <pre><code class="language-jade">
+
+<span class="token tag"><span class="token attr-value">.row
+  .col-xs-6.col-sm-4
+  .col-xs-6.col-sm-4
+  .col-xs-6.col-xs-offset-3.col-sm-4.col-sm-offset-0
+</span></span>
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t20" class="col-md-12">
+
+
+<pre><code class="language-markup">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-xs-6 col-sm-4&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xs-6 col-sm-4&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+<!-- Tab end-->
+
+</div>
+
+<div class="row">
+
+<div class="col-md-12">
+<h2>Nesting columns</h2>
+<p>To nest your content with the default grid, add a new <code class="language-markup">.row</code> and set of <code class="language-markup">.col-sm-*</code> columns within an existing <code class="language-markup">.col-sm-*</code> column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).</p>
+</div>
+</div>
+<div class="row show-grid"> <div class="col-sm-9"> Level 1: .col-sm-9 <div class="row show-grid"> <div class="col-xs-8 col-sm-6"> Level 2: .col-xs-8 .col-sm-6 </div> <div class="col-xs-4 col-sm-6"> Level 2: .col-xs-4 .col-sm-6 </div> </div> </div> </div>
+
+<div class="row">
+
+  <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t21">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t22">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t21" class="col-md-12">
+               <pre><code class="language-jade">
+
+<span class="token tag"><span class="token attr-value">.row
+  .col-sm-9</span></span>
+    | Level 1: .col-sm-9
+    <span class="token tag"><span class="token attr-value">.row
+      .col-xs-8.col-sm-6</span></span>
+        | Level 2: .col-xs-8 .col-sm-6
+      <span class="token tag"><span class="token attr-value">.col-xs-4.col-sm-6</span></span>
+        | Level 2: .col-xs-4 .col-sm-6
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t22" class="col-md-12">
+
+
+<pre><code class="language-markup">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-9&quot;&gt;
+    Level 1: .col-sm-9
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-xs-8 col-sm-6&quot;&gt;
+        Level 2: .col-xs-8 .col-sm-6
+      &lt;/div&gt;
+      &lt;div class=&quot;col-xs-4 col-sm-6&quot;&gt;
+        Level 2: .col-xs-4 .col-sm-6
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+<!-- Tab end-->
+
+</div>
+<div class="row">
+
+  <div class="col-md-12">
+
+  <h2>Column ordering</h2>
+  <p>Easily change the order of our built-in grid columns with <code class="language-markup">.col-md-push-*</code> and <code class="language-markup">.col-md-pull-*</code> modifier classes.</p>
+  </div>
+</div>
+<div class="row show-grid"> <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div> <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div> </div>
+
+<div class="row">
+
+  <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t23">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t24">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t23" class="col-md-12">
+               <pre><code class="language-jade">
+
+<span class="token tag"><span class="token attr-value">.row
+  .col-md-9.col-md-push-3</span></span> .col-md-9 .col-md-push-3
+  <span class="token tag"><span class="token attr-value">.col-md-3.col-md-pull-9</span></span> .col-md-3 .col-md-pull-9
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t24" class="col-md-12">
+
+
+<pre><code class="language-markup">
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-9 col-md-push-3&quot;&gt;.col-md-9 .col-md-push-3&lt;/div&gt;
+  &lt;div class=&quot;col-md-3 col-md-pull-9&quot;&gt;.col-md-3 .col-md-pull-9&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+<!-- Tab end-->
+
+</div>
+
 
 </div>
 <!--footer>
@@ -803,12 +1447,12 @@
 </div>
     </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
 <script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.js?v=0.0.0"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.3.3"></script>
 
 <script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
 <script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
 
-<script src="assets/js/doc.js?v=0.0.0"></script>
+<script src="assets/js/doc.js?v=0.3.3"></script>
 <script src="assets/js/ctrl/ctrl-color.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

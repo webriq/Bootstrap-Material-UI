@@ -8,8 +8,8 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>Components - Form Validation | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.css?v=0.0.0" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.0.0" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.3.3" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.3.3" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"components",path:"form-validation",name_section:"Components",name_chapter:"Form Validation"};</script>
@@ -845,7 +845,101 @@
                     </div>
                 </div>
             </form>
-            <pre><code class="language-markup">
+
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t1" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag">form<span class="token attr-value">#form-validation-test1
+  .row
+    .col-md-12
+      .eq-ui-form-group.eq-ui-input-field</span>
+        input<span class="token attr-value">#username-test1.form-control.eq-ui-input<span class="token attr-name">(type='text', data-parsley-minlength='6', required='')</span></span>
+        label<span class="token attr-name">(for='username-test1', data-error='Min length 6')</span></span> Username
+  <span class="token tag"><span class="token attr-value">.row
+    .col-md-6
+      .row
+        .col-md-12
+          .eq-ui-form-group.eq-ui-input-field</span>
+            input<span class="token attr-value">#first_name-test1.form-control.eq-ui-input<span class="token attr-name">(type='text', data-parsley-minlength='3')</span></span>
+            label<span class="token attr-name">(for='first_name-test1', data-error='Min length 3')</span></span> First Name
+    <span class="token tag"><span class="token attr-value">.col-md-6
+      .row
+        .col-md-12
+          .eq-ui-form-group.eq-ui-input-field</span>
+            input<span class="token attr-value">#last_name-test1.form-control.eq-ui-input<span class="token attr-name">(type='text', data-parsley-minlength='3')</span></span>
+            label<span class="token attr-name">(for='last_name-test1', data-error='Min length 3')</span></span> Last Name
+  <span class="token tag"><span class="token attr-value">.row
+    .col-md-6
+      .row
+        .col-md-12
+          .eq-ui-form-group.eq-ui-input-field</span>
+            input<span class="token attr-value">#password-test1.form-control.eq-ui-input<span class="token attr-name">(type='password', data-parsley-minlength='6', required='')</span></span>
+            label<span class="token attr-name">(for='password-test1', data-error='Min length 6')</span></span> Password
+    <span class="token tag"><span class="token attr-value">.col-md-6
+      .row
+        .col-md-12
+          .eq-ui-form-group.eq-ui-input-field</span>
+            input<span class="token attr-value">#password-confirm-test1.form-control.eq-ui-input<span class="token attr-name">(type='password', data-parsley-minlength='6', data-parsley-equalto='#password-test1', required='')</span></span>
+            label<span class="token attr-name">(for='password-confirm-test1', data-error='Min length 6 or Password not equal')</span></span> Confirm Password
+  <span class="token tag"><span class="token attr-value">.row
+    .col-md-6
+      .row
+        .col-md-12
+          .eq-ui-form-group.eq-ui-input-field</span>
+            input<span class="token attr-value">#email-test1.form-control.eq-ui-input<span class="token attr-name">(type='email', required='')</span></span>
+            label<span class="token attr-name">(for='email-test1', data-error='Email not valid')</span></span> Email
+    <span class="token tag"><span class="token attr-value">.col-md-6
+      .row
+        .col-md-12
+          .eq-ui-form-group.eq-ui-input-field</span>
+            select<span class="token attr-value">#gender-test1.eq-ui-select<span class="token attr-name">(required='')</span></span>
+              option<span class="token attr-name">(value='', disabled='', selected='')</span></span> Choose your gender
+              <span class="token tag">option<span class="token attr-name">(value='1')</span></span> Male
+              <span class="token tag">option<span class="token attr-name">(value='2')</span></span> Female
+            <span class="token tag">label<span class="token attr-name">(data-error='Required')</span></span> Gender
+  <span class="token tag"><span class="token attr-value">.row
+    .col-md-6
+      .row
+        .col-md-12
+          .eq-ui-form-group.eq-ui-input-field</span>
+            input<span class="token attr-value">#city-test1.form-control.eq-ui-input<span class="token attr-name">(type='text', required='')</span></span>
+            label<span class="token attr-name">(for='city-test1', data-error='Required')</span></span> City
+    <span class="token tag"><span class="token attr-value">.col-md-6
+      .row
+        .col-md-12
+          .eq-ui-form-group.eq-ui-input-field</span>
+            input<span class="token attr-value">#country-test1.form-control.eq-ui-input<span class="token attr-name">(type='text', required='')</span></span>
+            label<span class="token attr-name">(for='country-test1', data-error='Required')</span></span> Country
+  <span class="token tag"><span class="token attr-value">.row
+    .col-md-12
+      .eq-ui-form-group.eq-ui-input-field</span>
+        input<span class="token attr-value">#agree-test1.eq-ui-input.filled-in<span class="token attr-name">(type='checkbox', data-parsley-class-handler='#agree-test1', required='')</span></span>
+        label<span class="token attr-name">(for='agree-test1')</span></span> I agree to the terms and conditions
+  <span class="token tag"><span class="token attr-value">.row
+    .col-md-12
+      .eq-ui-form-group.eq-ui-input-field</span>
+        a<span class="token attr-value">#form-validation-test1-submit.btn.btn-primary.eq-ui-waves-light</span></span> Submit
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t2" class="col-md-12">
+
+
+ <pre><code class="language-markup">
 &lt;form id=&quot;form-validation-test1&quot;&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-md-12&quot;&gt;
@@ -964,6 +1058,11 @@
     &lt;/div&gt;
 &lt;/form&gt;</code></pre>
         </div>
+
+<!-- Tab end-->
+
+
+        </div>
     </div>
 
     <div class="row">
@@ -1029,12 +1128,12 @@ $(document).ready(function(){
 </div>
     </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
 <script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.js?v=0.0.0"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.3.3"></script>
 
 <script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
 <script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
 
-<script src="assets/js/doc.js?v=0.0.0"></script>
+<script src="assets/js/doc.js?v=0.3.3"></script>
 <script src="assets/js/ctrl/ctrl-color.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

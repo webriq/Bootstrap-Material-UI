@@ -8,8 +8,8 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>Components - Cards | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.css?v=0.0.0" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.0.0" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.3.3" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.3.3" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"components",path:"cards",name_section:"Components",name_chapter:"Cards"};</script>
@@ -765,7 +765,50 @@
                 </div>
             </div>
 
-            <pre><code class="language-markup">
+
+            <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t1" class="col-md-12">
+               <pre><code class="language-jade">
+// Basic
+<span class="token tag"><span class="token attr-value">.eq-ui-card
+  .eq-ui-card-title
+    h2.eq-ui-card-title-text</span></span> Welcome
+  <span class="token tag"><span class="token attr-value">.eq-ui-card-supporting-text</span></span>
+    | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    | Mauris sagittis pellentesque lacus eleifend lacinia...
+  <span class="token tag"><span class="token attr-value">.eq-ui-card-actions.eq-ui-card-border</span>
+    a<span class="token attr-value">.btn.btn-default.eq-ui-btn-flat.eq-ui-waves.eq-ui-secondary-color-text</span></span> Get Started
+  <span class="token tag"><span class="token attr-value">.eq-ui-card-menu</span>
+    ul<span class="token attr-value">.right.eq-ui-nav-menu</span>
+      li<span class="token attr-value">.eq-ui-nav-menu-item-icon</span>
+        a<span class="token attr-value">.btn.btn-default.eq-ui-btn-flat.eq-ui-btn-fab.eq-ui-btn-menu-fab.eq-ui-waves</span>
+          i<span class="token attr-value">.mdi.mdi-dots-vertical.icon</span></span>
+
+
+// Panel
+<span class="token tag"><span class="token attr-value">.eq-ui-card
+  .eq-ui-card-supporting-text</span></span>
+    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet eros quis sapien mollis congue eu a libero. Fusce blandit purus vel est sodales, consequat gravida felis condimentum. Suspendisse quis odio pulvinar neque condimentum congue ut et nisl. Cras nec neque eu urna euismod iaculis. Mauris facilisis arcu at eros porttitor, non consectetur ante rhoncus.
+
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t2" class="col-md-12">
+
+ <pre><code class="language-markup">
 &lt;!-- Basic --&gt;
 &lt;div class=&quot;eq-ui-card&quot;&gt;
     &lt;div class=&quot;eq-ui-card-title&quot;&gt;
@@ -795,6 +838,12 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet eros quis sapien mollis congue eu a libero. Fusce blandit purus vel est sodales, consequat gravida felis condimentum. Suspendisse quis odio pulvinar neque condimentum congue ut et nisl. Cras nec neque eu urna euismod iaculis. Mauris facilisis arcu at eros porttitor, non consectetur ante rhoncus.
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+
         </div>
     </div>
 
@@ -829,7 +878,43 @@
                 <div class="col-md-6"></div>
             </div>
 
-            <pre><code class="language-markup">
+            <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t3">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t4">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t3" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag"><span class="token attr-value">.eq-ui-card</span>
+  <span class="token attr-value">.eq-ui-card-title</span>
+    h2<span class="token attr-value">.eq-ui-card-title-text</span></span> Welcome
+  <span class="token tag"><span class="token attr-value">.eq-ui-card-supporting-text</span></span>
+    | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    | Mauris sagittis pellentesque lacus eleifend lacinia...
+  <span class="token tag"><span class="token attr-value">.eq-ui-card-actions.eq-ui-card-border</span>
+    a<span class="token attr-value">.btn.btn-default.eq-ui-btn-flat.eq-ui-waves.eq-ui-secondary-color-text</span></span> Get Started
+  <span class="token tag"><span class="token attr-value">.eq-ui-card-menu</span>
+    ul<span class="token attr-value">.right.eq-ui-nav-menu</span>
+      li<span class="token attr-value">.eq-ui-nav-menu-item-icon</span>
+        a<span class="token attr-value">.btn.btn-default.eq-ui-btn-flat.eq-ui-btn-fab.eq-ui-btn-menu-fab.eq-ui-waves</span>
+          i<span class="token attr-value">.mdi.mdi-dots-vertical.icon</span></span>
+
+
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t4" class="col-md-12">
+
+ <pre><code class="language-markup">
 &lt;div class=&quot;eq-ui-card&quot;&gt;
     &lt;div class=&quot;eq-ui-card-title&quot;&gt;
         &lt;h2 class=&quot;eq-ui-card-title-text&quot;&gt;Welcome&lt;/h2&gt;
@@ -851,6 +936,12 @@
         &lt;/ul&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+
         </div>
     </div>
 
@@ -1003,7 +1094,130 @@
                 </div>
             </div>
 
-            <pre><code class="language-markup">
+
+            <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t5">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t6">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t5" class="col-md-12">
+               <pre><code class="language-jade">
+// With Table
+<span class="token tag"><span class="token attr-value">.eq-ui-card.eq-ui-card-with-table
+  .eq-ui-card-title</span>
+    h2<span class="token attr-value">.eq-ui-card-title-text List Materials</span>
+  table<span class="token attr-value">.table.eq-ui-data-table.eq-ui-with-checkbox</span>
+    thead
+      tr
+        th
+          input<span class="token attr-value">#checkbox-all.eq-ui-input.filled-in</span><span class="token attr-name">(type='checkbox')</span>
+          label<span class="token attr-name">(for='checkbox-all')</span>
+        th<span class="token attr-value">.eq-ui-data-table-cell-non-numeric</span></span> Material
+        <span class="token tag">th</span> Quantity
+        <span class="token tag">th</span> Unit price
+    <span class="token tag">tbody
+      tr
+        td
+          input<span class="token attr-value">#checkbox-1.eq-ui-input.filled-in</span><span class="token attr-name">(type='checkbox')</span>
+          label<span class="token attr-name">(for='checkbox-1')</span>
+        td<span class="token attr-value">.eq-ui-data-table-cell-non-numeric Acrylic</span></span> (Transparent)
+        <span class="token tag">td</span> 25
+        <span class="token tag">td</span> $2.90
+      <span class="token tag">tr
+        td
+          input<span class="token attr-value">#checkbox-2.eq-ui-input.filled-in</span><span class="token attr-name">(type='checkbox')</span>
+          label<span class="token attr-name">(for='checkbox-2')</span>
+        td<span class="token attr-value">.eq-ui-data-table-cell-non-numeric</span></span> Plywood (Birch)
+        <span class="token tag">td</span> 50
+        <span class="token tag">td</span> $1.25
+      <span class="token tag">tr
+        td
+          input<span class="token attr-value">#checkbox-3.eq-ui-input.filled-in</span><span class="token attr-name">(type='checkbox')</span>
+          label<span class="token attr-name">(for='checkbox-3')</span>
+        td<span class="token attr-value">.eq-ui-data-table-cell-non-numeric</span></span> Laminate (Gold on Blue)
+        <span class="token tag">td</span> 10
+        <span class="token tag">td</span> $2.35
+  <span class="token tag"><span class="token attr-value">.eq-ui-card-actions.eq-ui-card-border</span>
+    ul<span class="token attr-value">.right.eq-ui-nav-menu</span>
+      li</span> Rows per page:
+      <span class="token tag">li
+        a<span class="token attr-name">(href='#')</span></span>
+          | 10
+          <span class="token tag">i<span class="token attr-value">.mdi.mdi-menu-down.icon.icon-right</span><span class="token attr-name">(style='margin-left: 5px;')</span>
+      li
+        a</span> 1 - 3 of 100
+      <span class="token tag">li<span class="token attr-value">.eq-ui-nav-menu-item-icon</span>
+        a<span class="token attr-value">.btn.btn-default.eq-ui-btn-flat.eq-ui-btn-fab.eq-ui-btn-menu-fab.eq-ui-waves</span>
+          i<span class="token attr-value">.mdi.mdi-chevron-left.icon</span>
+      li<span class="token attr-value">.eq-ui-nav-menu-item-icon</span>
+        a<span class="token attr-value">.btn.btn-default.eq-ui-btn-flat.eq-ui-btn-fab.eq-ui-btn-menu-fab.eq-ui-waves</span>
+          i<span class="token attr-value">.mdi.mdi-chevron-right.icon</span>
+  <span class="token attr-value">.eq-ui-card-menu</span>
+    ul<span class="token attr-value">.right.eq-ui-nav-menu</span>
+      li<span class="token attr-value">.eq-ui-nav-menu-item-icon
+        .eq-ui-search.eq-ui-search-expandable</span>
+          input<span class="token attr-name">(type='text', placeholder='Search')</span>
+          a<span class="token attr-value">.eq-ui-search-icon-left.eq-ui-serach-expandable-show.btn.btn-default.eq-ui-btn-flat.eq-ui-btn-fab.eq-ui-btn-menu-fab.eq-ui-waves</span>
+            i<span class="token attr-value">.mdi.mdi.mdi-magnify.icon</span>
+          i<span class="token attr-value">.eq-ui-search-clear.mdi.mdi-close.icon.icon-right.icon-18</span>
+      li<span class="token attr-value">.eq-ui-nav-menu-item-icon</span>
+        a<span class="token attr-value">.btn.btn-default.eq-ui-btn-flat.eq-ui-btn-fab.eq-ui-btn-menu-fab.eq-ui-waves</span>
+          i<span class="token attr-value">.mdi.mdi-filter-variant.icon</span>
+      li<span class="token attr-value">.eq-ui-nav-menu-item-icon</span>
+        a<span class="token attr-value">.btn.btn-default.eq-ui-btn-flat.eq-ui-btn-fab.eq-ui-btn-menu-fab.eq-ui-waves</span>
+          i<span class="token attr-value">.mdi.mdi-dots-vertical.icon</span></span>
+
+// With List
+<span class="token tag"><span class="token attr-value">.eq-ui-card.eq-ui-card-with-list
+  .eq-ui-card-title.eq-ui-card-border</span>
+    h2<span class="token attr-value">.eq-ui-card-title-text Messages</span>
+  ul<span class="token attr-value">.eq-ui-list.eq-ui-hoverable</span>
+    li<span class="token attr-value">.eq-ui-list-item.eq-ui-list-avatar.eq-ui-list-truncate.eq-ui-list-secondary-content</span>
+      img<span class="token attr-value">.circle</span><span class="token attr-name">(src='assets/img/doc/avatar/avatar_1.jpg')</span>
+      <span class="token attr-value">.eq-ui-list-body</span>
+        h6<span class="token attr-value">.eq-ui-list-title Title</span></span>
+        | Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+      <span class="token tag">a<span class="token attr-value">.eq-ui-list-secondary-content-body.shades-text-black-hover</span>
+        i<span class="token attr-value">.mdi.mdi-close-circle.icon.icon-18</span>
+    li<span class="token attr-value">.eq-ui-list-item.eq-ui-list-avatar.eq-ui-list-truncate.eq-ui-list-secondary-content</span>
+      img<span class="token attr-value">.circle</span><span class="token attr-name">(src='assets/img/doc/avatar/avatar_2.jpg')</span>
+      <span class="token attr-value">.eq-ui-list-body</span>
+        h6<span class="token attr-value">.eq-ui-list-title</span></span> Title
+        | Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+      <span class="token tag">a<span class="token attr-value">.eq-ui-list-secondary-content-body.shades-text-black-hover</span>
+        i<span class="token attr-value">.mdi.mdi-close-circle.icon.icon-18</span>
+    li<span class="token attr-value">.eq-ui-list-item.eq-ui-list-avatar.eq-ui-list-truncate.eq-ui-list-secondary-content</span>
+      img<span class="token attr-value">.circle</span><span class="token attr-name">(src='assets/img/doc/avatar/avatar_3.jpg')</span>
+      <span class="token attr-value">.eq-ui-list-body</span>
+        h6<span class="token attr-value">.eq-ui-list-title</span></span> Title
+        | Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
+      <span class="token tag">a<span class="token attr-value">.eq-ui-list-secondary-content-body.shades-text-black-hover</span>
+        i<span class="token attr-value">.mdi.mdi-close-circle.icon.icon-18
+  .eq-ui-card-actions.eq-ui-card-border.center</span>
+    a<span class="token attr-value">.btn.btn-default.eq-ui-btn-flat.eq-ui-waves.shades-text-black</span></span> View all
+  <span class="token tag"><span class="token attr-value">.eq-ui-card-menu</span>
+    ul<span class="token attr-value">.right.eq-ui-nav-menu</span>
+      li<span class="token attr-value">.eq-ui-nav-menu-item-icon</span>
+        a<span class="token attr-value">.btn.btn-default.eq-ui-btn-flat.eq-ui-btn-fab.eq-ui-btn-menu-fab.eq-ui-waves</span>
+          i<span class="token attr-value">.mdi.mdi-check-all.icon</span></span>
+
+
+
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t6" class="col-md-12">
+
+<pre><code class="language-markup">
 &lt;!--  With Table --&gt;
 &lt;div class=&quot;eq-ui-card eq-ui-card-with-table&quot;&gt;
     &lt;div class=&quot;eq-ui-card-title&quot;&gt;
@@ -1142,6 +1356,12 @@
         &lt;/ul&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+
         </div>
     </div>
 
@@ -1178,7 +1398,49 @@
                 </div>
             </div>
 
-            <pre><code class="language-markup">
+ <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t7">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t8">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t7" class="col-md-12">
+               <pre><code class="language-jade">
+// Image
+<span class="token tag"><span class="token attr-value">.eq-ui-card.eq-ui-card-image
+  .eq-ui-card-title.eq-ui-card-title-expand
+  .eq-ui-card-actions</span>
+    span<span class="token attr-value">.shades-text-white</span></span> Image.jpg
+
+// Event
+<span class="token tag"><span class="token attr-value">.eq-ui-card.eq-ui-card-event.eq-ui-primary-color
+  .eq-ui-card-title.eq-ui-card-title-expand</span>
+    h4<span class="token attr-value">.shades-text-white</span></span>
+      | Featured event:
+      <span class="token tag">br</span>
+      | May 24, 2016
+      <span class="token tag">br</span>
+      | 7-11pm
+  <span class="token tag"><span class="token attr-value">.eq-ui-card-actions.eq-ui-card-border</span>
+    a<span class="token attr-value">.btn.btn-default.eq-ui-btn-flat.eq-ui-waves.shades-text-white</span></span> Add to Calendar
+    <span class="token tag">i<span class="token attr-value">.mdi.mdi-calendar.icon.icon-right.icon-24.shades-text-white</span></span>
+
+
+
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t8" class="col-md-12">
+
+<pre><code class="language-markup">
 &lt;!-- Image --&gt;
 &lt;div class=&quot;eq-ui-card eq-ui-card-image&quot;&gt;
     &lt;div class=&quot;eq-ui-card-title eq-ui-card-title-expand&quot;&gt;&lt;/div&gt;
@@ -1201,6 +1463,12 @@
         &lt;i class=&quot;mdi mdi-calendar icon icon-right icon-24 shades-text-white&quot;&gt;&lt;/i&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+
         </div>
     </div>
 
@@ -1220,12 +1488,12 @@
 </div>
     </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
 <script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.js?v=0.0.0"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.3.3"></script>
 
 <script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
 <script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
 
-<script src="assets/js/doc.js?v=0.0.0"></script>
+<script src="assets/js/doc.js?v=0.3.3"></script>
 <script src="assets/js/ctrl/ctrl-color.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

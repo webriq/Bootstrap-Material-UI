@@ -8,8 +8,8 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>JavaScript - Modals | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.css?v=0.0.0" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.0.0" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.3.3" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.3.3" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"java-script",path:"modals",name_section:"JavaScript",name_chapter:"Modals"};</script>
@@ -1230,7 +1230,59 @@
             <h2 class="header">Modal Structure</h2>
             <p>For set Trigger, specify the Modal ID in data-target or href and add <code class="language-markup">eq-ui-modal-trigger</code> in the class item.</p>
 
-            <pre><code class="language-markup">
+
+            <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t1" class="col-md-12">
+               <pre><code class="language-jade">
+// Modal Trigger With href
+<span class="token tag">a<span class="token attr-value">.btn.btn-primary.eq-ui-waves-light.eq-ui-modal-trigger<span class="token attr-name">(href='#eq-ui-modal-sample1')</span></span></span> Show Modal
+
+// Modal Trigger With data-target
+<span class="token tag">button<span class="token attr-value">.btn.btn-primary.eq-ui-waves-light.eq-ui-modal-trigger<span class="token attr-name">(data-target='eq-ui-modal-sample1')</span></span></span> Show Modal
+
+// Modal
+<span class="token attr-value">#eq-ui-modal-sample1.eq-ui-modal</span>
+
+  // Header
+  <span class="token tag"><span class="token attr-value">.eq-ui-modal-header
+    .header-title</span>
+      i<span class="token attr-value">.mdi.mdi-settings.icon.icon-left.icon-24</span>
+      span<span class="token attr-value">.section-title</span></span> Modal Header
+    <span class="token tag">ul<span class="token attr-value">.right.eq-ui-nav-menu</span>
+      li<span class="token attr-value">.eq-ui-nav-menu-item-icon</span>
+        a<span class="token attr-value">.btn.btn-default.eq-ui-btn-flat.eq-ui-btn-fab.eq-ui-btn-menu-fab.eq-ui-waves</span>
+          i<span class="token attr-value">.mdi.mdi-dots-vertical.icon</span></span>
+
+  // Content
+  <span class="token tag"><span class="token attr-value">.eq-ui-modal-content
+    h5</span></span> Title
+    <span class="token tag">p</span>
+      | Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue.
+
+  // Footer
+  <span class="token tag">.eq-ui-modal-footer</span>
+    a<span class="token attr-value">.btn.btn-default.eq-ui-btn-flat.eq-ui-waves.eq-ui-secondary-color-text.eq-ui-modal-close<span class="token attr-name">(href='#')</span></span> Agree
+    a<span class="token attr-value">.btn.btn-default.eq-ui-btn-flat.eq-ui-waves.eq-ui-secondary-color-text.eq-ui-modal-close<span class="token attr-name">(href='#')</span></span> Disagree
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t2" class="col-md-12">
+
+
+<pre><code class="language-markup">
 &lt;!-- Modal Trigger With href --&gt;
 &lt;a href=&quot;#eq-ui-modal-sample1&quot; class=&quot;btn btn-primary eq-ui-waves-light eq-ui-modal-trigger&quot;&gt;Show Modal&lt;/a&gt;
 
@@ -1269,6 +1321,11 @@
 
 &lt;/div&gt;
 </code></pre>
+        </div>
+
+<!-- Tab end-->
+
+
         </div>
     </div>
 
@@ -1323,12 +1380,12 @@ $(document).ready(function(){
 </div>
     </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
 <script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.js?v=0.0.0"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.3.3"></script>
 
 <script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
 <script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
 
-<script src="assets/js/doc.js?v=0.0.0"></script>
+<script src="assets/js/doc.js?v=0.3.3"></script>
 <script src="assets/js/ctrl/ctrl-color.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

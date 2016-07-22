@@ -335,6 +335,7 @@ module.exports = function ( grunt ) {
                     "doc/showcase.html": "jade/showcase.jade",
                     "doc/admin-panel.html": "jade/admin-panel.jade",
                     "doc/getting-started.html": "jade/getting-started.jade",
+                    "doc/grid.html": "jade/grid.jade",
                     "doc/index.html": "jade/index.jade"
                 }
             }
