@@ -54,7 +54,7 @@ module.exports = function ( grunt ) {
         ]
     };
 
-    /** 
+    /**
     * Config.
     */
     grunt.initConfig({
@@ -197,7 +197,7 @@ module.exports = function ( grunt ) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'src/', 
+                        cwd: 'src/',
                         src: ['fonts/**'],
                         dest: 'doc/assets'
                     },
@@ -221,7 +221,7 @@ module.exports = function ( grunt ) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'src/', 
+                        cwd: 'src/',
                         src: ['img/**'],
                         dest: 'doc/assets'
                     }
@@ -231,7 +231,7 @@ module.exports = function ( grunt ) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'dist/', 
+                        cwd: 'dist/',
                         src: ['css/<%= meta.name_root_file %>.css', 'css/<%= meta.name_root_file %>.css.map', 'css/<%= meta.name_root_file %>.min.css'],
                         dest: 'doc/assets/'
                     }
@@ -251,13 +251,13 @@ module.exports = function ( grunt ) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'src/', 
+                        cwd: 'src/',
                         src: ['img/**'],
                         dest: 'dist'
                     },
                     {
                         expand: true,
-                        cwd: 'src/', 
+                        cwd: 'src/',
                         src: ['fonts/**'],
                         dest: 'dist'
                     },
@@ -283,7 +283,7 @@ module.exports = function ( grunt ) {
         replace: {
             version: {
                 src: ['doc/*.html'],
-                overwrite: true, // overwrite matched source files 
+                overwrite: true, // overwrite matched source files
                 replacements: [
                     {
                         from: "?v=0.0.0",
@@ -333,6 +333,8 @@ module.exports = function ( grunt ) {
                     "doc/modals.html": "jade/modals.jade",
                     "doc/tabs.html": "jade/tabs.jade",
                     "doc/showcase.html": "jade/showcase.jade",
+                    "doc/admin-panel.html": "jade/admin-panel.jade",
+                    "doc/getting-started.html": "jade/getting-started.jade",
                     "doc/index.html": "jade/index.jade"
                 }
             }
@@ -453,8 +455,8 @@ module.exports = function ( grunt ) {
         }
 
     });
-  
-    /** 
+
+    /**
     * Load required Grunt tasks.
     */
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -475,7 +477,7 @@ module.exports = function ( grunt ) {
 
     grunt.loadNpmTasks('grunt-contrib-jade');
 
-    /** 
+    /**
     * Register Grunt tasks.
     */
 
@@ -492,7 +494,7 @@ module.exports = function ( grunt ) {
     // Release
     grunt.registerTask('Release', [
         'clean:dist',
-        'sass:dist', 
+        'sass:dist',
         'postcss:dist',
         'cssmin:dist',
         'concat:bower',

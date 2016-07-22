@@ -1,0 +1,158 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1>Admin Panel</h1>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Configure Content Model</h2>
+
+             <p>Add a <code class="language-markup">config.yml</code> file to <code class="language-markup">/admin</code> folder.</p>
+
+            <pre><code>
+              <span class="token tag">MyWebsite</span>/
+              |--<span class="token attr-value">admin</span>/
+              |  |--<span class="token attr-name">config.yml</span>
+              |  |--<span class="token attr-name">index.jade</span>
+              |
+              |--<span class="token attr-value">data</span>/
+              |  |--<span class="token attr-name">general.json</span>
+              |
+              |--<span class="token attr-value">posts</span>/
+              |  |--<span class="token attr-name">blog.md</span>
+              |
+              |--<span class="token attr-value">views</span>/
+              |  |--<span class="token attr-name">index.jade</span>
+              |  |--<span class="token attr-name">layout.jade</span>
+              |
+
+            </code></pre>
+            <br/>
+<div class="col-md-12">
+<p>WebriQ CMS works with the concept of collections of documents that a user can edit.</p>
+
+<p>Collections basically comes in two forms:</p>
+<ol>
+<li>A <code class="language-markup">folder</code>. Set the <code class="language-markup">folder</code> attribute on the collection. Each document will be a file in this folder. Each document will have the same format, fields and meta fields.</li>
+<li>A list of <code class="language-markup">files</code>. Set the <code class="language-markup">files</code> attribute on the collection. You can set fields that all files in the folder shares directly on the collection, and set specific fields for each file. This is great when you have files with a different structure.</li>
+
+
+</ol>
+
+<p>Each collection has a list of fields (or files with their individual fields). Each field has a label, a name and a widget.</p>
+
+Setting up the right collections is the main part of integrating netlify CMS with your site. It's where you decide exactly what content editors can work with, and what widgets should be used to edit each field of your various files or content types.
+
+</div>
+<br/>
+<br/>
+
+<div class="col-md-12">
+<pre><code class="language-yaml">
+  <span class="token tag">backend:</span>
+  <span class="token tag">name:</span> <span class="token attr-value">github-api</span>
+  <span class="token tag">repo:</span> <span class="token attr-value">owner/repo # Path to your Github repository</span>
+  <span class="token tag">branch:</span> <span class="token attr-value">master</span> # Branch to update (master by default)
+
+  <span class="token tag">media_folder:</span> <span class="token attr-value">"img/uploads"</span> # Folder where user uploaded files should go
+
+  <span class="token tag">collections:</span> # A list of collections the CMS should be able to edit
+    <span class="token tag">- name:</span> <span class="token attr-value">"post"</span> # Used in routes, ie.: /admin/collections/:slug/edit
+      <span class="token tag">label:</span> <span class="token attr-value">"Post"</span> # Used in the UI, ie.: "New Post"
+      <span class="token tag">folder:</span> <span class="token attr-value">"posts"</span> # The path to the folder where the documents are stored
+      <span class="token tag">create:</span> <span class="token attr-value">true</span> # Allow users to create new documents in this collection
+      <span class="token tag">fields:</span> # The fields each document in this collection have
+        <span class="token tag">- {label:</span> <span class="token attr-value">"Title", <span class="token attr-name">name:</span> "title", <span class="token attr-name">widget:</span> "string", <span class="token attr-name">tagname:</span> "h1"}</span>
+        <span class="token tag">- {label:</span> <span class="token attr-value">"Body", <span class="token attr-name">name:</span> "body", <span class="token attr-name">widget:</span> "markdown"}</span>
+        <span class="token tag">- {label:</span> <span class="token attr-value">"Foo", <span class="token attr-name">name:</span> "foo", <span class="token attr-name">widget:</span> "foo"}</span>
+      <span class="token tag">meta:</span> # Meta data fields. Just like fields, but without any preview element
+        <span class="token tag">- {label:</span> <span class="token attr-value">"Publish Date", <span class="token attr-name">name:</span> "date", <span class="token attr-name">widget:</span> "datetime"}</span>
+
+    <span class="token tag">- name:</span> <span class="token attr-value">"settings"</span>
+      <span class="token tag">label:</span> <span class="token attr-value">"Settings"</span>
+      <span class="token tag">files:</span>
+        <span class="token tag">- name:</span> <span class="token attr-value">"general"</span>
+          <span class="token tag">label:</span> <span class="token attr-value">"General settings"</span>
+          <span class="token tag">file:</span> <span class="token attr-value">"_settings/general.json"</span>
+          <span class="token tag">fields:</span>
+            <span class="token tag">- {label:</span> <span class="token attr-value">"Main site title", <span class="token attr-name">name: "site_title", <span class="token attr-name">widget: "string"}</span>
+            <span class="token tag">- {label:</span> <span class="token attr-value">"Number of fronpage posts", <span class="token attr-name">name:</span> "post_count", <span class="token attr-name">widget:</span> "number"}</span>
+            <span class="token tag">- {label:</span> <span class="token attr-value">"Site cover image", <span class="token attr-name">name:</span> "cover", <span class="token attr-name">widget:</span> "image"}</span>
+            </code></pre>
+</div>
+
+        </div>
+
+
+
+</div>
+<div class="row">
+    <div class="col-md-12">
+            <h2 class="header">Roots Collection Content Model</h2>
+            <p></p>
+
+<pre><code class="language-yaml">
+  <span class="token tag">- name:</span> <span class="token attr-value">"post"</span> # Used in routes, ie.: /admin/collections/:slug/edit
+      <span class="token tag">label:</span> <span class="token attr-value">"Post"</span> # Used in the UI, ie.: "New Post"
+      <span class="token tag">folder:</span> <span class="token attr-value">"posts"</span> # The path to the folder where the documents are stored
+      <span class="token tag">create:</span> <span class="token attr-value">true</span> # Allow users to create new documents in this collection
+      <span class="token tag">fields:</span> # The fields each document in this collection have
+        <span class="token tag">- {label:</span> <span class="token attr-value">"Title", <span class="token attr-name">name:</span> "title", <span class="token attr-name">widget:</span> "string", <span class="token attr-name">tagname:</span> "h1"}</span>
+        <span class="token tag">- {label:</span> <span class="token attr-value">"Body", <span class="token attr-name">name:</span> "body", <span class="token attr-name">widget:</span> "markdown"}</span>
+        <span class="token tag">- {label:</span> <span class="token attr-value">"Foo", <span class="token attr-name">name:</span> "foo", <span class="token attr-name">widget:</span> "foo"}</span>
+      <span class="token tag">meta:</span> # Meta data fields. Just like fields, but without any preview element
+        <span class="token tag">- {label:</span> <span class="token attr-value">"Publish Date", <span class="token attr-name">name:</span> "date", <span class="token attr-name">widget:</span> "datetime"}</span>
+
+</code></pre>
+
+<p>On <code class="language-markup">app.coffee</code> add this following lines on <code class="language-markup">extensions[]</code></p>
+<p>Example:</p>
+<pre>
+  <code>
+    <span class="token tag">extensions:</span> [ <span class="token attr-value">collections</span>(<span class="token attr-name">folder:</span> '_posts', <span class="token attr-name">layout:</span> 'post')]
+  </code>
+
+</pre>
+
+    </div>
+
+
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+            <h2 class="header">Roots Records Content Model</h2>
+            <p></p>
+
+<pre><code class="language-yaml">
+  <span class="token tag">- name:</span> <span class="token attr-value">"settings"</span>
+    <span class="token tag">label:</span> <span class="token attr-value">"Settings"</span>
+    <span class="token tag">files:</span>
+      <span class="token tag">- name:</span> <span class="token attr-value">"general"</span>
+        <span class="token tag">label:</span> <span class="token attr-value">"General settings"</span>
+        <span class="token tag">file:</span> <span class="token attr-value">"_settings/general.json"</span>
+        <span class="token tag">fields:</span>
+          <span class="token tag">- {label:</span> <span class="token attr-value">"Main site title", <span class="token attr-name">name: "site_title", <span class="token attr-name">widget: "string"}</span>
+          <span class="token tag">- {label:</span> <span class="token attr-value">"Number of fronpage posts", <span class="token attr-name">name:</span> "post_count", <span class="token attr-name">widget:</span> "number"}</span>
+          <span class="token tag">- {label:</span> <span class="token attr-value">"Site cover image", <span class="token attr-name">name:</span> "cover", <span class="token attr-name">widget:</span> "image"}</span>
+
+</code></pre>
+
+<p>On <code class="language-markup">app.coffee</code> add this following lines on <code class="language-markup">extensions[]</code></p>
+<p>Example:</p>
+<pre>
+  <code>
+    <span class="token tag">extensions:</span> [ <span class="token attr-value">records</span>(
+      <span class="token attr-name">general:</span> { <span class="token attr-name">file:</span> <span class="token attr-value">"data/general.json"</span>}
+    )]
+  </code>
+
+</pre>
+
+    </div>
+
+
+</div>
