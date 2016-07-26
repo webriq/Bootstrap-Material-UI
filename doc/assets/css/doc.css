@@ -11,6 +11,10 @@ body.doc-show-in-layout-struture-1 .doc-show-in-layout-struture-1 {
     display: block;
 }
 
+.carousel-inner > .item > img, .carousel-inner > .item > a > img{
+    width:100%;
+}
+
 /* Home */
 .jumbotron.home {
 	text-align: center;

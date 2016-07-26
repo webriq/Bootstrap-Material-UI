@@ -1,0 +1,305 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1>Carousel</h1>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Example</h2>
+            <p>A slideshow component for cycling through elements, like a carousel. Nested carousels are not supported.</p>
+
+            <div class="eq-ui-card doc-margin-bottom">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img alt="First slide [900x500]" src="../assets/img/doc/slide-1.jpg" data-holder-rendered="true">
+
+    </div>
+    <div class="item">
+      <img alt="Second slide [900x500]" src="../assets/img/doc/slide-2.jpg" data-holder-rendered="true">
+
+    </div>
+    <div class="item">
+      <img alt="Third slide [900x500]" src="../assets/img/doc/slide-3.jpg" data-holder-rendered="true">
+
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+            </div>
+
+            <div class="col-md-12">
+    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+        <ul class="eq-ui-tabs">
+            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
+            <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
+
+        </ul>
+    </div>
+</div>
+
+<div id="eq-ui-tab-s1-t1" class="col-md-12">
+                <pre><code class="language-jade">
+<span class="token attr-value">#carousel-example-generic.carousel.slide<span class="token attr-name">(data-ride='carousel')</span></span>
+
+  // Indicators
+  <span class="token tag">ol<span class="token attr-value">.carousel-indicators</span>
+    li<span class="token attr-value">.active</span><span class="token attr-name">(data-target='#carousel-example-generic', data-slide-to='0')</span>
+    li<span class="token attr-name">(data-target='#carousel-example-generic', data-slide-to='1')</span>
+    li<span class="token attr-name">(data-target='#carousel-example-generic', data-slide-to='2')</span></span>
+
+  // Wrapper for slides
+  <span class="token tag"><span class="token attr-value">.carousel-inner</span><span class="token attr-name">(role='listbox')</span>
+    <span class="token attr-value">.item.active</span>
+      img<span class="token attr-name">(src='...', alt='...')</span>
+      <span class="token attr-value">.carousel-caption</span></span>
+        | ...
+    <span class="token tag"><span class="token attr-value">.item</span>
+      img<span class="token attr-name">(src='...', alt='...')</span>
+      <span class="token attr-value">.carousel-caption</span></span>
+        | ...
+    |     ...
+
+  // Controls
+  <span class="token tag">a<span class="token attr-value">.left.carousel-control</span><span class="token attr-name">(href='#carousel-example-generic', role='button', data-slide='prev')</span>
+    span<span class="token attr-value">.glyphicon.glyphicon-chevron-left</span><span class="token attr-name">(aria-hidden='true')</span>
+    span<span class="token attr-value">.sr-only</span></span> Previous
+  <span class="token tag">a<span class="token attr-value">.right.carousel-control</span><span class="token attr-name">(href='#carousel-example-generic', role='button', data-slide='next')</span>
+    span<span class="token attr-value">.glyphicon.glyphicon-chevron-right</span><span class="token attr-name">(aria-hidden='true')</span>
+    span<span class="token attr-value">.sr-only</span></span> Next
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t2" class="col-md-12">
+
+            <pre><code class="language-markup">
+
+&lt;div id=&quot;carousel-example-generic&quot; class=&quot;carousel slide&quot; data-ride=&quot;carousel&quot;&gt;
+  &lt;!-- Indicators --&gt;
+  &lt;ol class=&quot;carousel-indicators&quot;&gt;
+    &lt;li data-target=&quot;#carousel-example-generic&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/li&gt;
+    &lt;li data-target=&quot;#carousel-example-generic&quot; data-slide-to=&quot;1&quot;&gt;&lt;/li&gt;
+    &lt;li data-target=&quot;#carousel-example-generic&quot; data-slide-to=&quot;2&quot;&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;!-- Wrapper for slides --&gt;
+  &lt;div class=&quot;carousel-inner&quot; role=&quot;listbox&quot;&gt;
+    &lt;div class=&quot;item active&quot;&gt;
+      &lt;img src=&quot;...&quot; alt=&quot;...&quot;&gt;
+      &lt;div class=&quot;carousel-caption&quot;&gt;
+        ...
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;
+      &lt;img src=&quot;...&quot; alt=&quot;...&quot;&gt;
+      &lt;div class=&quot;carousel-caption&quot;&gt;
+        ...
+      &lt;/div&gt;
+    &lt;/div&gt;
+    ...
+  &lt;/div&gt;
+
+  &lt;!-- Controls --&gt;
+  &lt;a class=&quot;left carousel-control&quot; href=&quot;#carousel-example-generic&quot; role=&quot;button&quot; data-slide=&quot;prev&quot;&gt;
+    &lt;span class=&quot;glyphicon glyphicon-chevron-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;Previous&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;a class=&quot;right carousel-control&quot; href=&quot;#carousel-example-generic&quot; role=&quot;button&quot; data-slide=&quot;next&quot;&gt;
+    &lt;span class=&quot;glyphicon glyphicon-chevron-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;sr-only&quot;&gt;Next&lt;/span&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+        </div>
+
+        <div class="col-md-12">
+            <h2 class="header">Optional captions</h2>
+            <p>Add captions to your slides easily with the .carousel-caption element within any .item. Place just about any optional HTML within there and it will be automatically aligned and formatted.</p>
+
+            <div class="eq-ui-card doc-margin-bottom">
+              <div id="carousel-with-captions" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-with-captions" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-with-captions" data-slide-to="1"></li>
+    <li data-target="#carousel-with-captions" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img alt="First slide [900x500]" src="../assets/img/doc/slide-1.jpg" data-holder-rendered="true">
+      <div class="carousel-caption">
+    <h3>First slide label</h3>
+    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+  </div>
+    </div>
+    <div class="item">
+      <img alt="Second slide [900x500]" src="../assets/img/doc/slide-2.jpg" data-holder-rendered="true">
+      <div class="carousel-caption">
+    <h3>Second slide label</h3>
+    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+  </div>
+    </div>
+    <div class="item">
+      <img alt="Third slide [900x500]" src="../assets/img/doc/slide-3.jpg" data-holder-rendered="true">
+      <div class="carousel-caption">
+    <h3>Third slide label</h3>
+    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+  </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-with-captions" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-with-captions" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+
+
+
+
+
+
+<div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s2-t1">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s2-t2">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s2-t1" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag"><span class="token attr-value">.item</span>
+  img<span class="token attr-name">(src='...', alt='...')</span>
+  <span class="token attr-value">.carousel-caption</span></span>
+    <span class="token tag">h3</span> ...
+    <span class="token tag">p</span> ...
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s2-t2" class="col-md-12">
+
+         <pre><code class="language-markup">
+&lt;div class=&quot;item&quot;&gt;
+  &lt;img src=&quot;...&quot; alt=&quot;...&quot;&gt;
+  &lt;div class=&quot;carousel-caption&quot;&gt;
+    &lt;h3&gt;...&lt;/h3&gt;
+    &lt;p&gt;...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        </div>
+    </div>
+
+    <div class="col-md-12">
+
+      <h2 class="header">Usage</h2>
+<h3>Multiple carousels</h3>
+<p>Carousels require the use of an <code class="language-markup">id</code> on the outermost container (the <code class="language-markup">.carousel</code>) for carousel controls to function properly. When adding multiple carousels, or when changing a carousel's <code class="language-markup">id</code>, be sure to update the relevant controls.</p>
+
+<h3>Via data attributes</h3>
+<p>Use data attributes to easily control the position of the carousel. <code class="language-markup">data-slide</code> accepts the keywords <code class="language-markup">prev</code> or <code class="language-markup">next</code>, which alters the slide position relative to its current position. Alternatively, use <code class="language-markup">data-slide-to</code> to pass a raw slide index to the carousel <code class="language-markup">data-slide-to="2"</code>, which shifts the slide position to a particular index beginning with <code class="language-markup">0</code>.</p>
+
+<p>The <code class="language-markup">data-ride="carousel"</code> attribute is used to mark a carousel as animating starting at page load. <strong>It cannot be used in combination with (redundant and unnecessary) explicit JavaScript initialization of the same carousel.</strong></p>
+
+<h3>Via JavaScript</h3>
+<p>Call carousel manually with:</p>
+<pre><code class="language-javascript">$('.carousel').carousel()</code></pre>
+
+
+<h3>Options</h3>
+<p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code class="language-markup">data-</code>, as in <code class="language-markup">data-interval=""</code>.</p>
+<div class="table-responsive"> <table class="table table-bordered table-striped js-options-table"> <thead> <tr> <th>Name</th> <th>type</th> <th>default</th> <th>description</th> </tr> </thead> <tbody> <tr> <td>interval</td> <td>number</td> <td>5000</td> <td>The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.</td> </tr> <tr> <td>pause</td> <td>string | null</td> <td>"hover"</td> <td>If set to <code>"hover"</code>, pauses the cycling of the carousel on <code>mouseenter</code> and resumes the cycling of the carousel on <code>mouseleave</code>. If set to <code>null</code>, hovering over the carousel won't pause it.</td> </tr> <tr> <td>wrap</td> <td>boolean</td> <td>true</td> <td>Whether the carousel should cycle continuously or have hard stops.</td> </tr> <tr> <td>keyboard</td> <td>boolean</td> <td>true</td> <td>Whether the carousel should react to keyboard events.</td> </tr> </tbody> </table> </div>
+
+<h3>Methods</h3>
+<p><code class="language-javascript">.carousel(options)</code></p>
+
+<p>Initializes the carousel with an optional options object and starts cycling through items.</p>
+
+<pre><code class="language-javascript">$('.carousel').carousel({
+  interval: 2000
+})</code></pre>
+
+<p><code>.carousel('cycle')</code></p>
+
+<p>Cycles through the carousel items from left to right.</p>
+
+<p><code>.carousel('pause')</code></p>
+
+<p>Stops the carousel from cycling through items.</p>
+
+<p><code>.carousel(number)</code></p>
+
+<p>Cycles the carousel to a particular frame (0 based, similar to an array).</p>
+
+<p><code>.carousel('prev')</code></p>
+
+<p>Cycles to the previous item.</p>
+
+<p><code>.carousel('next')</code></p>
+
+<p>Cycles to the next item.</p>
+
+<h3>Events</h3>
+<p>Bootstrap's carousel class exposes two events for hooking into carousel functionality.</p>
+
+<p>Both events have the following additional properties:</p>
+<ul>
+
+  <li><code class="language-markup">direction</code>: The direction in which the carousel is sliding (either <code>"left"</code> or <code>"right"</code>).</li>
+  <li><code class="language-markup">relatedTarget</code>: The DOM element that is being slid into place as the active item.</li>
+</ul>
+
+
+<p>All carousel events are fired at the carousel itself (i.e. at the <code class="language-markup">&lt;div class=&quot;carousel&quot;&gt;</code>).</p>
+
+<div class="table-responsive"> <table class="table table-bordered table-striped bs-events-table"> <thead> <tr> <th>Event Type</th> <th>Description</th> </tr> </thead> <tbody> <tr> <td>slide.bs.carousel</td> <td>This event fires immediately when the <code>slide</code> instance method is invoked.</td> </tr> <tr> <td>slid.bs.carousel</td> <td>This event is fired when the carousel has completed its slide transition.</td> </tr> </tbody> </table> </div>
+
+<pre><code class="language-javascript">
+$('#myCarousel').on('slide.bs.carousel', function () {
+  // do something…
+})
+</code></pre>
+
+
+</div>
+
+</div>
+

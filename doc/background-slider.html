@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
-    <title>CSS - Color | WebriQ - Bootstrap Material UI</title>
+    <title>Plugins - Background Slider | WebriQ - Bootstrap Material UI</title>
     <!-- CSS-->
     <link rel="icon" href="assets/img/doc/logo@xs.png" type="image/*">
     <link href="assets/css/exentriq-bootstrap-material-ui.css?v=0.0.0" rel="stylesheet">
     <link href="assets/css/doc.css?v=0.0.0" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
-    <script>var _doc_route = {root_path:"css",path:"color",name_section:"CSS",name_chapter:"Color"};</script>
+    <script>var _doc_route = {root_path:"plugins",path:"background-slider",name_section:"Plugins",name_chapter:"Background Slider"};</script>
 <!--[if lt IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -733,25 +733,39 @@
 
     <main class="eq-ui-main"><div class="jumbotron">
     <div class="container">
-        <h1>Color</h1>
+        <h1>Background Slideshow</h1>
+        <p>A simple fullscreen background slideshow with auto-play and controls to navigate and pause.</p>
     </div>
 </div>
 
 <div class="container">
 
-    <div class="row">
-        <div class="col-md-6">
-            <h2 class="header">Normal</h2>
-            <p>To apply a background color, add the color name <code class="language-markup">eq-deep-blue-500</code>. To apply a text color, add the color name <code class="language-markup">eq-green-turquoise-text-500</code></p>
+            <div class="row">
 
-            <div class="eq-ui-card doc-margin-bottom eq-deep-blue-500 eq-green-turquoise-text-500">
-                <div class="eq-ui-card-supporting-text">
-                    Sample color usage
+
+                <div class="col-md-12 text-center">
+                  <p><img style="margin:5px auto;" class="img-responsive" src="assets/img/doc/BlueprintBackgroundSlideshow1.jpg"></p>
+
                 </div>
+                 <div class="col-md-12 text-center">
+                    <p class="source-in-git-hub"><a class="btn btn-primary btn-lg eq-ui-waves-light download-in-git-hub" href="http://tympanus.net/Blueprints/BackgroundSlideshow/" target="_blank">View Demo</a>&nbsp;&nbsp;<a class="btn btn-primary btn-lg eq-ui-waves-light download-in-git-hub" href="../assets/archive/backgroundslideshow.zip" download><i class="mdi mdi-download icon icon-right icon-18"></i> Download Source</a></p>
+                </div>
+                <div class="col-md-12">
+                  <p>A fullscreen background slideshow with autoplay functionality.</p>
+
+                </div>
+
+
+
             </div>
 
-            <!-- Tab start-->
+            <div class="row">
+
+                <div class="col-md-12">
+                 <h2 class="header">JADE & HTML</h2>
+                   <!-- Tab start-->
             <div class="col-md-12">
+
    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
        <ul class="eq-ui-tabs">
            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
@@ -761,12 +775,27 @@
    </div>
 </div>
 
+
+
 <div id="eq-ui-tab-s1-t1" class="col-md-12">
                <pre><code class="language-jade">
-<span class="token tag">
-<span class="token attr-value">.eq-ui-card.eq-deep-blue-500.eq-green-turquoise-text-500
-  .eq-ui-card-supporting-text</span></span>
-    | Sample color usage
+<span class="token tag">ul<span class="token attr-value">#cbp-bislideshow.cbp-bislideshow</span>
+  li
+    img<span class="token attr-name">(src='images/1.jpg', alt='image01')</span>
+  li
+    img<span class="token attr-name">(src='images/2.jpg', alt='image02')</span>
+  li
+    img<span class="token attr-name">(src='images/3.jpg', alt='image03')</span>
+  li
+    img<span class="token attr-name">(src='images/4.jpg', alt='image04')</span>
+  li
+    img<span class="token attr-name">(src='images/5.jpg', alt='image05')</span>
+  li
+    img<span class="token attr-name">(src='images/6.jpg', alt='image06')</span>
+<span class="token attr-value">#cbp-bicontrols.cbp-bicontrols</span>
+  span<span class="token attr-value">.cbp-biprev</span>
+  span<span class="token attr-value">.cbp-bipause</span>
+  span<span class="token attr-value">.cbp-binext</span></span>
 
 
 
@@ -775,87 +804,142 @@
 </div>
 <div id="eq-ui-tab-s1-t2" class="col-md-12">
 
-
-<pre><code class="language-markup">
-&lt;div class=&quot;eq-ui-card eq-deep-blue-500 eq-green-turquoise-text-500&quot;&gt;
-    &lt;div class=&quot;eq-ui-card-supporting-text&quot;&gt;
-        Sample color usage
-    &lt;/div&gt;
+ <pre><code class="language-markup">
+&lt;ul id=&quot;cbp-bislideshow&quot; class=&quot;cbp-bislideshow&quot;&gt;
+  &lt;li&gt;&lt;img src=&quot;images/1.jpg&quot; alt=&quot;image01&quot;/&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;images/2.jpg&quot; alt=&quot;image02&quot;/&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;images/3.jpg&quot; alt=&quot;image03&quot;/&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;images/4.jpg&quot; alt=&quot;image04&quot;/&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;images/5.jpg&quot; alt=&quot;image05&quot;/&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;images/6.jpg&quot; alt=&quot;image06&quot;/&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&quot;cbp-bicontrols&quot; class=&quot;cbp-bicontrols&quot;&gt;
+  &lt;span class=&quot;cbp-biprev&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;cbp-bipause&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;cbp-binext&quot;&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre>
-        </div>
+
+</div>
 
 <!-- Tab end-->
 
-        </div>
 
-        <div class="col-md-6">
-            <h2 class="header">Hover</h2>
-            <p>To apply a hover for background color and text color, add <code class="language-markup">-hover</code> after the name color.</p>
 
-            <div class="eq-ui-card doc-margin-bottom eq-deep-blue-500-hover eq-green-turquoise-text-500-hover">
-                <div class="eq-ui-card-supporting-text">
-                    Sample hover color usage
                 </div>
+
+
             </div>
+            <div class="row">
+
+              <div class="col-md-12">
+
+<h2 class="header">JavaScript</h2>
 
 
-            <!-- Tab start-->
+
+<!-- Tab start-->
             <div class="col-md-12">
+
    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
        <ul class="eq-ui-tabs">
            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t3">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t4">HTML</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t4">JAVASCRIPT</a></li>
 
        </ul>
    </div>
 </div>
 
+
+
 <div id="eq-ui-tab-s1-t3" class="col-md-12">
                <pre><code class="language-jade">
-<span class="token tag">
-<span class="token attr-value">.eq-ui-card.eq-deep-blue-500-hover.eq-green-turquoise-text-500-hover
-  .eq-ui-card-supporting-text</span></span>
-    | Sample hover color usage
+<span class="token tag">script<span class="token attr-name">(src='js/modernizr.custom.js')</span>
+script<span class="token attr-name">(src='js/jquery.imagesloaded.min.js')</span>
+script<span class="token attr-name">(src='js/cbpBGSlideshow.min.js')</span>
+script.
+  $<span class="token attr-name">(function() {
+  <span class="token attr-value">cbpBGSlideshow</span>.init();
+  });</span></span>
+
+
+
+
 </code></pre>
 
 </div>
 <div id="eq-ui-tab-s1-t4" class="col-md-12">
 
+ <pre><code class="language-javascript">
+  &lt;script src=&quot;js/modernizr.custom.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;js/jquery.imagesloaded.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;js/cbpBGSlideshow.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    $(function() {
+      cbpBGSlideshow.init();
+    });
+  &lt;/script&gt;
 
-<pre><code class="language-markup">
-&lt;div class=&quot;eq-ui-card eq-deep-blue-500-hover eq-green-turquoise-text-500-hover&quot;&gt;
-    &lt;div class=&quot;eq-ui-card-supporting-text&quot;&gt;
-        Sample hover color usage
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+</code></pre>
 
-
-        </div>
+</div>
 
 <!-- Tab end-->
 
 
 
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="header">Sass</h2>
-            <p>You can apply the color simply by extending the classes like the example below</p>
+                </div>
 
-            <pre><code class="language-scss">
-.custom-container {
-    @extend .eq-deep-blue-500;
-}</code></pre>
+            </div>
 
-        </div>
-    </div>
+            <div class="row">
 
-    <!-- Render color palette -->
-    <doc-color-palette></doc-color-palette>
+              <div class="col-md-12">
+                <h2 class="header">CSS</h2>
+
+                  <!-- Tab start-->
+            <div class="col-md-12">
+
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t5">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t6">CSS</a></li>
+
+       </ul>
+   </div>
+</div>
+
+
+
+<div id="eq-ui-tab-s1-t5" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag">link<span class="token attr-name">(rel='stylesheet', type='text/css', href='assets/css/component.css')</span></span>
+
+
+
+</code></pre>
 
 </div>
+<div id="eq-ui-tab-s1-t6" class="col-md-12">
+
+ <pre><code class="language-markup">
+  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/css/component.css&quot; /&gt;
+
+</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+
+
+
+              </div>
+
+            </div>
+
+        </div>
+
 <!--footer>
     <p>&copy; Exentriq 2015</p>
 </footer-->

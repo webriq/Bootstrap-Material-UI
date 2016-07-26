@@ -1,0 +1,208 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1>Background Slideshow</h1>
+        <p>A simple fullscreen background slideshow with auto-play and controls to navigate and pause.</p>
+    </div>
+</div>
+
+<div class="container">
+
+            <div class="row">
+
+
+                <div class="col-md-12 text-center">
+                  <p><img style="margin:5px auto;" class="img-responsive" src="assets/img/doc/BlueprintBackgroundSlideshow1.jpg"></p>
+
+                </div>
+                 <div class="col-md-12 text-center">
+                    <p class="source-in-git-hub"><a class="btn btn-primary btn-lg eq-ui-waves-light download-in-git-hub" href="http://tympanus.net/Blueprints/BackgroundSlideshow/" target="_blank">View Demo</a>&nbsp;&nbsp;<a class="btn btn-primary btn-lg eq-ui-waves-light download-in-git-hub" href="../assets/archive/backgroundslideshow.zip" download><i class="mdi mdi-download icon icon-right icon-18"></i> Download Source</a></p>
+                </div>
+                <div class="col-md-12">
+                  <p>A fullscreen background slideshow with autoplay functionality.</p>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-12">
+                 <h2 class="header">JADE & HTML</h2>
+                   <!-- Tab start-->
+            <div class="col-md-12">
+
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+
+
+<div id="eq-ui-tab-s1-t1" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag">ul<span class="token attr-value">#cbp-bislideshow.cbp-bislideshow</span>
+  li
+    img<span class="token attr-name">(src='images/1.jpg', alt='image01')</span>
+  li
+    img<span class="token attr-name">(src='images/2.jpg', alt='image02')</span>
+  li
+    img<span class="token attr-name">(src='images/3.jpg', alt='image03')</span>
+  li
+    img<span class="token attr-name">(src='images/4.jpg', alt='image04')</span>
+  li
+    img<span class="token attr-name">(src='images/5.jpg', alt='image05')</span>
+  li
+    img<span class="token attr-name">(src='images/6.jpg', alt='image06')</span>
+<span class="token attr-value">#cbp-bicontrols.cbp-bicontrols</span>
+  span<span class="token attr-value">.cbp-biprev</span>
+  span<span class="token attr-value">.cbp-bipause</span>
+  span<span class="token attr-value">.cbp-binext</span></span>
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t2" class="col-md-12">
+
+ <pre><code class="language-markup">
+&lt;ul id=&quot;cbp-bislideshow&quot; class=&quot;cbp-bislideshow&quot;&gt;
+  &lt;li&gt;&lt;img src=&quot;images/1.jpg&quot; alt=&quot;image01&quot;/&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;images/2.jpg&quot; alt=&quot;image02&quot;/&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;images/3.jpg&quot; alt=&quot;image03&quot;/&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;images/4.jpg&quot; alt=&quot;image04&quot;/&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;images/5.jpg&quot; alt=&quot;image05&quot;/&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;images/6.jpg&quot; alt=&quot;image06&quot;/&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&quot;cbp-bicontrols&quot; class=&quot;cbp-bicontrols&quot;&gt;
+  &lt;span class=&quot;cbp-biprev&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;cbp-bipause&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;cbp-binext&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+
+
+                </div>
+
+
+            </div>
+            <div class="row">
+
+              <div class="col-md-12">
+
+<h2 class="header">JavaScript</h2>
+
+
+
+<!-- Tab start-->
+            <div class="col-md-12">
+
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t3">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t4">JAVASCRIPT</a></li>
+
+       </ul>
+   </div>
+</div>
+
+
+
+<div id="eq-ui-tab-s1-t3" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag">script<span class="token attr-name">(src='js/modernizr.custom.js')</span>
+script<span class="token attr-name">(src='js/jquery.imagesloaded.min.js')</span>
+script<span class="token attr-name">(src='js/cbpBGSlideshow.min.js')</span>
+script.
+  $<span class="token attr-name">(function() {
+  <span class="token attr-value">cbpBGSlideshow</span>.init();
+  });</span></span>
+
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t4" class="col-md-12">
+
+ <pre><code class="language-javascript">
+  &lt;script src=&quot;js/modernizr.custom.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;js/jquery.imagesloaded.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;js/cbpBGSlideshow.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    $(function() {
+      cbpBGSlideshow.init();
+    });
+  &lt;/script&gt;
+
+</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+
+
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-12">
+                <h2 class="header">CSS</h2>
+
+                  <!-- Tab start-->
+            <div class="col-md-12">
+
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t5">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t6">CSS</a></li>
+
+       </ul>
+   </div>
+</div>
+
+
+
+<div id="eq-ui-tab-s1-t5" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag">link<span class="token attr-name">(rel='stylesheet', type='text/css', href='assets/css/component.css')</span></span>
+
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t6" class="col-md-12">
+
+ <pre><code class="language-markup">
+  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/css/component.css&quot; /&gt;
+
+</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+
+
+
+              </div>
+
+            </div>
+
+        </div>

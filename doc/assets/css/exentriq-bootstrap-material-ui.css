@@ -22478,7 +22478,7 @@ input.eq-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
 }
 
 .eq-ui-side-nav nav .eq-ui-collapsible li .eq-ui-collapsible-header a {
-  font-weight: 700;
+  font-weight: 400;
   color: #9b9b9b;
   padding: 0 16px 0 24px;
   line-height: 3rem;
