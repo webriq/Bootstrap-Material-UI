@@ -10,9 +10,16 @@ body {
 body.doc-show-in-layout-struture-1 .doc-show-in-layout-struture-1 {
     display: block;
 }
-
-.carousel-inner > .item > img, .carousel-inner > .item > a > img{
-    width:100%;
+.show-grid {
+    margin-bottom:1em;
+}
+.show-grid [class^=col-]{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #607D8B;
+    background-color: rgba(96, 125, 139, 0.42);
+    border: 1px solid #000;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 /* Home */
