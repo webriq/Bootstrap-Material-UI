@@ -1,0 +1,80 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1>Breadcrumbs</h1>
+    </div>
+</div>
+
+<div class="container">
+
+<div class="row">
+
+    <div class="col-md-12">
+
+    <p class="lead">Indicate the current page's location within a navigational hierarchy.</p>
+    <p>Separators are automatically added in CSS through <code class="language-markup">:before</code> and <code>content</code>.</p>
+
+    <div class="bs-example" data-example-id="simple-breadcrumbs">
+    <ol class="breadcrumb eq-deep-blue-50">
+        <li class="active">Home</li>
+    </ol>
+    <ol class="breadcrumb eq-deep-blue-50">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li class="active">Library</li>
+    </ol>
+    <ol class="breadcrumb eq-deep-blue-50">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">Library</a>
+        </li>
+        <li class="active">Data</li>
+    </ol>
+</div>
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t1" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag">ol<span class="token attr-value">.breadcrumb
+  li
+    a<span class="token attr-name">(href='#')</span></span></span> Home
+  <span class="token tag">li
+    a<span class="token attr-name">(href='#')</span></span> Library
+  <span class="token tag">li<span class="token attr-value">.active</span></span> Data
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t2" class="col-md-12">
+
+<pre><code class="language-markup">
+&lt;ol class=&quot;breadcrumb&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Library&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;active&quot;&gt;Data&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+
+    </div>
+
+</div>
+
+
+</div>

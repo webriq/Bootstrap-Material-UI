@@ -338,6 +338,7 @@ module.exports = function ( grunt ) {
                     "doc/grid.html": "jade/grid.jade",
                     "doc/carousel.html": "jade/carousel.jade",
                     "doc/navbar.html": "jade/navbar.jade",
+                    "doc/breadcrumbs.html": "jade/breadcrumbs.jade",
                     "doc/background-slider.html": "jade/background-slider.jade",
                     "doc/index.html": "jade/index.jade"
                 }
