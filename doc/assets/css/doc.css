@@ -10,6 +10,17 @@ body {
 body.doc-show-in-layout-struture-1 .doc-show-in-layout-struture-1 {
     display: block;
 }
+
+.bs-example{
+    position: relative;
+}
+.bs-example .navbar-fixed-top,
+.bs-example .navbar-fixed-bottom{
+    position: relative;
+}
+.bs-example.bs-navbar-bottom-example{
+    padding-bottom: 30px;
+}
 .show-grid {
     margin-bottom:1em;
 }
