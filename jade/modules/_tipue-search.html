@@ -1,0 +1,211 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1>Tipue Search</h1>
+        <p>Tipue Search is a site search engine jQuery plugin. It's free, open source, responsive and fast.</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="header">Getting Started</h2>
+      <p>
+If you haven't already done so, <a href="http://www.tipue.com/search/tipuesearch.zip">download</a> Tipue Search and copy the <code class="language-markup">tipuesearch</code> folder to your site.</p>
+<p>
+Tipue Search usually consists of two parts, the search box and the results page which displays the search results. To create a search box, the following should be included in the <code class="language-markup">&lt;head&gt;</code> section of your page.
+</p>
+
+<p>Note: We don't own this "Tipue Search" plugin. For more information about this plugin please visit their website at <a href="http://www.tipue.com/search/" target="_blank">www.tipue.com</a></p>
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t1" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag">link<span class="token attr-name">(href='tipuesearch/tipuesearch.css', rel='stylesheet')</span></span>
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t2" class="col-md-12">
+
+<pre><code class="language-markup">
+&lt;link href=&quot;tipuesearch/tipuesearch.css&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+<p>This loads <code class="language-markup">tipuesearch.css</code>, the CSS for the search box. The following creates the search box. The <code class="language-markup">form action</code> attribute should point to your results page.
+</p>
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t3">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t4">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t3" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag">form<span class="token attr-name">(action='search.html')</span>
+  input<span class="token attr-value">#tipue_search_input<span class="token attr-name">(type='text', name='q', autocomplete='off', required='')</span></span></span>
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t4" class="col-md-12">
+
+<pre><code class="language-markup">
+&lt;form action=&quot;search.html&quot;&gt;
+&lt;input type=&quot;text&quot; name=&quot;q&quot; id=&quot;tipue_search_input&quot; autocomplete=&quot;off&quot; required&gt;
+&lt;/form&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+<p>Tipue Search uses various modes for loading content, and therefore has various results page structures. To get started we'll use Static mode, which can be used without a web server. Static mode uses site content stored in the <code class="language-markup">tipuedrop_content.js</code> file.</p>
+<p>The following should be included in the <code class="language-markup">&lt;head&gt;</code> section of your results page.
+</p>
+
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t5">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t6">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t5" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag">link<span class="token attr-name">(href='http://fonts.googleapis.com/css?family=Open+Sans:300,400', rel='stylesheet')</span>
+script<span class="token attr-name">(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')</span>
+
+script<span class="token attr-name">(src='tipuesearch/tipuesearch_content.js')</span>
+link<span class="token attr-name">(href='tipuesearch/tipuesearch.css', rel='stylesheet')</span>
+script<span class="token attr-name">(src='tipuesearch/tipuesearch_set.js')</span>
+script<span class="token attr-name">(src='tipuesearch/tipuesearch.min.js')</span></span>
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t6" class="col-md-12">
+
+<pre><code class="language-markup">
+&lt;link href=&quot;http://fonts.googleapis.com/css?family=Open+Sans:300,400&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;tipuesearch/tipuesearch_content.js&quot;&gt;&lt;/script&gt;
+&lt;link href=&quot;tipuesearch/tipuesearch.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;script src=&quot;tipuesearch/tipuesearch_set.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;tipuesearch/tipuesearch.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+<p>
+The first line loads the Open Sans font from <a href="http://www.google.com/webfonts" target="_blank">Google Web Fonts</a>, which is optional. The second line loads jQuery via <a href="https://developers.google.com/speed/libraries/devguide" target="_blank">Google Hosted Libraries</a>.</p>
+<p>
+The remaining lines load the content to be searched, the Tipue Search CSS, the Tipue Search <a href="http://www.tipue.com/search/docs/?d=3" target="_blank">Options</a> and the Tipue Search jQuery plugin.
+</p><p>
+The code below displays the search results.
+</p>
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t7">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t8">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t7" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag">form<span class="token attr-name">(action='search.html')</span>
+  input<span class="token attr-value">#tipue_search_input<span class="token attr-name">(type='text', name='q', autocomplete='off', required='')</span>
+#tipue_search_content</span></span>
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t8" class="col-md-12">
+
+<pre><code class="language-markup">
+&lt;form action=&quot;search.html&quot;&gt;
+&lt;input type=&quot;text&quot; name=&quot;q&quot; id=&quot;tipue_search_input&quot; autocomplete=&quot;off&quot; required&gt;
+&lt;/form&gt;
+&lt;div id=&quot;tipue_search_content&quot;&gt;&lt;/div&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+      </div>
+      <div class="col-md-12">
+      <h2 class="header">JSON Mode</h2>
+      <p>
+JSON mode uses <a href="http://www.json.org/" target="_blank">JSON</a> for site content. Your site has to be installed on a web server for JSON mode to work.</p>
+
+<p>Call the <code class="language-markup">.tipuesearch()</code> method with the mode set to json and the name and location of your JSON file.</p>
+
+
+<pre><code class="language-javascript">
+  $(document).ready(function() {
+     $('#tipue_search_input').tipuesearch({
+          'mode': 'json',
+          'contentLocation': 'data/tipuesearch_content.json'
+     });
+  });
+</code></pre>
+
+<h3>Markdown to JSON</h3>
+
+<p>To dynamically create a json file from your markdown file on our cms install the node package on your project.</p>
+
+<pre><code><span class="token tag">npm</span> install <span class="token attr-value">webriq-roots-markdown-to-json</span> --save</code></pre>
+
+<p>Modify your <code class="language-markup">app.coffee</code> file to include the extension.</p>
+
+<pre><code><span class="token tag">roots_markdown_to_json</span> = <span class="token attr-value">require</span> <span class="token attr-name">'webriq-roots-markdown-to-json'</span>
+
+<span class="token tag">module.exports</span> =
+  <span class="token attr-value">extensions:</span> [<span class="token attr-value">roots_markdown_to_json(<span class="token attr-name">options</span>)</span>]</code></pre>
+
+  <h3>Example</h3>
+  <pre><code>
+  <span class="token tag">roots_markdown_to_json</span>(<span class="token attr-value">jsonoutput</span>: "<span class="token attr-name">data</span>", <span class="token attr-value">folder</span>:['<span class="token attr-name">posts/**.md</span>', '<span class="token attr-name">page/**.md</span>'])
+  </code></pre>
+
+  <h3>Options</h3>
+  <p><code>jsonoutput</code> - output destination folder</p>
+  <p><code>folder</code> - the directory location with .md files you would like to include, see example</p>
+
+
+
+      </div>
+
+    </div>
+
+
+</div>

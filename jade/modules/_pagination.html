@@ -1,0 +1,524 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1>Pagination</h1>
+        <p class="lead">Provide pagination links for your site or app with the multi-page pagination component, or the simpler <a href="#pagination-pager">pager alternative</a>.</p>
+    </div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h2 class="header">Default pagination</h2>
+<p>Simple pagination inspired by Rdio, great for apps and search results. The large block is hard to miss, easily scalable, and provides large click areas.</p>
+
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+ <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t1" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag">nav<span class="token attr-name">(aria-label='Page navigation')</span>
+  ul<span class="token attr-value">.pagination</span>
+    li
+      a<span class="token attr-name">(href='#', aria-label='Previous')</span>
+        span<span class="token attr-name">(aria-hidden='true')</span></span> «
+    <span class="token tag">li
+      a<span class="token attr-name">(href='#')</span></span> 1
+    <span class="token tag">li
+      a<span class="token attr-name">(href='#')</span></span> 2
+    <span class="token tag">li
+      a<span class="token attr-name">(href='#')</span></span> 3
+    <span class="token tag">li
+      a<span class="token attr-name">(href='#')</span></span> 4
+    <span class="token tag">li
+      a<span class="token attr-name">(href='#')</span></span> 5
+    <span class="token tag">li
+      a<span class="token attr-name">(href='#', aria-label='Next')</span>
+        span<span class="token attr-name">(aria-hidden='true')</span></span> »
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t2" class="col-md-12">
+
+<pre><code class="language-markup">
+&lt;nav aria-label=&quot;Page navigation&quot;&gt;
+  &lt;ul class=&quot;pagination&quot;&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot; aria-label=&quot;Previous&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot; aria-label=&quot;Next&quot;&gt;
+        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+<div class="bs-callout bs-callout-info" id="callout-pagination-label"> <h4>Labelling the pagination component</h4> <p>The pagination component should be wrapped in a <code>&lt;nav&gt;</code> element to identify it as a navigation section to screen readers and other assistive technologies. In addition, as a page is likely to have more than one such navigation section already (such as the primary navigation in the header, or a sidebar navigation), it is advisable to provide a descriptive <code>aria-label</code> for the <code>&lt;nav&gt;</code> which reflects its purpose. For example, if the pagination component is used to navigate between a set of search results, an appropriate label could be <code>aria-label="Search results pages"</code>.</p> </div>
+
+</div>
+
+<div class="col-md-12">
+  <h2 class="header">Disabled and active states</h2>
+  <p>Links are customizable for different circumstances. Use <code>.disabled</code> for unclickable links and <code>.active</code> to indicate the current page.</p>
+
+  <nav aria-label="...">
+    <ul class="pagination">
+        <li class="disabled">
+            <a aria-label="Previous" href="#"><span aria-hidden=
+            "true">«</span></a>
+        </li>
+        <li class="active">
+            <a href="#">1 <span class="sr-only">(current)</span></a>
+        </li>
+        <li>
+            <a href="#">2</a>
+        </li>
+        <li>
+            <a href="#">3</a>
+        </li>
+        <li>
+            <a href="#">4</a>
+        </li>
+        <li>
+            <a href="#">5</a>
+        </li>
+        <li>
+            <a aria-label="Next" href="#"><span aria-hidden="true">»</span></a>
+        </li>
+    </ul>
+</nav>
+
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t3">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t4">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t3" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag">nav<span class="token attr-name">(aria-label='...')</span>
+  ul<span class="token attr-value">.pagination</span>
+    li<span class="token attr-value">.disabled</span>
+      a<span class="token attr-name">(href='#', aria-label='Previous')</span>
+        span<span class="token attr-name">(aria-hidden='true')</span></span> «
+    <span class="token tag">li<span class="token attr-value">.active</span>
+      a<span class="token attr-name">(href='#')</span></span>
+        | 1
+        <span class="token tag">span<span class="token attr-value">.sr-only</span></span> (current)
+    |     ...
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t4" class="col-md-12">
+
+<pre><code class="language-markup">
+&lt;nav aria-label=&quot;...&quot;&gt;
+  &lt;ul class=&quot;pagination&quot;&gt;
+    &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot; aria-label=&quot;Previous&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;1 &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+<p>We recommend that you swap out active or disabled anchors for <code>&lt;span&gt;</code>, or omit the anchor in the case of the previous/next arrows, to remove click functionality while retaining intended styles.</p>
+
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t5">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t6">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t5" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag">nav<span class="token attr-name">(aria-label='...')</span>
+  ul<span class="token attr-value">.pagination</span>
+    li<span class="token attr-value">.disabled</span>
+      span
+        span<span class="token attr-name">(aria-hidden='true')</span></span> «
+    <span class="token tag">li<span class="token attr-value">.active</span>
+      span</span>
+        | 1
+        <span class="token tag">span<span class="token attr-value">.sr-only</span></span> (current)
+    |     ...
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t6" class="col-md-12">
+
+<pre><code class="language-markup">
+&lt;nav aria-label=&quot;...&quot;&gt;
+  &lt;ul class=&quot;pagination&quot;&gt;
+    &lt;li class=&quot;disabled&quot;&gt;
+      &lt;span&gt;
+        &lt;span aria-hidden=&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;
+      &lt;span&gt;1 &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/span&gt;
+    &lt;/li&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+</div>
+
+<div class="col-md-12">
+<h2 class="header">Sizing</h2>
+<p>Fancy larger or smaller pagination? Add <code>.pagination-lg</code> or <code>.pagination-sm</code> for additional sizes.</p>
+
+<div class="bs-example" data-example-id="pagination-sizing">
+    <nav aria-label="...">
+        <ul class="pagination pagination-lg">
+            <li>
+                <a aria-label="Previous" href="#"><span aria-hidden=
+                "true">«</span></a>
+            </li>
+            <li>
+                <a href="#">1</a>
+            </li>
+            <li>
+                <a href="#">2</a>
+            </li>
+            <li>
+                <a href="#">3</a>
+            </li>
+            <li>
+                <a href="#">4</a>
+            </li>
+            <li>
+                <a href="#">5</a>
+            </li>
+            <li>
+                <a aria-label="Next" href="#"><span aria-hidden=
+                "true">»</span></a>
+            </li>
+        </ul>
+    </nav>
+    <nav aria-label="...">
+        <ul class="pagination">
+            <li>
+                <a aria-label="Previous" href="#"><span aria-hidden=
+                "true">«</span></a>
+            </li>
+            <li>
+                <a href="#">1</a>
+            </li>
+            <li>
+                <a href="#">2</a>
+            </li>
+            <li>
+                <a href="#">3</a>
+            </li>
+            <li>
+                <a href="#">4</a>
+            </li>
+            <li>
+                <a href="#">5</a>
+            </li>
+            <li>
+                <a aria-label="Next" href="#"><span aria-hidden=
+                "true">»</span></a>
+            </li>
+        </ul>
+    </nav>
+    <nav aria-label="...">
+        <ul class="pagination pagination-sm">
+            <li>
+                <a aria-label="Previous" href="#"><span aria-hidden=
+                "true">«</span></a>
+            </li>
+            <li>
+                <a href="#">1</a>
+            </li>
+            <li>
+                <a href="#">2</a>
+            </li>
+            <li>
+                <a href="#">3</a>
+            </li>
+            <li>
+                <a href="#">4</a>
+            </li>
+            <li>
+                <a href="#">5</a>
+            </li>
+            <li>
+                <a aria-label="Next" href="#"><span aria-hidden=
+                "true">»</span></a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t7">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t8">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t7" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag">nav<span class="token attr-name">(aria-label='...')</span>
+  ul<span class="token attr-value">.pagination.pagination-lg</span> ...
+<span class="token tag">nav<span class="token attr-name">(aria-label='...')</span>
+  ul<span class="token attr-value">.pagination</span> ...
+<span class="token tag">nav<span class="token attr-name">(aria-label='...')</span>
+  ul<span class="token attr-value">.pagination.pagination-sm</span></span> ...
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t8" class="col-md-12">
+
+<pre><code class="language-markup">
+&lt;nav aria-label=&quot;...&quot;&gt;&lt;ul class=&quot;pagination pagination-lg&quot;&gt;...&lt;/ul&gt;&lt;/nav&gt;
+&lt;nav aria-label=&quot;...&quot;&gt;&lt;ul class=&quot;pagination&quot;&gt;...&lt;/ul&gt;&lt;/nav&gt;
+&lt;nav aria-label=&quot;...&quot;&gt;&lt;ul class=&quot;pagination pagination-sm&quot;&gt;...&lt;/ul&gt;&lt;/nav&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+</div>
+<div class="col-md-12">
+<h2 class="header">Pager</h2>
+<p>Quick previous and next links for simple pagination implementations with light markup and styles. It's great for simple sites like blogs or magazines.</p>
+<h3>Default example</h3>
+<p>By default, the pager centers links.</p>
+<div class="bs-example" data-example-id="simple-pager">
+    <nav aria-label="...">
+        <ul class="pager">
+            <li>
+                <a href="#">Previous</a>
+            </li>
+            <li>
+                <a href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t9">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t10">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t9" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag">nav<span class="token attr-name">(aria-label='...')</span>
+  ul<span class="token attr-value">.pager</span>
+    li
+      a<span class="token attr-name">(href='#')</span></span> Previous
+    <span class="token tag">li
+      a<span class="token attr-name">(href='#')</span></span> Next
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t10" class="col-md-12">
+
+<pre><code class="language-markup">
+&lt;nav aria-label=&quot;...&quot;&gt;
+  &lt;ul class=&quot;pager&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+</div>
+<div class="col-md-12">
+
+  <h2>Aligned links</h2>
+  <p>Alternatively, you can align each link to the sides:</p>
+  <div class="bs-example" data-example-id="aligned-pager-links">
+    <nav aria-label="...">
+        <ul class="pager">
+            <li class="previous">
+                <a href="#"><span aria-hidden="true">←</span> Older</a>
+            </li>
+            <li class="next">
+                <a href="#">Newer <span aria-hidden="true">→</span></a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t11">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t12">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t11" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag">nav<span class="token attr-name">(aria-label='...')</span>
+  ul<span class="token attr-value">.pager</span>
+    li<span class="token attr-value">.previous</span>
+      a<span class="token attr-name">(href='#')</span>
+        span<span class="token attr-name">(aria-hidden='true')</span></span> ←
+        |  Older
+    <span class="token tag">li<span class="token attr-value">.next</span>
+      a<span class="token attr-name">(href='#')</span></span>
+        | Newer
+        <span class="token tag">span<span class="token attr-name">(aria-hidden='true')</span></span> →
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t12" class="col-md-12">
+
+<pre><code class="language-markup">
+&lt;nav aria-label=&quot;...&quot;&gt;
+  &lt;ul class=&quot;pager&quot;&gt;
+    &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;larr;&lt;/span&gt; Older&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;Newer &lt;span aria-hidden=&quot;true&quot;&gt;&amp;rarr;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+</div>
+
+<div class="col-md-12">
+<h2 class="header">Optional disabled state</h2>
+<p>Pager links also use the general <code>.disabled</code> utility class from the pagination.</p>
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t13">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t14">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t13" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token tag">nav<span class="token attr-name">(aria-label='...')</span>
+  ul<span class="token attr-value">.pager</span>
+    li<span class="token attr-value">.previous.disabled</span>
+      a<span class="token attr-name">(href='#')</span>
+        span<span class="token attr-name">(aria-hidden='true')</span></span> ←
+        |  Older
+    <span class="token tag">li<span class="token attr-value">.next</span>
+      a<span class="token attr-name">(href='#')</span></span>
+        | Newer
+        <span class="token tag">span<span class="token attr-name">(aria-hidden='true')</span></span> →
+
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t14" class="col-md-12">
+
+<pre><code class="language-markup">
+&lt;nav aria-label=&quot;...&quot;&gt;
+  &lt;ul class=&quot;pager&quot;&gt;
+    &lt;li class=&quot;previous disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;larr;&lt;/span&gt; Older&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;Newer &lt;span aria-hidden=&quot;true&quot;&gt;&amp;rarr;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+
+
+</div>
+
+</div>
+
+
+</div>

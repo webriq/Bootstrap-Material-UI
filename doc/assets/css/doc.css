@@ -17,6 +17,7 @@ body.doc-show-in-layout-struture-1 .doc-show-in-layout-struture-1 {
 .bs-example .navbar-fixed-top,
 .bs-example .navbar-fixed-bottom{
     position: relative;
+    z-index: 0;
 }
 .bs-example.bs-navbar-bottom-example{
     margin-bottom:24px;
