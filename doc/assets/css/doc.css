@@ -19,7 +19,7 @@ body.doc-show-in-layout-struture-1 .doc-show-in-layout-struture-1 {
     position: relative;
 }
 .bs-example.bs-navbar-bottom-example{
-    padding-bottom: 30px;
+    margin-bottom:24px;
 }
 .show-grid {
     margin-bottom:1em;
