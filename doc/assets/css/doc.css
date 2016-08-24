@@ -21,6 +21,16 @@ body.doc-show-in-layout-struture-1 .doc-show-in-layout-struture-1 {
 .bs-example.bs-navbar-bottom-example{
     margin-bottom:24px;
 }
+
+
+ doc-color-palette .color-wrap > div {
+    padding: 15px;
+ }
+
+ doc-color-palette .palette {
+    min-height: 786px;
+}
+
 .show-grid {
     margin-bottom:1em;
 }
