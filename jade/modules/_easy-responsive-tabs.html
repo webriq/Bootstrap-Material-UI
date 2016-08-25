@@ -1,0 +1,226 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1>Easy Responsive Tabs to Accordion</h1>
+        <p>A lightweight jQuery plugin which optimizes normal horizontal or vertical tabs to accordion on multi devices like: web, tablets, Mobile (IPad & IPhone). This plugin adapts the screen size and changes its action accordingly.</p>
+    </div>
+</div>
+
+<div class="container">
+<div class="row">
+
+<div class="col-md-12">
+ <h2 class="header">Getting Started</h2>
+
+ <div class="col-md-12 text-center">
+                  <p><img style="margin:5px auto;" class="img-responsive" src="assets/img/doc/easytabs.jpg"></p>
+
+                </div>
+ <div class="col-md-12 text-center">
+      <p class="source-in-git-hub"><a class="btn btn-primary btn-lg eq-ui-waves-light download-in-git-hub" href="http://webthemez.com/demo/easy-responsive-tabs/Index.html" target="_blank">View Demo</a>&nbsp;&nbsp;<a class="btn btn-primary btn-lg eq-ui-waves-light download-in-git-hub" href="https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion" target="_blank"><i class="mdi mdi-download icon icon-right icon-18"></i> Download Source</a></p>
+  </div>
+
+
+</div>
+
+<div class="col-md-12">
+<h2 class="header">Features</h2>
+
+  <ol>
+    <li>Horizontal / Vertical Tabs to Accordion</li>
+    <li>Tabs and accordion are created entirely with jQuery</li>
+    <li>Supports multiple sets of tabs on same page</li>
+    <li>Cross browser compatibility (IE7+, Chrome, Firefox, Safari and Opera)</li>
+    <li>Multi device support (Web, Tablets & Mobile)</li>
+    <li>Link directly to specified tab (works with multiple instances)</li>
+    <li>Maintains state of tabs when navigating away from page and then returning using back or forward (if browser supports the History API)</li>
+    <li>Nested tabs</li>
+  </ol>
+
+</div>
+
+<div class="col-md-12">
+<h2 class="header">How to use</h2>
+
+  <ol>
+    <li>Include jQuery file (minimum <code class="language-markup">jQuery-1.5.1.min.js</code>)</li>
+    <li>Include <code class="language-markup">easyResponsiveTabs.js</code></li>
+    <li>Include <code class="language-markup">responsive-tabs.css</code></li>
+  </ol>
+  <p class="lead">Here is the Markup for Tabs structure (non nested tabs):</p>
+
+  <!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t1">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t2">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t1" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token attr-value">#demoTab</span>
+  <span class="token tag">ul<span class="token attr-value">.resp-tabs-list</span>
+    <span class="token tag">li</span>  ....
+    <span class="token tag">li</span>  ....
+    <span class="token tag">li</span>  ....
+  <span class="token attr-value">.resp-tabs-container</span>
+    <span class="token tag">div</span>  .......
+    <span class="token tag">div</span>  .......
+    <span class="token tag">div</span>  .......
+
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t2" class="col-md-12">
+
+<pre><code class="language-markup">
+&lt;div id=&quot;demoTab&quot;&gt;
+        &lt;ul class=&quot;resp-tabs-list&quot;&gt;
+            &lt;li&gt; .... &lt;/li&gt;
+            &lt;li&gt; .... &lt;/li&gt;
+            &lt;li&gt; .... &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;div class=&quot;resp-tabs-container&quot;&gt;
+            &lt;div&gt; ....... &lt;/div&gt;
+            &lt;div&gt; ....... &lt;/div&gt;
+            &lt;div&gt; ....... &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+</div>
+
+
+<div class="col-md-12">
+<h2 class="header">Nested Tabs</h2>
+
+<p class="lead">Here is the Markup for Tabs structure (nested tabs):</p>
+
+<!-- Tab start-->
+            <div class="col-md-12">
+   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
+       <ul class="eq-ui-tabs">
+           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t3">JADE</a></li>
+           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t4">HTML</a></li>
+
+       </ul>
+   </div>
+</div>
+
+<div id="eq-ui-tab-s1-t3" class="col-md-12">
+               <pre><code class="language-jade">
+<span class="token attr-value">#ParentTab</span>
+  <span class="token tag">ul<span class="token attr-value">.resp-tabs-list.tab_identifier_parent</span>
+    li</span>  ....
+    <span class="token tag">li</span>  ....
+    <span class="token tag">li</span>  ....
+  <span class="token attr-value">.resp-tabs-container.tab_identifier_parent</span>
+    <span class="token tag">div
+      p</span>
+        <span class="token attr-value">#ChildTab</span>
+          <span class="token tag">ul<span class="token attr-value">.resp-tabs-list.tab_identifier_child</span></span>
+            <span class="token tag">li</span>  ....
+            <span class="token tag">li</span>  ....
+            <span class="token tag">li</span>  ....
+          <span class="token attr-value">.resp-tabs-container.tab_identifier_child</span>
+            <span class="token tag">div</span>  .......
+            <span class="token tag">div</span>  .......
+            <span class="token tag">div</span>  .......
+    <span class="token tag">div</span>  .......
+    <span class="token tag">div</span>  .......
+</code></pre>
+
+</div>
+<div id="eq-ui-tab-s1-t4" class="col-md-12">
+
+<pre><code class="language-markup">
+&lt;div id=&quot;ParentTab&quot;&gt;
+    &lt;ul class=&quot;resp-tabs-list tab_identifier_parent&quot;&gt;
+        &lt;li&gt; .... &lt;/li&gt;
+        &lt;li&gt; .... &lt;/li&gt;
+        &lt;li&gt; .... &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;resp-tabs-container tab_identifier_parent&quot;&gt;
+        &lt;div&gt;
+           &lt;p&gt;
+              &lt;div id=&quot;ChildTab&quot;&gt;
+                &lt;ul class=&quot;resp-tabs-list tab_identifier_child&quot;&gt;
+                   &lt;li&gt; .... &lt;/li&gt;
+                   &lt;li&gt; .... &lt;/li&gt;
+                   &lt;li&gt; .... &lt;/li&gt;
+                &lt;/ul&gt;
+
+                &lt;div class=&quot;resp-tabs-container tab_identifier_child&quot;&gt;                                                                     &lt;div&gt; ....... &lt;/div&gt;
+                   &lt;div&gt; ....... &lt;/div&gt;
+                   &lt;div&gt; ....... &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+           &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt; ....... &lt;/div&gt;
+        &lt;div&gt; ....... &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+<!-- Tab end-->
+
+</div>
+
+<div class="col-md-12">
+<h2 class="header">Javascript</h2>
+
+<p class="lead">Call the easyResponsiveTabs function:</p>
+
+<pre><code class="language-javascript">$('#demoTab').easyResponsiveTabs();</code></pre>
+
+<p class="lead">With optional parameters:</p>
+
+<pre>
+<code class="language-javascript">
+$("#demoTab").easyResponsiveTabs({
+    type: 'default', //Types: default, vertical, accordion
+    width: 'auto', //auto or any custom width
+    fit: true,   // 100% fits in a container
+    closed: false, // Close the panels on start, the options 'accordion' and 'tabs' keep them closed in there respective view types
+    activate: function() {},  // Callback function, gets called if tab is switched
+    tabidentify: 'tab_identifier_child', // The tab groups identifier *This should be a unique name for each tab group and should not be defined in any styling or css file.
+    activetab_bg: '#B5AC5F', // background color for active tabs in this group
+    inactive_bg: '#E0D78C', // background color for inactive tabs in this group
+    active_border_color: '#9C905C', // border color for active tabs heads in this group
+    active_content_border_color: '#9C905C' // border color for active tabs contect in this group so that it matches the tab head border
+});
+</code>
+
+</pre>
+
+<p class="lead">Linking to Tabs:</p>
+
+<pre>
+  <code>
+    http://yoursite.com/tabs.html#{TAB ID}{TAB NUM}
+    http://yoursite.com/tabs.html#demoTab2
+
+    Multiple Instances:
+    http://yoursite.com/tabs.html#{TAB ID 1}{TAB NUM}|{TAB ID 2}{TAB NUM}
+    http://yoursite.com/tabs.html#demoTab2|demoTwo3
+  </code>
+
+</pre>
+
+<p>Credits to <a href="http://webthemez.com/sam-profile/" target="_blank">Samson Onna</a></p>
+
+</div>
+
+
+</div>
+</div>

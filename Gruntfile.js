@@ -342,6 +342,7 @@ module.exports = function ( grunt ) {
                     "doc/pagination.html": "jade/pagination.jade",
                     "doc/background-slider.html": "jade/background-slider.jade",
                     "doc/tipue-search.html": "jade/tipue-search.jade",
+                    "doc/easy-responsive-tabs.html": "jade/easy-responsive-tabs.jade",
                     "doc/index.html": "jade/index.jade"
                 }
             }

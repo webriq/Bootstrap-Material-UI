@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
-    <title>Plugins - Tipue Search | WebriQ - Bootstrap Material UI</title>
+    <title>Plugins - Easy Responsive Tabs | WebriQ - Bootstrap Material UI</title>
     <!-- CSS-->
     <link rel="icon" href="assets/img/doc/logo@xs.png" type="image/*">
     <link href="assets/css/exentriq-bootstrap-material-ui.css?v=0.0.0" rel="stylesheet">
     <link href="assets/css/doc.css?v=0.0.0" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
-    <script>var _doc_route = {root_path:"plugins",path:"tipue-search",name_section:"Plugins",name_chapter:"Tipue Search"};</script>
+    <script>var _doc_route = {root_path:"plugins",path:"easy-responsive-tabs",name_section:"Plugins",name_chapter:"Easy Responsive Tabs"};</script>
 <!--[if lt IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -738,24 +738,55 @@
 
     <main class="eq-ui-main"><div class="jumbotron">
     <div class="container">
-        <h1>Tipue Search</h1>
-        <p>Tipue Search is a site search engine jQuery plugin. It's free, open source, responsive and fast.</p>
+        <h1>Easy Responsive Tabs to Accordion</h1>
+        <p>A lightweight jQuery plugin which optimizes normal horizontal or vertical tabs to accordion on multi devices like: web, tablets, Mobile (IPad & IPhone). This plugin adapts the screen size and changes its action accordingly.</p>
     </div>
 </div>
 
 <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="header">Getting Started</h2>
-      <p>
-If you haven't already done so, <a href="http://www.tipue.com/search/tipuesearch.zip">download</a> Tipue Search and copy the <code class="language-markup">tipuesearch</code> folder to your site.</p>
-<p>
-Tipue Search usually consists of two parts, the search box and the results page which displays the search results. To create a search box, the following should be included in the <code class="language-markup">&lt;head&gt;</code> section of your page.
-</p>
+<div class="row">
 
-<p>Note: We don't own this "Tipue Search" plugin. For more information about this plugin please visit their website at <a href="http://www.tipue.com/search/" target="_blank">www.tipue.com</a></p>
+<div class="col-md-12">
+ <h2 class="header">Getting Started</h2>
 
-<!-- Tab start-->
+ <div class="col-md-12 text-center">
+                  <p><img style="margin:5px auto;" class="img-responsive" src="assets/img/doc/easytabs.jpg"></p>
+
+                </div>
+ <div class="col-md-12 text-center">
+      <p class="source-in-git-hub"><a class="btn btn-primary btn-lg eq-ui-waves-light download-in-git-hub" href="http://webthemez.com/demo/easy-responsive-tabs/Index.html" target="_blank">View Demo</a>&nbsp;&nbsp;<a class="btn btn-primary btn-lg eq-ui-waves-light download-in-git-hub" href="https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion" target="_blank"><i class="mdi mdi-download icon icon-right icon-18"></i> Download Source</a></p>
+  </div>
+
+
+</div>
+
+<div class="col-md-12">
+<h2 class="header">Features</h2>
+
+  <ol>
+    <li>Horizontal / Vertical Tabs to Accordion</li>
+    <li>Tabs and accordion are created entirely with jQuery</li>
+    <li>Supports multiple sets of tabs on same page</li>
+    <li>Cross browser compatibility (IE7+, Chrome, Firefox, Safari and Opera)</li>
+    <li>Multi device support (Web, Tablets & Mobile)</li>
+    <li>Link directly to specified tab (works with multiple instances)</li>
+    <li>Maintains state of tabs when navigating away from page and then returning using back or forward (if browser supports the History API)</li>
+    <li>Nested tabs</li>
+  </ol>
+
+</div>
+
+<div class="col-md-12">
+<h2 class="header">How to use</h2>
+
+  <ol>
+    <li>Include jQuery file (minimum <code class="language-markup">jQuery-1.5.1.min.js</code>)</li>
+    <li>Include <code class="language-markup">easyResponsiveTabs.js</code></li>
+    <li>Include <code class="language-markup">responsive-tabs.css</code></li>
+  </ol>
+  <p class="lead">Here is the Markup for Tabs structure (non nested tabs):</p>
+
+  <!-- Tab start-->
             <div class="col-md-12">
    <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
        <ul class="eq-ui-tabs">
@@ -768,7 +799,15 @@ Tipue Search usually consists of two parts, the search box and the results page 
 
 <div id="eq-ui-tab-s1-t1" class="col-md-12">
                <pre><code class="language-jade">
-<span class="token tag">link<span class="token attr-name">(href='tipuesearch/tipuesearch.css', rel='stylesheet')</span></span>
+<span class="token attr-value">#demoTab</span>
+  <span class="token tag">ul<span class="token attr-value">.resp-tabs-list</span>
+    <span class="token tag">li</span>  ....
+    <span class="token tag">li</span>  ....
+    <span class="token tag">li</span>  ....
+  <span class="token attr-value">.resp-tabs-container</span>
+    <span class="token tag">div</span>  .......
+    <span class="token tag">div</span>  .......
+    <span class="token tag">div</span>  .......
 
 </code></pre>
 
@@ -776,14 +815,31 @@ Tipue Search usually consists of two parts, the search box and the results page 
 <div id="eq-ui-tab-s1-t2" class="col-md-12">
 
 <pre><code class="language-markup">
-&lt;link href=&quot;tipuesearch/tipuesearch.css&quot; rel=&quot;stylesheet&quot;&gt;</code></pre>
+&lt;div id=&quot;demoTab&quot;&gt;
+        &lt;ul class=&quot;resp-tabs-list&quot;&gt;
+            &lt;li&gt; .... &lt;/li&gt;
+            &lt;li&gt; .... &lt;/li&gt;
+            &lt;li&gt; .... &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;div class=&quot;resp-tabs-container&quot;&gt;
+            &lt;div&gt; ....... &lt;/div&gt;
+            &lt;div&gt; ....... &lt;/div&gt;
+            &lt;div&gt; ....... &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
 
 </div>
 
 <!-- Tab end-->
 
-<p>This loads <code class="language-markup">tipuesearch.css</code>, the CSS for the search box. The following creates the search box. The <code class="language-markup">form action</code> attribute should point to your results page.
-</p>
+</div>
+
+
+<div class="col-md-12">
+<h2 class="header">Nested Tabs</h2>
+
+<p class="lead">Here is the Markup for Tabs structure (nested tabs):</p>
 
 <!-- Tab start-->
             <div class="col-md-12">
@@ -798,154 +854,113 @@ Tipue Search usually consists of two parts, the search box and the results page 
 
 <div id="eq-ui-tab-s1-t3" class="col-md-12">
                <pre><code class="language-jade">
-<span class="token tag">form<span class="token attr-name">(action='search.html')</span>
-  input<span class="token attr-value">#tipue_search_input<span class="token attr-name">(type='text', name='q', autocomplete='off', required='')</span></span></span>
-
+<span class="token attr-value">#ParentTab</span>
+  <span class="token tag">ul<span class="token attr-value">.resp-tabs-list.tab_identifier_parent</span>
+    li</span>  ....
+    <span class="token tag">li</span>  ....
+    <span class="token tag">li</span>  ....
+  <span class="token attr-value">.resp-tabs-container.tab_identifier_parent</span>
+    <span class="token tag">div
+      p</span>
+        <span class="token attr-value">#ChildTab</span>
+          <span class="token tag">ul<span class="token attr-value">.resp-tabs-list.tab_identifier_child</span></span>
+            <span class="token tag">li</span>  ....
+            <span class="token tag">li</span>  ....
+            <span class="token tag">li</span>  ....
+          <span class="token attr-value">.resp-tabs-container.tab_identifier_child</span>
+            <span class="token tag">div</span>  .......
+            <span class="token tag">div</span>  .......
+            <span class="token tag">div</span>  .......
+    <span class="token tag">div</span>  .......
+    <span class="token tag">div</span>  .......
 </code></pre>
 
 </div>
 <div id="eq-ui-tab-s1-t4" class="col-md-12">
 
 <pre><code class="language-markup">
-&lt;form action=&quot;search.html&quot;&gt;
-&lt;input type=&quot;text&quot; name=&quot;q&quot; id=&quot;tipue_search_input&quot; autocomplete=&quot;off&quot; required&gt;
-&lt;/form&gt;</code></pre>
+&lt;div id=&quot;ParentTab&quot;&gt;
+    &lt;ul class=&quot;resp-tabs-list tab_identifier_parent&quot;&gt;
+        &lt;li&gt; .... &lt;/li&gt;
+        &lt;li&gt; .... &lt;/li&gt;
+        &lt;li&gt; .... &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;resp-tabs-container tab_identifier_parent&quot;&gt;
+        &lt;div&gt;
+           &lt;p&gt;
+              &lt;div id=&quot;ChildTab&quot;&gt;
+                &lt;ul class=&quot;resp-tabs-list tab_identifier_child&quot;&gt;
+                   &lt;li&gt; .... &lt;/li&gt;
+                   &lt;li&gt; .... &lt;/li&gt;
+                   &lt;li&gt; .... &lt;/li&gt;
+                &lt;/ul&gt;
+
+                &lt;div class=&quot;resp-tabs-container tab_identifier_child&quot;&gt;                                                                     &lt;div&gt; ....... &lt;/div&gt;
+                   &lt;div&gt; ....... &lt;/div&gt;
+                   &lt;div&gt; ....... &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+           &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt; ....... &lt;/div&gt;
+        &lt;div&gt; ....... &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
 </div>
 
 <!-- Tab end-->
 
-<p>Tipue Search uses various modes for loading content, and therefore has various results page structures. To get started we'll use Static mode, which can be used without a web server. Static mode uses site content stored in the <code class="language-markup">tipuedrop_content.js</code> file.</p>
-<p>The following should be included in the <code class="language-markup">&lt;head&gt;</code> section of your results page.
-</p>
-
-
-<!-- Tab start-->
-            <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t5">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t6">HTML</a></li>
-
-       </ul>
-   </div>
 </div>
 
-<div id="eq-ui-tab-s1-t5" class="col-md-12">
-               <pre><code class="language-jade">
-<span class="token tag">link<span class="token attr-name">(href='http://fonts.googleapis.com/css?family=Open+Sans:300,400', rel='stylesheet')</span>
-script<span class="token attr-name">(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')</span>
+<div class="col-md-12">
+<h2 class="header">Javascript</h2>
 
-script<span class="token attr-name">(src='tipuesearch/tipuesearch_content.js')</span>
-link<span class="token attr-name">(href='tipuesearch/tipuesearch.css', rel='stylesheet')</span>
-script<span class="token attr-name">(src='tipuesearch/tipuesearch_set.js')</span>
-script<span class="token attr-name">(src='tipuesearch/tipuesearch.min.js')</span></span>
+<p class="lead">Call the easyResponsiveTabs function:</p>
 
-</code></pre>
+<pre><code class="language-javascript">$('#demoTab').easyResponsiveTabs();</code></pre>
 
-</div>
-<div id="eq-ui-tab-s1-t6" class="col-md-12">
+<p class="lead">With optional parameters:</p>
 
-<pre><code class="language-markup">
-&lt;link href=&quot;http://fonts.googleapis.com/css?family=Open+Sans:300,400&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+<pre>
+<code class="language-javascript">
+$("#demoTab").easyResponsiveTabs({
+    type: 'default', //Types: default, vertical, accordion
+    width: 'auto', //auto or any custom width
+    fit: true,   // 100% fits in a container
+    closed: false, // Close the panels on start, the options 'accordion' and 'tabs' keep them closed in there respective view types
+    activate: function() {},  // Callback function, gets called if tab is switched
+    tabidentify: 'tab_identifier_child', // The tab groups identifier *This should be a unique name for each tab group and should not be defined in any styling or css file.
+    activetab_bg: '#B5AC5F', // background color for active tabs in this group
+    inactive_bg: '#E0D78C', // background color for inactive tabs in this group
+    active_border_color: '#9C905C', // border color for active tabs heads in this group
+    active_content_border_color: '#9C905C' // border color for active tabs contect in this group so that it matches the tab head border
+});
+</code>
 
-&lt;script src=&quot;tipuesearch/tipuesearch_content.js&quot;&gt;&lt;/script&gt;
-&lt;link href=&quot;tipuesearch/tipuesearch.css&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;script src=&quot;tipuesearch/tipuesearch_set.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;tipuesearch/tipuesearch.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+</pre>
 
-</div>
+<p class="lead">Linking to Tabs:</p>
 
-<!-- Tab end-->
+<pre>
+  <code>
+    http://yoursite.com/tabs.html#{TAB ID}{TAB NUM}
+    http://yoursite.com/tabs.html#demoTab2
 
-<p>
-The first line loads the Open Sans font from <a href="http://www.google.com/webfonts" target="_blank">Google Web Fonts</a>, which is optional. The second line loads jQuery via <a href="https://developers.google.com/speed/libraries/devguide" target="_blank">Google Hosted Libraries</a>.</p>
-<p>
-The remaining lines load the content to be searched, the Tipue Search CSS, the Tipue Search <a href="http://www.tipue.com/search/docs/?d=3" target="_blank">Options</a> and the Tipue Search jQuery plugin.
-</p><p>
-The code below displays the search results.
-</p>
+    Multiple Instances:
+    http://yoursite.com/tabs.html#{TAB ID 1}{TAB NUM}|{TAB ID 2}{TAB NUM}
+    http://yoursite.com/tabs.html#demoTab2|demoTwo3
+  </code>
 
-<!-- Tab start-->
-            <div class="col-md-12">
-   <div class="eq-ui-scrollbar-wrap eq-ui-primary-color eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide common">
-       <ul class="eq-ui-tabs">
-           <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s1-t7">JADE</a></li>
-           <li class="eq-ui-tab"><a href="#eq-ui-tab-s1-t8">HTML</a></li>
+</pre>
 
-       </ul>
-   </div>
-</div>
-
-<div id="eq-ui-tab-s1-t7" class="col-md-12">
-               <pre><code class="language-jade">
-<span class="token tag">form<span class="token attr-name">(action='search.html')</span>
-  input<span class="token attr-value">#tipue_search_input<span class="token attr-name">(type='text', name='q', autocomplete='off', required='')</span>
-#tipue_search_content</span></span>
-
-</code></pre>
-
-</div>
-<div id="eq-ui-tab-s1-t8" class="col-md-12">
-
-<pre><code class="language-markup">
-&lt;form action=&quot;search.html&quot;&gt;
-&lt;input type=&quot;text&quot; name=&quot;q&quot; id=&quot;tipue_search_input&quot; autocomplete=&quot;off&quot; required&gt;
-&lt;/form&gt;
-&lt;div id=&quot;tipue_search_content&quot;&gt;&lt;/div&gt;</code></pre>
+<p>Credits to <a href="http://webthemez.com/sam-profile/" target="_blank">Samson Onna</a></p>
 
 </div>
 
-<!-- Tab end-->
 
-      </div>
-      <div class="col-md-12">
-      <h2 class="header">JSON Mode</h2>
-      <p>
-JSON mode uses <a href="http://www.json.org/" target="_blank">JSON</a> for site content. Your site has to be installed on a web server for JSON mode to work.</p>
-
-<p>Call the <code class="language-markup">.tipuesearch()</code> method with the mode set to json and the name and location of your JSON file.</p>
-
-
-<pre><code class="language-javascript">
-  $(document).ready(function() {
-     $('#tipue_search_input').tipuesearch({
-          'mode': 'json',
-          'contentLocation': 'data/tipuesearch_content.json'
-     });
-  });
-</code></pre>
-
-<h3>Markdown to JSON</h3>
-
-<p>To dynamically create a json file from your markdown file on our cms install the node package on your project.</p>
-
-<pre><code><span class="token tag">npm</span> install <span class="token attr-value">webriq-roots-markdown-to-json</span> --save</code></pre>
-
-<p>Modify your <code class="language-markup">app.coffee</code> file to include the extension.</p>
-
-<pre><code><span class="token tag">roots_markdown_to_json</span> = <span class="token attr-value">require</span> <span class="token attr-name">'webriq-roots-markdown-to-json'</span>
-
-<span class="token tag">module.exports</span> =
-  <span class="token attr-value">extensions:</span> [<span class="token attr-value">roots_markdown_to_json(<span class="token attr-name">options</span>)</span>]</code></pre>
-
-  <h3>Example</h3>
-  <pre><code>
-  <span class="token tag">roots_markdown_to_json</span>(<span class="token attr-value">jsonoutput</span>: "<span class="token attr-name">data</span>", <span class="token attr-value">folder</span>:['<span class="token attr-name">posts/**.md</span>', '<span class="token attr-name">page/**.md</span>'])
-  </code></pre>
-
-  <h3>Options</h3>
-  <p><code>jsonoutput</code> - output destination folder</p>
-  <p><code>folder</code> - the directory location with .md files you would like to include, see example</p>
-
-
-
-      </div>
-
-    </div>
-
-
+</div>
 </div>
 <!--footer>
     <p>&copy; Exentriq 2015</p>
